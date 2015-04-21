@@ -1,156 +1,90 @@
 [
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-mitte/org/stadtplanung/bauleitplanung.html",
-            "name": "Bezirksamt Mitte",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 2
+            "updated": "2015-03-15T11:38:18.734Z",
+            "link": "http://www.hamburg.de/bebauungsplaene/",
+            "name": "Behörde für Stadtentwicklung und Umwelt",
+            "created": "2015-03-15T11:38:18.734Z",
+            "entity": 1
         },
         "model": "region.department",
         "pk": 1
     },
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-friedrichshain-kreuzberg/verwaltung/org/stadtplanung/beteiligung.html",
-            "name": "Bezirksamt Friedrichshain-Kreuzberg",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 3
+            "updated": "2015-03-15T11:35:15.625Z",
+            "link": "http://www.hamburg.de/mitte/bplaene-im-verfahren/",
+            "name": "Bezirksamt Hamburg-Mitte",
+            "created": "2015-03-15T11:35:15.625Z",
+            "entity": 2
         },
         "model": "region.department",
         "pk": 2
     },
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-pankow/verwaltung/stadt/bekannt.html",
-            "name": "Bezirksamt Pankow",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 4
+            "updated": "2015-03-15T11:32:27.537Z",
+            "link": "http://www.hamburg.de/altona/bebauungsplaene/",
+            "name": "Bezirksamt Altona",
+            "created": "2015-03-15T11:32:27.537Z",
+            "entity": 3
         },
         "model": "region.department",
         "pk": 3
     },
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-charlottenburg-wilmersdorf/org/stadtplanung/bebauungsplan/index.html",
-            "name": "Bezirksamt Charlottenburg-Wilmersdorf",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 5
+            "updated": "2015-03-15T11:34:01.855Z",
+            "link": "http://www.hamburg.de/eimsbuettel/bplaene-im-verfahren/",
+            "name": "Bezirksamt Eimsbüttel",
+            "created": "2015-03-15T11:34:01.855Z",
+            "entity": 4
         },
         "model": "region.department",
         "pk": 4
     },
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-spandau/verwaltung/abt/bpu/stadtplanung/bauleitplanung.html",
-            "name": "Bezirksamt Spandau",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 6
+            "updated": "2015-03-15T11:36:24.597Z",
+            "link": "http://www.hamburg.de/hamburg-nord/bauleitplanung/38790/bebauungsplaene/",
+            "name": "Bezirksamt Hamburg-Nord",
+            "created": "2015-03-15T11:36:24.597Z",
+            "entity": 5
         },
         "model": "region.department",
         "pk": 5
     },
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-steglitz-zehlendorf/verwaltung/stadtplanung/beteiligungsverfahren.php",
-            "name": "Bezirksamt Steglitz-Zehlendorf",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 7
+            "updated": "2015-03-15T11:37:01.451Z",
+            "link": "http://www.hamburg.de/wandsbek/bebauungsplaene/",
+            "name": "Bezirksamt Wandsbek",
+            "created": "2015-03-15T11:37:01.451Z",
+            "entity": 6
         },
         "model": "region.department",
         "pk": 6
     },
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-tempelhof-schoeneberg/organisationseinheit/planen/bebauungsplaene.html",
-            "name": "Bezirksamt Tempelhof-Sch\u00f6neberg",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 8
+            "updated": "2015-03-15T11:33:27.056Z",
+            "link": "http://www.hamburg.de/bergedorf/bebauungsplaene/",
+            "name": "Bezirksamt Bergedorf",
+            "created": "2015-03-15T11:33:27.056Z",
+            "entity": 7
         },
         "model": "region.department",
         "pk": 7
     },
     {
         "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-neukoelln/verwaltung/bebauungsplaene/bplan.html",
-            "name": "Bezirksamt Neuk\u00f6lln",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 9
+            "updated": "2015-03-15T11:34:32.635Z",
+            "link": "http://www.hamburg.de/harburg/bebauungsplaene/",
+            "name": "Bezirksamt Harburg",
+            "created": "2015-03-15T11:34:32.635Z",
+            "entity": 8
         },
         "model": "region.department",
         "pk": 8
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/stadtentwicklung/aktuelleinformationenausdemstadtentwicklungsamt.php",
-            "name": "Bezirksamt Treptow-K\u00f6penick",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 10
-        },
-        "model": "region.department",
-        "pk": 9
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-marzahn-hellersdorf/verwaltung/bauen/beteiligungderoeffent.html",
-            "name": "Bezirksamt Mahrzahn-Hellersdorf",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 11
-        },
-        "model": "region.department",
-        "pk": 10
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-lichtenberg/buergerservice/bauen/bauen022.html",
-            "name": "Bezirksamt Lichtenberg",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 12
-        },
-        "model": "region.department",
-        "pk": 11
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.berlin.de/ba-reinickendorf/org/stadtplanung/index.html",
-            "name": "Bezirksamt Reinickendorf",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 13
-        },
-        "model": "region.department",
-        "pk": 12
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/plaene.shtml",
-            "name": "Senatsverwaltung f\u00fcr Stadtentwicklung von Berlin",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 1
-        },
-        "model": "region.department",
-        "pk": 13
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "link": "http://www.stadtentwicklung.berlin.de/verkehr/politik_planung/planfeststellungen/",
-            "name": "Senatsverwaltung f\u00fcr Stadtentwicklung von Berlin (PFV)",
-            "updated": "2013-06-11T20:00:00Z",
-            "entity": 1
-        },
-        "model": "region.department",
-        "pk": 14
     }
 ]

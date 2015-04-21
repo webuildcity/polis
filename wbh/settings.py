@@ -38,7 +38,7 @@ MIDDLEWARE_CLASSES = (
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(SITE_ROOT,'bbs/templates/')],
+        'DIRS': [os.path.join(SITE_ROOT,'wbh/templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -52,8 +52,8 @@ TEMPLATES = [
     },
 ]
 
-ROOT_URLCONF = 'bbs.urls'
-WSGI_APPLICATION = 'bbs.wsgi.application'
+ROOT_URLCONF = 'wbh.urls'
+WSGI_APPLICATION = 'wbh.wsgi.application'
 SITE_ID = 1
 
 LANGUAGE_CODE = 'de-de'
@@ -69,7 +69,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(SITE_ROOT,'static/')
 
 STATICFILES_DIRS = (
-    os.path.join(SITE_ROOT,'bbs/static/'),
+    os.path.join(SITE_ROOT,'wbh/static/'),
 )
 
 STATICFILES_FINDERS = (
@@ -79,10 +79,10 @@ STATICFILES_FINDERS = (
 
 LOGIN_URL = '/login'
 
-FEED_TITLE = "Bürger baut Stadt (Veröffentlichungen)"
-FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Berlin"
+FEED_TITLE = "Wir bauen Hamburg (Veröffentlichungen)"
+FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Hamburg"
 
-TILES_URL = 'http://tiles.codefor.de/bbs-berlin/'
+TILES_URL = 'http://tiles.codefor.de/bbs-hamburg/'
 TILES_OPT = {
     'attribution': 'Map data &copy; 2012 OpenStreetMap contributors',
     'maxZoom': 17,
@@ -92,7 +92,7 @@ TILES_OPT = {
 }
 
 DEFAULT_VIEW = {
-    'lat': 52.51,
-    'lon': 13.37628,
+    'lat': 53.550556,
+    'lon': 10.0,
     'zoom': 11
 }

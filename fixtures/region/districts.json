@@ -2,7 +2,7 @@
     {
         "fields": {
             "created": "2015-01-11T20:00:00Z",
-            "name": "Mitte",
+            "name": "Hamburg-Mitte",
             "updated": "2013-06-11T20:00:00Z"
         },
         "model": "region.entity",
@@ -11,7 +11,7 @@
     {
         "fields": {
             "created": "2013-06-11T20:00:00Z",
-            "name": "Friedrichshain-Kreuzberg",
+            "name": "Altona",
             "updated": "2013-06-11T20:00:00Z"
         },
         "model": "region.entity",
@@ -20,7 +20,7 @@
     {
         "fields": {
             "created": "2013-06-11T20:00:00Z",
-            "name": "Pankow",
+            "name": "Eimsbüttel",
             "updated": "2013-06-11T20:00:00Z"
         },
         "model": "region.entity",
@@ -29,7 +29,7 @@
     {
         "fields": {
             "created": "2013-06-11T20:00:00Z",
-            "name": "Charlottenburg-Wilmersdorf",
+            "name": "Hamburg-Nord",
             "updated": "2013-06-11T20:00:00Z"
         },
         "model": "region.entity",
@@ -38,7 +38,7 @@
     {
         "fields": {
             "created": "2013-06-11T20:00:00Z",
-            "name": "Spandau",
+            "name": "Wandsbek",
             "updated": "2013-06-11T20:00:00Z"
         },
         "model": "region.entity",
@@ -47,7 +47,7 @@
     {
         "fields": {
             "created": "2013-06-11T20:00:00Z",
-            "name": "Steglitz-Zehlendorf",
+            "name": "Bergedorf",
             "updated": "2013-06-11T20:00:00Z"
         },
         "model": "region.entity",
@@ -56,56 +56,11 @@
     {
         "fields": {
             "created": "2013-06-11T20:00:00Z",
-            "name": "Tempelhof-Sch\u00f6neberg",
+            "name": "Harburg",
             "updated": "2013-06-11T20:00:00Z"
         },
         "model": "region.entity",
         "pk": 8
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "name": "Neuk\u00f6lln",
-            "updated": "2013-06-11T20:00:00Z"
-        },
-        "model": "region.entity",
-        "pk": 9
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "name": "Treptow-K\u00f6penick",
-            "updated": "2013-06-11T20:00:00Z"
-        },
-        "model": "region.entity",
-        "pk": 10
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "name": "Marzahn- Hellersdorf",
-            "updated": "2013-06-24T18:55:26Z"
-        },
-        "model": "region.entity",
-        "pk": 11
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "name": "Lichtenberg",
-            "updated": "2013-06-11T20:00:00Z"
-        },
-        "model": "region.entity",
-        "pk": 12
-    },
-    {
-        "fields": {
-            "created": "2013-06-11T20:00:00Z",
-            "name": "Reinickendorf",
-            "updated": "2013-06-11T20:00:00Z"
-        },
-        "model": "region.entity",
-        "pk": 13
     },
     {
         "fields": {"muncipality": 1},
@@ -141,30 +96,5 @@
         "fields": {"muncipality": 1},
         "model": "region.district",
         "pk": 8
-    },
-    {
-        "fields": {"muncipality": 1},
-        "model": "region.district",
-        "pk": 9
-    },
-    {
-        "fields": {"muncipality": 1},
-        "model": "region.district",
-        "pk": 10
-    },
-    {
-        "fields": {"muncipality": 1},
-        "model": "region.district",
-        "pk": 11
-    },
-    {
-        "fields": {"muncipality": 1},
-        "model": "region.district",
-        "pk": 12
-    },
-    {
-        "fields": {"muncipality": 1},
-        "model": "region.district",
-        "pk": 13
     }
 ]

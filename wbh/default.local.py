@@ -35,12 +35,12 @@ DATABASES = {
     # }
 }
 
-SITE_TITLE = 'Bürger baut Stadt'
+SITE_TITLE = 'Wir bauen Hamburg'
 SITE_ROOT = os.path.dirname(os.path.dirname(__file__))
 SITE_URL = 'http://localhost:8000'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_FROM = 'news@buergerbautstadt.de'
+EMAIL_FROM = 'info@wir-bauen-hamburg.de'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'localhost'
@@ -50,4 +50,3 @@ EMAIL_FROM = 'news@buergerbautstadt.de'
 # EMAIL_USE_TLS = True
 
 # FACEBOOK_APIKEY = 'XXXXXXXXXXXXXXX'
-
