@@ -1,4 +1,4 @@
-bbs/local.py
+wbh/local.py
 
 *~
 *.pyc
@@ -7,8 +7,8 @@ bbs/local.py
 static/*
 !static/.gitkeep
 
-bbs/static/*
-!bbs/static/.gitkeep
+wbh/static/*
+!wbh/static/.gitkeep
 
 data/database
 env
