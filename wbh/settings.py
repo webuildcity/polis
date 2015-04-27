@@ -96,7 +96,3 @@ DEFAULT_VIEW = {
     'lon': 10.0,
     'zoom': 11
 }
-
-ENTITY_NAME = 'Ortsteil'
-ENTITY_MODEL = 'Quarter'
-
