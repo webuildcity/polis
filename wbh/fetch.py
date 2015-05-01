@@ -31,6 +31,7 @@ class PlaceFetcher():
         # open geojson
         geojson = json.load(open('/tmp/imverfahren.json','r'))
 
+        n = 0
         for feature in geojson["features"]:
 
             # prepare values dictionary
@@ -85,6 +86,7 @@ class PlaceFetcher():
             place,created = Place.objects.update_or_create(identifier=place_values['identifier'],defaults=place_values)
 
             if created:
+                n += 1
                 try:
                     for quarter in quarters:
                         q = Quarter.objects.get(name=quarter)
@@ -106,3 +108,5 @@ class PlaceFetcher():
                 place.save()
 
                 print place,','.join(quarters),place.address
+
+        print n,'places created'
