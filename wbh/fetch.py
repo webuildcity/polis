@@ -8,25 +8,28 @@ class PlaceFetcher():
 
     def fetch(self):
 
-        # get time since last download
-        try:
-            time_delta = time.time() - os.stat('/tmp/process.json').st_ctime
-        except OSError:
-            time_delta = 86400
+        # # get time since last download
+        # try:
+        #     time_delta = time.time() - os.stat('/tmp/process.json').st_ctime
+        # except OSError:
+        #     time_delta = 86400
 
-        # download data if older than 10 minutes
-        if time_delta > 600:
-            try:
-                os.remove('/tmp/places.json')
-            except OSError:
-                pass
+        # # download data if older than 10 minutes
+        # if time_delta > 600:
+        #     try:
+        #         os.remove('/tmp/places.json')
+        #     except OSError:
+        #         pass
 
-            # call org2org to fetch the bplan geojson from the FIZ-Broker
-            cmd = 'ogr2ogr -s_srs EPSG:25832 -t_srs WGS84 -f geoJSON /tmp/places.json WFS:"http://geodienste-hamburg.de/HH_WFS_Bebauungsplaene" app:imverfahren'
-            subprocess.call(cmd,shell=True);
+        #     # call org2org to fetch the bplan geojson from the FIZ-Broker
+        #     cmd = 'ogr2ogr -s_srs EPSG:25832 -t_srs WGS84 -f geoJSON /tmp/places.json WFS:"http://geodienste-hamburg.de/HH_WFS_Bebauungsplaene" app:imverfahren'
+        #     subprocess.call(cmd,shell=True);
+
+        # hack using wget
+        subprocess.call('wget hamburg.codefor.de/bplan/imverfahren.json -O /tmp/imverfahren.json',shell=True);
 
         # open geojson
-        geojson = json.load(open('/tmp/places.json','r'))
+        geojson = json.load(open('/tmp/imverfahren.json','r'))
 
         for feature in geojson["features"]:
 
