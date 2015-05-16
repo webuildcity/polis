@@ -8,6 +8,15 @@ class PlaceFetcher():
 
     def fetch(self):
 
+        umlaut_quarters = {
+            "Barmbek-Sued": "Barmbek-Süd",
+            "Fuhlsbuettel": "Fuhlsbüttel",
+            "Lohbruegge": "Lohbrügge",
+            "Poppenbuettel": "Poppenbüttel",
+            "Suelldorf": "Sülldorf",
+            "Wellingsbuettel": "Wellingsbüttel"
+        }
+
         # # get time since last download
         # try:
         #     time_delta = time.time() - os.stat('/tmp/process.json').st_ctime
@@ -40,7 +49,13 @@ class PlaceFetcher():
             # get identifier
             try:
                 place_values['identifier'] = feature['properties']['plan'].replace(' ','').strip()
-                quarters = re.findall('([a-zA-Z][a-zA-Z\-\.]+)',place_values['identifier'].replace('Aend',''))
+                cleaned_identifier = place_values['identifier'].replace('Aend','')
+                quarters = []
+                for quarter in re.findall('([a-zA-Z][a-zA-Z\-\.]+)',cleaned_identifier):
+                    if quarter in umlaut_quarters:
+                        quarters.append(umlaut_quarters[quarter])
+                    else:
+                        quarters.append(quarter)
             except KeyError:
                 continue
 
@@ -93,7 +108,7 @@ class PlaceFetcher():
                         place.entities.add(q)
                         place.save()
                 except Quarter.DoesNotExist:
-                    pass
+                    print 'no quarter for',place_values['identifier']
 
                 if place.address == '':
                     # get address from open street map
@@ -104,9 +119,9 @@ class PlaceFetcher():
                         place.address = data['address']['road']
                     else:
                         place.address = ''
-                    time.sleep(1)
+                    time.sleep(0.5)
                 place.save()
 
-                print place,','.join(quarters),place.address
+                print place,'(' + ', '.join([str(quarter) for quarter in quarters]) + ')'
 
         print n,'places created'
