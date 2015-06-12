@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='core/map.html')),
     url(r'^begriffe/$', 'wbc.process.views.process'),
     url(r'^liste/$', TemplateView.as_view(template_name='process/list.html')),
+    url(r'^impressum/$', TemplateView.as_view(template_name='impressum.html')),
 
     # orte
     url(r'^orte/$', RedirectView.as_view(url='/liste/', permanent=True)),
