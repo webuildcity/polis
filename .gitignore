@@ -4,11 +4,8 @@ wbh/local.py
 *.pyc
 .DS_Store
 
-static/*
-!static/.gitkeep
-
-wbh/static/*
-!wbh/static/.gitkeep
+static_root
+media_root
 
 data/database
 env

@@ -36,6 +36,9 @@ urlpatterns = patterns('',
     url(r'^region/', include('wbc.region.urls')),
     url(r'^process/', include('wbc.process.urls')),
 
+    # buildings
+    # url(r'^buildings/(?P<pk>[0-9]+)/$', 'wbc.buildings.views.building', name='buildings'),
+
     # admin foo
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
@@ -43,6 +46,9 @@ urlpatterns = patterns('',
     # user login
     # url(r'^login/', 'wbc.core.views.login_user'),
     # url(r'^logout/', 'wbc.core.views.logout_user'),
+
+    # serve media files
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
     # robots.txt and sitemap.xml
     (r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
