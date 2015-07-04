@@ -3,6 +3,11 @@ Wir bauen Hamburg / We build Hamburg
 
 [http://wir-bauen-hamburg.de][wbh] - Finde geplante Bauvorhaben in deinem Kiez.
 
+## Requirements
+
+* [GDAL][gdal] 
+
+
 ## Setup
 
 1. Have Python 2.7.x installed.
@@ -18,6 +23,8 @@ Wir bauen Hamburg / We build Hamburg
 11. Open a browser and go to [http://localhost:8000/][wbh-home]. A map of berlin should appear.
 12. Use [http://localhost:8000/admin/][wbh-admin] to log in. Under *region* and *process*, districts, departments, places and publications can be added or edited.
 
+
+
 [wbh]: http://buergerbautstadt.de
 [wbh-github]: https://github.com/webuildcity/wbh
 [wbc-github]: https://github.com/webuildcity/wbc
@@ -25,3 +32,5 @@ Wir bauen Hamburg / We build Hamburg
 [virtualenv]: https://virtualenv.pypa.io/en/latest/
 [wbh-home]: http://localhost:8000/
 [wbh-admin]: http://localhost:8000/admin/
+[gdal]: http://www.gdal.org/
+
