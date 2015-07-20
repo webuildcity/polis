@@ -12,3 +12,4 @@ wbh/static/*
 
 data/database
 env
+sqlitefile
