@@ -22,6 +22,8 @@ INSTALLED_APPS = (
     'wbc.process',
     'wbc.news',
     'wbc.comments',
+    'wbc.stakeholder',
+    'wbc.tags',
     #'wbc.buildings'
 )
 
