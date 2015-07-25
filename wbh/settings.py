@@ -11,6 +11,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    #rolodex
+   # 'rolodex',
     # other dependencies
     'rest_framework',
     'rest_framework_gis',
@@ -25,6 +27,7 @@ INSTALLED_APPS = (
     'wbc.stakeholder',
     'wbc.tags',
     'wbc.events',
+    'wbc.projects',
     #'wbc.buildings'
 )
 

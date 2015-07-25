@@ -2,9 +2,9 @@
 import os,subprocess,json,urllib2,time,sys,re
 
 from wbc.region.models import Quarter
-from wbc.process.models import Place
+from wbc.projects.models import Project
 
-class PlaceFetcher():
+class ProjectFetcher():
 
     def fetch(self):
 
@@ -44,18 +44,19 @@ class PlaceFetcher():
         for feature in geojson["features"]:
 
             # prepare values dictionary
-            place_values = {}
+            project_values = {}
 
             # get identifier
             try:
-                place_values['identifier'] = feature['properties']['plan'].replace(' ','').strip()
-                cleaned_identifier = place_values['identifier'].replace('Aend','')
+                project_values['identifier'] = feature['properties']['plan'].replace(' ','').strip()
+                cleaned_identifier = project_values['identifier'].replace('Aend','')
                 quarters = []
                 for quarter in re.findall('([a-zA-Z][a-zA-Z\-\.]+)',cleaned_identifier):
                     if quarter in umlaut_quarters:
                         quarters.append(umlaut_quarters[quarter])
                     else:
                         quarters.append(quarter)
+                project_values['name'] = cleaned_identifier
             except KeyError:
                 continue
 
@@ -70,7 +71,7 @@ class PlaceFetcher():
                             latMax = max(latMax,point[0])
                             lonMin = min(lonMin,point[1])
                             lonMax = max(lonMax,point[1])
-                    place_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
+                    project_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
                 else:
                     for polygon in feature['geometry']['coordinates']:
                         for path in polygon:
@@ -80,48 +81,48 @@ class PlaceFetcher():
                                 latMax = max(latMax,point[0])
                                 lonMin = min(lonMin,point[1])
                                 lonMax = max(lonMax,point[1])
-                    place_values['polygon'] = json.dumps(feature['geometry']['coordinates'])
+                    project_values['polygon'] = json.dumps(feature['geometry']['coordinates'])
 
                 # get lat and lon
-                place_values['lat'] = str((latMax + latMin) * 0.5)
-                place_values['lon'] = str((lonMax + lonMin) * 0.5)
+                project_values['lat'] = str((latMax + latMin) * 0.5)
+                project_values['lon'] = str((lonMax + lonMin) * 0.5)
             except TypeError:
                 continue
 
             # see if is marked active
             try:
                 if feature['properties']['feststellung'].lower() == 'ja':
-                    place_values['active'] = False
+                    project_values['active'] = False
                 else:
-                    place_values['active'] = True
+                    project_values['active'] = True
             except KeyError:
-                place_values['active'] = True
+                project_values['active'] = True
 
             # update the place or create a new one
-            place,created = Place.objects.update_or_create(identifier=place_values['identifier'],defaults=place_values)
+            project,created = Project.objects.update_or_create(identifier=project_values['identifier'],defaults=project_values)
 
             if created:
                 n += 1
                 try:
                     for quarter in quarters:
                         q = Quarter.objects.get(name=quarter)
-                        place.entities.add(q)
-                        place.save()
+                        project.entities.add(q)
+                        project.save()
                 except Quarter.DoesNotExist:
-                    print 'no quarter for',place_values['identifier']
+                    print 'no quarter for',project_values['identifier']
 
-                if place.address == '':
+                if project.address == '':
                     # get address from open street map
-                    url = "http://open.mapquestapi.com/nominatim/v1/reverse.php?format=json&lat=%s&lon=%s" % (place.lat,place.lon)
+                    url = "http://open.mapquestapi.com/nominatim/v1/reverse.php?format=json&lat=%s&lon=%s" % (project.lat,project.lon)
                     response = urllib2.urlopen(url).read()
                     data = json.loads(response)
                     if 'road' in data['address']:
-                        place.address = data['address']['road']
+                        project.address = data['address']['road']
                     else:
-                        place.address = ''
+                        project.address = ''
                     time.sleep(0.5)
-                place.save()
+                project.save()
 
-                print place,'(' + ', '.join([str(quarter) for quarter in quarters]) + ')'
+                print project,'(' + ', '.join([str(quarter) for quarter in quarters]) + ')'
 
-        print n,'places created'
+        print n,'projects created'
