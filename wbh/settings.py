@@ -4,6 +4,7 @@ from local import *
 
 INSTALLED_APPS = (
     # django
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -11,8 +12,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    #rolodex
-   # 'rolodex',
+
     # other dependencies
     'rest_framework',
     'rest_framework_gis',
@@ -26,9 +26,12 @@ INSTALLED_APPS = (
     'wbc.comments',
     'wbc.stakeholder',
     'wbc.tags',
-    'wbc.events',
     'wbc.projects',
+    'wbc.events',
     #'wbc.buildings'
+    #rolodex
+   # 'rolodex',
+    'taggit'
 )
 
 MIDDLEWARE_CLASSES = (

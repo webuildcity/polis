@@ -57,6 +57,6 @@ urlpatterns = patterns('',
     (r'^sitemap\.xml$', TemplateView.as_view(template_name='sitemap.xml', content_type='text/plain')),
 
     #rolodex
-    url(r'^rolodex/', include('rolodex.urls')),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # url(r'^rolodex/', include('rolodex.urls')),
+    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 )
