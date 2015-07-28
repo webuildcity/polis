@@ -31,7 +31,6 @@ INSTALLED_APPS = (
     #'wbc.buildings'
     #rolodex
    # 'rolodex',
-    'taggit'
 )
 
 MIDDLEWARE_CLASSES = (
