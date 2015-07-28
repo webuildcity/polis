@@ -16,6 +16,8 @@ urlpatterns = patterns('',
     url(r'^orte/$', RedirectView.as_view(url='/liste/', permanent=True)),
     url(r'^orte/neu/$', ProjectCreate.as_view(), name='project_create'),
     url(r'^orte/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
+    url(r'^orte/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='project'),
+    
     url(r'^orte/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
     url(r'^orte/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
 
