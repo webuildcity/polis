@@ -5,6 +5,7 @@ from local import *
 INSTALLED_APPS = (
     # django
     'django_admin_bootstrapped',
+    # 'autocomplete_light',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -12,7 +13,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-
+    'django.contrib.sites',
+    'django_extensions',
     # other dependencies
     'rest_framework',
     'rest_framework_gis',
@@ -31,6 +33,9 @@ INSTALLED_APPS = (
     #'wbc.buildings'
     #rolodex
    # 'rolodex',
+    'sortedm2m',
+    'photologue',
+    # 'sorl.thumbnail',
 )
 
 MIDDLEWARE_CLASSES = (

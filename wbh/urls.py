@@ -61,4 +61,8 @@ urlpatterns = patterns('',
     #rolodex
     # url(r'^rolodex/', include('rolodex.urls')),
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+    # url(r'^autocomplete/', include('autocomplete_light.urls')),
+    url(r'^photologue/', include('photologue.urls', namespace='photologue')),
+
 )
