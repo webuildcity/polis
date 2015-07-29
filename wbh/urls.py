@@ -12,14 +12,14 @@ urlpatterns = patterns('',
     url(r'^begriffe/$', 'wbc.process.views.process'),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
 
-    # orte
-    url(r'^orte/$', RedirectView.as_view(url='/liste/', permanent=True)),
-    url(r'^orte/neu/$', ProjectCreate.as_view(), name='project_create'),
-    url(r'^orte/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
-    url(r'^orte/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='project'),
+    # projects
+    url(r'^projects/$', RedirectView.as_view(url='/liste/', permanent=True)),
+    url(r'^projects/neu/$', ProjectCreate.as_view(), name='project_create'),
+    url(r'^projects/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
+    url(r'^projects/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='project2'),
     
-    url(r'^orte/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
-    url(r'^orte/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
+    url(r'^projects/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
+    url(r'^projects/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
 
     # veroeffentlichungen neu
     # url(r'^veroeffentlichungen/neu/$', PublicationCreate.as_view(), name='publication_create'),
@@ -38,7 +38,7 @@ urlpatterns = patterns('',
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),
     url(r'^process/', include('wbc.process.urls')),
-    url(r'^projects/', include('wbc.projects.urls')),
+    url(r'^project/', include('wbc.projects.urls')),
 
     # buildings
     # url(r'^buildings/(?P<pk>[0-9]+)/$', 'wbc.buildings.views.building', name='buildings'),
