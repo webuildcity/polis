@@ -8,26 +8,39 @@ class PlaceFetcher():
 
     def fetch(self):
 
-        # get time since last download
-        try:
-            time_delta = time.time() - os.stat('/tmp/process.json').st_ctime
-        except OSError:
-            time_delta = 86400
+        umlaut_quarters = {
+            "Barmbek-Sued": "Barmbek-Süd",
+            "Fuhlsbuettel": "Fuhlsbüttel",
+            "Lohbruegge": "Lohbrügge",
+            "Poppenbuettel": "Poppenbüttel",
+            "Suelldorf": "Sülldorf",
+            "Wellingsbuettel": "Wellingsbüttel"
+        }
 
-        # download data if older than 10 minutes
-        if time_delta > 600:
-            try:
-                os.remove('/tmp/places.json')
-            except OSError:
-                pass
+        # # get time since last download
+        # try:
+        #     time_delta = time.time() - os.stat('/tmp/process.json').st_ctime
+        # except OSError:
+        #     time_delta = 86400
 
-            # call org2org to fetch the bplan geojson from the FIZ-Broker
-            cmd = 'ogr2ogr -s_srs EPSG:25832 -t_srs WGS84 -f geoJSON /tmp/places.json WFS:"http://geodienste-hamburg.de/HH_WFS_Bebauungsplaene" app:imverfahren'
-            subprocess.call(cmd,shell=True);
+        # # download data if older than 10 minutes
+        # if time_delta > 600:
+        #     try:
+        #         os.remove('/tmp/places.json')
+        #     except OSError:
+        #         pass
+
+        #     # call org2org to fetch the bplan geojson from the FIZ-Broker
+        #     cmd = 'ogr2ogr -s_srs EPSG:25832 -t_srs WGS84 -f geoJSON /tmp/places.json WFS:"http://geodienste-hamburg.de/HH_WFS_Bebauungsplaene" app:imverfahren'
+        #     subprocess.call(cmd,shell=True);
+
+        # hack using wget
+        subprocess.call('wget hamburg.codefor.de/bplan/imverfahren.json -O /tmp/imverfahren.json',shell=True);
 
         # open geojson
-        geojson = json.load(open('/tmp/places.json','r'))
+        geojson = json.load(open('/tmp/imverfahren.json','r'))
 
+        n = 0
         for feature in geojson["features"]:
 
             # prepare values dictionary
@@ -36,7 +49,13 @@ class PlaceFetcher():
             # get identifier
             try:
                 place_values['identifier'] = feature['properties']['plan'].replace(' ','').strip()
-                quarters = re.findall('([a-zA-Z][a-zA-Z\-\.]+)',place_values['identifier'].replace('Aend',''))
+                cleaned_identifier = place_values['identifier'].replace('Aend','')
+                quarters = []
+                for quarter in re.findall('([a-zA-Z][a-zA-Z\-\.]+)',cleaned_identifier):
+                    if quarter in umlaut_quarters:
+                        quarters.append(umlaut_quarters[quarter])
+                    else:
+                        quarters.append(quarter)
             except KeyError:
                 continue
 
@@ -82,13 +101,14 @@ class PlaceFetcher():
             place,created = Place.objects.update_or_create(identifier=place_values['identifier'],defaults=place_values)
 
             if created:
+                n += 1
                 try:
                     for quarter in quarters:
                         q = Quarter.objects.get(name=quarter)
                         place.entities.add(q)
                         place.save()
                 except Quarter.DoesNotExist:
-                    pass
+                    print 'no quarter for',place_values['identifier']
 
                 if place.address == '':
                     # get address from open street map
@@ -99,7 +119,9 @@ class PlaceFetcher():
                         place.address = data['address']['road']
                     else:
                         place.address = ''
-                    time.sleep(1)
+                    time.sleep(0.5)
                 place.save()
 
-                print place,','.join(quarters),place.address
+                print place,'(' + ', '.join([str(quarter) for quarter in quarters]) + ')'
+
+        print n,'places created'

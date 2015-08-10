@@ -74,7 +74,7 @@
     {
         "fields": {
             "created": "2015-01-11T20:00:00Z", 
-            "name": "Barmbek-Sued", 
+            "name": "Barmbek-Süd", 
             "updated": "2013-06-11T20:00:00Z"
         }, 
         "model": "region.entity", 
@@ -263,7 +263,7 @@
     {
         "fields": {
             "created": "2015-01-11T20:00:00Z", 
-            "name": "Fuhlsbuettel", 
+            "name": "Fuhlsbüttel", 
             "updated": "2013-06-11T20:00:00Z"
         }, 
         "model": "region.entity", 
@@ -479,7 +479,7 @@
     {
         "fields": {
             "created": "2015-01-11T20:00:00Z", 
-            "name": "Lohbruegge", 
+            "name": "Lohbrügge", 
             "updated": "2013-06-11T20:00:00Z"
         }, 
         "model": "region.entity", 
@@ -668,7 +668,7 @@
     {
         "fields": {
             "created": "2015-01-11T20:00:00Z", 
-            "name": "Poppenbuettel", 
+            "name": "Poppenbüttel", 
             "updated": "2013-06-11T20:00:00Z"
         }, 
         "model": "region.entity", 
@@ -821,7 +821,7 @@
     {
         "fields": {
             "created": "2015-01-11T20:00:00Z", 
-            "name": "Suelldorf", 
+            "name": "Sülldorf", 
             "updated": "2013-06-11T20:00:00Z"
         }, 
         "model": "region.entity", 
@@ -893,7 +893,7 @@
     {
         "fields": {
             "created": "2015-01-11T20:00:00Z", 
-            "name": "Wellingsbuettel", 
+            "name": "Wellingsbüttel", 
             "updated": "2013-06-11T20:00:00Z"
         }, 
         "model": "region.entity", 
