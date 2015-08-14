@@ -24,7 +24,7 @@ INSTALLED_APPS = (
     'wbc.core',
     'wbc.region',
     'wbc.process',
-    'wbc.news',
+    'wbc.notifications',
     'wbc.comments',
     'wbc.stakeholder',
     'wbc.tags',

@@ -31,9 +31,9 @@ urlpatterns = patterns('',
     # url(r'^veroeffentlichungen/feed/$', PublicationFeed(), name="publication_feed_url"),
 
     # news module
-    url(r'^news/abonnieren/$', 'wbc.news.views.subscribe'),
-    url(r'^news/abbestellen/(?P<email>.*)$', 'wbc.news.views.unsubscribe'),
-    url(r'^news/validieren/(?P<code>.*)$', 'wbc.news.views.validate'),
+    url(r'^notifications/abonnieren/$', 'wbc.notifications.views.subscribe'),
+    url(r'^notifications/abbestellen/(?P<email>.*)$', 'wbc.notifications.views.unsubscribe'),
+    url(r'^notifications/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),
