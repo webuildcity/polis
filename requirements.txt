@@ -7,6 +7,7 @@ django_admin_bootstrapped
 django_extensions
 django-sortedm2m
 django-photologue
+django-taggit
 
 # uncomment this if you plan to use postgres
 #psycopg2>=2.5.1,<2.6
