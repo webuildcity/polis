@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'photologue',
     # 'sorl.thumbnail',
     'taggit',
+    'taggit_templatetags',
     # 'taggit_labels'
 )
 

@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^projects/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
 
     url(r'^tags/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.tags.views.tagview', name='tag'),
+    url(r'^stakeholders/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.stakeholder.views.stakeholderview', name='stakeholder'),
     # veroeffentlichungen neu
     # url(r'^veroeffentlichungen/neu/$', PublicationCreate.as_view(), name='publication_create'),
     # url(r'^veroeffentlichungen/(?P<pk>[0-9]+)/bearbeiten/$', PublicationUpdate.as_view(), name='publication_update'),
@@ -40,6 +41,7 @@ urlpatterns = patterns('',
     url(r'^region/', include('wbc.region.urls')),
     url(r'^process/', include('wbc.process.urls')),
     url(r'^project/', include('wbc.projects.urls')),
+    url(r'^stakeholder/', include('wbc.stakeholder.urls')),
 
     # buildings
     # url(r'^buildings/(?P<pk>[0-9]+)/$', 'wbc.buildings.views.building', name='buildings'),
