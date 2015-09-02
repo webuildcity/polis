@@ -5,9 +5,9 @@
             "link": "http://www.hamburg.de/bebauungsplaene/",
             "name": "Behörde für Stadtentwicklung und Umwelt",
             "created": "2015-03-15T11:38:18.734Z",
-            "entity": 1
+            "entities": [1]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 1
     },
     {
@@ -16,9 +16,9 @@
             "link": "http://www.hamburg.de/mitte/bplaene-im-verfahren/",
             "name": "Bezirksamt Hamburg-Mitte",
             "created": "2015-03-15T11:35:15.625Z",
-            "entity": 2
+            "entities": [2]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 2
     },
     {
@@ -27,9 +27,9 @@
             "link": "http://www.hamburg.de/altona/bebauungsplaene/",
             "name": "Bezirksamt Altona",
             "created": "2015-03-15T11:32:27.537Z",
-            "entity": 3
+            "entities": [3]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 3
     },
     {
@@ -38,9 +38,9 @@
             "link": "http://www.hamburg.de/eimsbuettel/bplaene-im-verfahren/",
             "name": "Bezirksamt Eimsbüttel",
             "created": "2015-03-15T11:34:01.855Z",
-            "entity": 4
+            "entities": [4]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 4
     },
     {
@@ -49,9 +49,9 @@
             "link": "http://www.hamburg.de/hamburg-nord/bauleitplanung/38790/bebauungsplaene/",
             "name": "Bezirksamt Hamburg-Nord",
             "created": "2015-03-15T11:36:24.597Z",
-            "entity": 5
+            "entities": [5]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 5
     },
     {
@@ -60,9 +60,9 @@
             "link": "http://www.hamburg.de/wandsbek/bebauungsplaene/",
             "name": "Bezirksamt Wandsbek",
             "created": "2015-03-15T11:37:01.451Z",
-            "entity": 6
+            "entities": [6]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 6
     },
     {
@@ -71,9 +71,9 @@
             "link": "http://www.hamburg.de/bergedorf/bebauungsplaene/",
             "name": "Bezirksamt Bergedorf",
             "created": "2015-03-15T11:33:27.056Z",
-            "entity": 7
+            "entities": [7]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 7
     },
     {
@@ -82,9 +82,9 @@
             "link": "http://www.hamburg.de/harburg/bebauungsplaene/",
             "name": "Bezirksamt Harburg",
             "created": "2015-03-15T11:34:32.635Z",
-            "entity": 8
+            "entities": [8]
         },
-        "model": "region.department",
+        "model": "stakeholder.department",
         "pk": 8
     }
 ]

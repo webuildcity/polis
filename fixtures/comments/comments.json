@@ -1,7 +1,7 @@
 [
     {
         "fields": {
-            "place": 1,
+            "project": 1,
             "author_name": "Tanja Testuser",
             "author_email": "tanja@testuser.de",
             "author_url": "http://tanja.testuser.de",
@@ -15,7 +15,7 @@
     },
     {
         "fields": {
-            "place": 1,
+            "project": 1,
             "author_name": "Tarek Testuser",
             "author_email": "tarek@testuser.de",
             "author_url": "http://tarek.testuser.de",
