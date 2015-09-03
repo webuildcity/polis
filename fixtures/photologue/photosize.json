@@ -1,0 +1,114 @@
+[
+    {
+        "fields": {
+            "name": "admin_thumbnail",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": true,
+            "height": 75,
+            "width": 100,
+            "upscale": false,
+            "pre_cache": true,
+            "quality": 70
+        },
+        "model": "photologue.photosize",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "name": "thumbnail",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": true,
+            "height": 75,
+            "width": 100,
+            "upscale": false,
+            "pre_cache": true,
+            "quality": 70
+        },
+        "model": "photologue.photosize",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "name": "display",
+            "watermark": null,
+            "increment_count": true,
+            "effect": null,
+            "crop": false,
+            "height": 0,
+            "width": 400,
+            "upscale": false,
+            "pre_cache": true,
+            "quality": 70
+        },
+        "model": "photologue.photosize",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "name": "absolute",
+            "watermark": null,
+            "increment_count": true,
+            "effect": null,
+            "crop": false,
+            "height": 0,
+            "width": 500,
+            "upscale": false,
+            "pre_cache": true,
+            "quality": 70
+        },
+        "model": "photologue.photosize",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "name": "test",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": true,
+            "height": 400,
+            "width": 800,
+            "upscale": false,
+            "pre_cache": false,
+            "quality": 70
+        },
+        "model": "photologue.photosize",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "name": "stakeholder",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": false,
+            "height": 200,
+            "width": 200,
+            "upscale": false,
+            "pre_cache": false,
+            "quality": 70
+        },
+        "model": "photologue.photosize",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "name": "description",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": true,
+            "height": 100,
+            "width": 200,
+            "upscale": false,
+            "pre_cache": false,
+            "quality": 70
+        },
+        "model": "photologue.photosize",
+        "pk": 7
+    }
+]
