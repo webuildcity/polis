@@ -9,6 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='core/map.html')),
+
     url(r'^begriffe/$', 'wbc.process.views.process', name="process"),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
 
@@ -20,7 +21,6 @@ urlpatterns = patterns('',
     
     url(r'^projects/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
     url(r'^projects/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
-
 
     #tags
     url(r'^tags/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.tags.views.tagview', name='tag'),

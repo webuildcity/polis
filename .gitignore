@@ -9,4 +9,6 @@ media_root
 
 data/database
 env
-sqlitefile
+
+.coverage
+htmlcov
