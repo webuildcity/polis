@@ -14,19 +14,19 @@ urlpatterns = patterns('',
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
 
     # projects
-    url(r'^projects/$', RedirectView.as_view(url='/liste/', permanent=True)),
-    url(r'^projects/neu/$', ProjectCreate.as_view(), name='project_create'),
-    url(r'^projects/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
-    url(r'^projects/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='projectslug'),
+    url(r'^projekte/$', RedirectView.as_view(url='/liste/', permanent=True)),
+    url(r'^projekt/neu/$', ProjectCreate.as_view(), name='project_create'),
+    url(r'^projekt/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
+    url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='projectslug'),
     
-    url(r'^projects/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
-    url(r'^projects/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
+    url(r'^projekt/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
+    url(r'^projekt/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
 
     #tags
     url(r'^tags/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.tags.views.tagview', name='tag'),
     
     #stakeholder
-    url(r'^stakeholders/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.stakeholder.views.stakeholderview', name='stakeholder'),
+    url(r'^akteur/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.stakeholder.views.stakeholderview', name='stakeholder'),
     
     # veroeffentlichungen neu
     url(r'^veroeffentlichungen/neu/$', PublicationCreate.as_view(), name='publication_create'),
@@ -38,9 +38,9 @@ urlpatterns = patterns('',
     url(r'^veroeffentlichungen/feed/$', PublicationFeed(), name="publication_feed_url"),
 
     # news module
-    url(r'^notifications/abonnieren/$', 'wbc.notifications.views.subscribe'),
-    url(r'^notifications/abbestellen/(?P<email>.*)$', 'wbc.notifications.views.unsubscribe'),
-    url(r'^notifications/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
+    url(r'^benachrichtigungen/abonnieren/$', 'wbc.notifications.views.subscribe'),
+    url(r'^benachrichtigungen/abbestellen/(?P<email>.*)$', 'wbc.notifications.views.unsubscribe'),
+    url(r'^benachrichtigungen/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),
