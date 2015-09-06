@@ -67,10 +67,6 @@ urlpatterns = patterns('',
     (r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     (r'^sitemap\.xml$', TemplateView.as_view(template_name='sitemap.xml', content_type='text/plain')),
 
-    #rolodex
-    # url(r'^rolodex/', include('rolodex.urls')),
-    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
