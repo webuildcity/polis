@@ -70,6 +70,6 @@ urlpatterns = patterns('',
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
-    url(r'^search/', include('haystack.urls')),
+    url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
 
 )
