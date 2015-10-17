@@ -20,6 +20,7 @@ INSTALLED_APPS = (
     'rest_framework_gis',
     'widget_tweaks',
     'markdown',
+    'compressor',
     # we build city apps
     'wbc.core',
     'wbc.region',
@@ -31,14 +32,13 @@ INSTALLED_APPS = (
     'wbc.projects',
     'wbc.events',
     #'wbc.buildings'
-    #rolodex
-   # 'rolodex',
+    #'rolodex',
     'sortedm2m',
     'photologue',
-    # 'sorl.thumbnail',
+    #'sorl.thumbnail',
     'taggit',
     'taggit_templatetags',
-    # 'taggit_labels'
+    #'taggit_labels'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,7 +93,12 @@ STATICFILES_DIRS = (
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
 LOGIN_URL = '/login'
