@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^projekt/neu/$', ProjectCreate.as_view(), name='project_create'),
     url(r'^projekt/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
     url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='projectslug'),
+    # url(r'^project_map/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project_for_map', name='project_map'),
 
     url(r'^projekt/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
     url(r'^projekt/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
@@ -71,6 +72,7 @@ urlpatterns = patterns('',
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
     url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
-    url(r'^suche/', 'wbc.core.views.search', name='search'),
+    url(r'^search/', 'wbc.core.views.search'),
+    # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
 )
