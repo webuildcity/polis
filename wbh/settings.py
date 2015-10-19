@@ -38,7 +38,8 @@ INSTALLED_APPS = (
     # 'sorl.thumbnail',
     'taggit',
     'taggit_templatetags',
-    # 'taggit_labels'
+    # 'taggit_labels',
+    'haystack'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,4 +115,12 @@ DEFAULT_VIEW = {
     'lat': 53.550556,
     'lon': 10.0,
     'zoom': 11
+}
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'haystack',
+    },
 }
