@@ -32,13 +32,14 @@ INSTALLED_APPS = (
     'wbc.projects',
     'wbc.events',
     #'wbc.buildings'
-    #'rolodex',
+    # 'rolodex',
     'sortedm2m',
     'photologue',
-    #'sorl.thumbnail',
+    # 'sorl.thumbnail',
     'taggit',
     'taggit_templatetags',
-    #'taggit_labels'
+    # 'taggit_labels',
+    'haystack'
 )
 
 MIDDLEWARE_CLASSES = (

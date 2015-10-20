@@ -18,16 +18,16 @@ urlpatterns = patterns('',
     url(r'^projekt/neu/$', ProjectCreate.as_view(), name='project_create'),
     url(r'^projekt/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
     url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='projectslug'),
-    
+
     url(r'^projekt/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
     url(r'^projekt/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
 
     #tags
     url(r'^tags/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.tags.views.tagview', name='tag'),
-    
+
     #stakeholder
     url(r'^akteur/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.stakeholder.views.stakeholderview', name='stakeholder'),
-    
+
     # veroeffentlichungen neu
     url(r'^veroeffentlichungen/neu/$', PublicationCreate.as_view(), name='publication_create'),
     url(r'^veroeffentlichungen/(?P<pk>[0-9]+)/bearbeiten/$', PublicationUpdate.as_view(), name='publication_update'),
@@ -69,5 +69,8 @@ urlpatterns = patterns('',
 
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
+
+    url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
+    url(r'^suche/', 'wbc.core.views.search', name='search'),
 
 )
