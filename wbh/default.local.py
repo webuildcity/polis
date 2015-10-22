@@ -35,6 +35,14 @@ DATABASES = {
     # }
 }
 
+HAYSTACK_CONNECTIONS = {
+    # 'default': {
+    #     'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+    #     'URL': 'http://127.0.0.1:9200/',
+    #     'INDEX_NAME': 'haystack',
+    # },
+}
+
 SITE_TITLE = 'Wir bauen Hamburg'
 SITE_ROOT = os.path.dirname(os.path.dirname(__file__))
 SITE_URL = 'http://localhost:8000'

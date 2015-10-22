@@ -20,6 +20,7 @@ INSTALLED_APPS = (
     'rest_framework_gis',
     'widget_tweaks',
     'markdown',
+    'compressor',
     # we build city apps
     'wbc.core',
     'wbc.region',
@@ -31,8 +32,7 @@ INSTALLED_APPS = (
     'wbc.projects',
     'wbc.events',
     #'wbc.buildings'
-    #rolodex
-   # 'rolodex',
+    # 'rolodex',
     'sortedm2m',
     'photologue',
     # 'sorl.thumbnail',
@@ -94,7 +94,12 @@ STATICFILES_DIRS = (
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
 LOGIN_URL = '/login'
@@ -102,7 +107,7 @@ LOGIN_URL = '/login'
 FEED_TITLE = "Wir bauen Hamburg (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Hamburg"
 
-TILES_URL = 'http://tiles.we-build.city/hamburg/'
+TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
 TILES_OPT = {
     'attribution': 'Map data &copy; 2012 OpenStreetMap contributors',
     'maxZoom': 17,
@@ -115,12 +120,4 @@ DEFAULT_VIEW = {
     'lat': 53.550556,
     'lon': 10.0,
     'zoom': 11
-}
-
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-        'URL': 'http://127.0.0.1:9200/',
-        'INDEX_NAME': 'haystack',
-    },
 }
