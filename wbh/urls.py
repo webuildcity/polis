@@ -70,7 +70,7 @@ urlpatterns = patterns('',
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
-    url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
-    url(r'^suche/', 'wbc.core.views.search', name='search'),
+    # url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
+    # url(r'^suche/', 'wbc.core.views.search', name='search'),
 
 )
