@@ -8,7 +8,7 @@ from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpda
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='core/map.html')),
+    url(r'^$', TemplateView.as_view(template_name='core/startpage.html')),
 
     url(r'^begriffe/$', 'wbc.process.views.process', name="process"),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
@@ -72,7 +72,8 @@ urlpatterns = patterns('',
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
     url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
-    url(r'^search/', 'wbc.core.views.search'),
+    url(r'^search/', 'wbc.core.views.search', name="search"),
+    url(r'^karte/', 'wbc.core.views.map', name="map"),
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
 )
