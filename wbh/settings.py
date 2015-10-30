@@ -107,7 +107,9 @@ LOGIN_URL = '/login'
 FEED_TITLE = "Wir bauen Hamburg (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Hamburg"
 
-TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
+
+TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.jpg'
+
 TILES_OPT = {
     'attribution': 'Map data &copy; 2012 OpenStreetMap contributors',
     'maxZoom': 17,
