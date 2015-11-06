@@ -31,7 +31,6 @@ INSTALLED_APPS = (
     'wbc.tags',
     'wbc.projects',
     'wbc.events',
-    'wbc.accounts',
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',

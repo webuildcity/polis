@@ -42,9 +42,6 @@ urlpatterns = patterns('',
     url(r'^benachrichtigungen/abbestellen/(?P<email>.*)$', 'wbc.notifications.views.unsubscribe'),
     url(r'^benachrichtigungen/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
-    # accounts module
-    url(r'^benutzer/registrieren/$', 'wbc.accounts.views.register'),
-
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),
     url(r'^process/', include('wbc.process.urls')),
