@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView,RedirectView
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
@@ -43,7 +44,28 @@ urlpatterns = patterns('',
     url(r'^benachrichtigungen/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
     # accounts module
-    url(r'^benutzer/registrieren/$', 'wbc.accounts.views.register'),
+    url(r'^registrieren/$', 'wbc.accounts.views.register'),
+
+    url(r'^passwort/aendern/$', auth_views.password_change, {
+            'template_name': 'accounts/password_change.html'
+        }, name='password_change'),
+    url(r'^passwort/aendern/fertig/$', auth_views.password_change_done, {
+            'template_name': 'accounts/password_change_done.html'
+        }, name='password_change_done'),
+    url(r'^passwort/vergessen/$', auth_views.password_reset, {
+            'template_name': 'accounts/password_reset.html',
+            'email_template_name': 'accounts/mail/password_reset.html',
+            'subject_template_name': 'accounts/mail/password_reset_subject.txt'
+        }, name='password_reset'),
+    url(r'^passwort/vergessen/info/$', auth_views.password_reset_done, {
+            'template_name': 'accounts/password_reset_done.html'
+        }, name='password_reset_done'),
+    url(r'^passwort/vergessen/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', auth_views.password_reset_confirm, {
+            'template_name': 'accounts/password_reset_confirm.html'
+        }, name='password_reset_confirm'),
+    url(r'^passwort/vergessen/fertig/$', auth_views.password_reset_complete, {
+            'template_name': 'accounts/password_reset_complete.html'
+        }, name='password_reset_complete'),
 
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),
@@ -60,8 +82,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # user login
-    url(r'^login/', 'wbc.core.views.login_user'),
-    url(r'^logout/', 'wbc.core.views.logout_user'),
+    url(r'^login/', 'wbc.core.views.login_user', name='login'),
+    url(r'^logout/', 'wbc.core.views.logout_user', name='logout'),
 
     # serve media files
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
