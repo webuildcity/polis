@@ -1,8 +1,15 @@
 # coding: utf-8
-import os,subprocess,json,urllib2,time,sys,re
+import os
+import subprocess
+import json
+import urllib2
+import time
+import re
+from datetime import datetime
 
 from wbc.region.models import Quarter
 from wbc.projects.models import Project
+
 
 class ProjectFetcher():
 
@@ -31,7 +38,7 @@ class ProjectFetcher():
                 pass
 
             # call org2org to fetch the bplan geojson from the FIZ-Broker
-            print "querying geodinste-hamburg.de WFS server"
+            print "querying geodienste-hamburg.de WFS server"
             cmd = 'ogr2ogr -overwrite -s_srs EPSG:25832 -t_srs WGS84 -f geoJSON /tmp/imverfahren.json WFS:"http://geodienste-hamburg.de/HH_WFS_Bebauungsplaene" app:imverfahren'
             subprocess.call(cmd,shell=True);
 
@@ -96,8 +103,21 @@ class ProjectFetcher():
                 project_values['active'] = True
 
             # update the place or create a new one
-            project,created = Project.objects.update_or_create(identifier=project_values['identifier'],defaults=project_values)
+            project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
             if created:
+                importEvent = {
+                    'description': "Bauprojekt aus dem  Planportal importiert.",
+                    'link': "http://www.hamburg.de/planportal/",
+                    'begin': datetime.now()
+                }
+
+                link = feature['properties'].get('hotlink_iv', '')
+                if link:
+                    project.link = link.strip()
+                    importEvent['link'] = link.strip()
+
+                project.events.create(**importEvent)
+
                 n += 1
                 try:
                     for quarter in quarters:
@@ -109,7 +129,7 @@ class ProjectFetcher():
 
                 if project.address == '':
                     # get address from open street map
-                    url = "http://nominatim.openstreetmap.org/reverse?format=json&lat=%s&lon=%s&zoom=18&addressdetails=1" % (project.lat,project.lon)
+                    url = "http://nominatim.openstreetmap.org/reverse?format=json&lat=%s&lon=%s&zoom=18&addressdetails=1" % (project.lat, project.lon)
 
                     response = urllib2.urlopen(url).read()
                     data = json.loads(response)
@@ -119,9 +139,6 @@ class ProjectFetcher():
                         project.address = ''
                     time.sleep(1.2)
 
-                    link = feature['properties']['hotlink_iv']
-                    if link:
-                        project.link = link.strip()
 
                 project.save()
 
