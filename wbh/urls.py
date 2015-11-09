@@ -11,7 +11,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', StartView.as_view(), name='start'),
 
-    url(r'^begriffe/$', 'wbc.process.views.process', name="process"),
+    url(r'^lexikon/$', 'wbc.process.views.process', name="process"),
+    url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.process.views.process', name="process_step"),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
 
     # projects
