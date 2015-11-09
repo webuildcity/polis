@@ -80,4 +80,6 @@ urlpatterns = patterns('',
     url(r'^karte/', 'wbc.core.views.map', name="map"),
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
+    url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint')
+
 )

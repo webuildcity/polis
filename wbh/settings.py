@@ -98,6 +98,8 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
+COMPRESS_ENABLED = True
+
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
@@ -123,3 +125,4 @@ DEFAULT_VIEW = {
     'lon': 10.0,
     'zoom': 11
 }
+
