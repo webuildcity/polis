@@ -3,13 +3,13 @@ from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView,RedirectView
 from django.contrib import admin
 
-from wbc.core.views import SearchView
+from wbc.core.views import SearchView, StartView
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='core/startpage.html')),
+    url(r'^$', StartView.as_view(), name='start'),
 
     url(r'^begriffe/$', 'wbc.process.views.process', name="process"),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
