@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'taggit',
     'taggit_templatetags',
     # 'taggit_labels',
-    'haystack'
+    'haystack',
+    'registration'
 )
 
 MIDDLEWARE_CLASSES = (

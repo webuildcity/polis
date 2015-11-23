@@ -4,12 +4,14 @@ from django.views.generic import TemplateView,RedirectView
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
+from registration.views import RegistrationView
+
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='core/map.html')),
+    url(r'^$', TemplateView.as_view(template_name='core/map.html'), name='home'),
 
     url(r'^begriffe/$', 'wbc.process.views.process', name="process"),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
@@ -44,7 +46,8 @@ urlpatterns = patterns('',
     url(r'^benachrichtigungen/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
     # accounts module
-    url(r'^registrieren/$', 'wbc.accounts.views.register'),
+    url(r'^registrieren/$', RegistrationView.as_view(template_name='accounts/registration_form.html')),
+    url(r'^profil/$', 'wbc.accounts.views.profile_update', name='profile_update'),
 
     url(r'^passwort/aendern/$', auth_views.password_change, {
             'template_name': 'accounts/password_change.html'
