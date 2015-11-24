@@ -3,14 +3,16 @@ from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView,RedirectView
 from django.contrib import admin
 
+from wbc.core.views import SearchView, StartView
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='core/map.html')),
+    url(r'^$', StartView.as_view(template_name="core/hamburg.html"), name='start'),
 
-    url(r'^begriffe/$', 'wbc.process.views.process', name="process"),
+    url(r'^lexikon/$', 'wbc.process.views.process', name="process"),
+    url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.process.views.process', name="process_step"),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
 
     # projects
@@ -18,6 +20,10 @@ urlpatterns = patterns('',
     url(r'^projekt/neu/$', ProjectCreate.as_view(), name='project_create'),
     url(r'^projekt/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
     url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='projectslug'),
+    # url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/map/$', 'wbc.projects.views.projectslug', name='projectslug'),
+    # url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/gallery/$', 'wbc.projects.views.projectslug', name='projectslug'),
+    # url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/timeline/$', 'wbc.projects.views.projectslug', name='projectslug'),
+    # url(r'^project_map/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project_for_map', name='project_map'),
 
     url(r'^projekt/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
     url(r'^projekt/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
@@ -70,7 +76,11 @@ urlpatterns = patterns('',
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
-    # url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
-    # url(r'^suche/', 'wbc.core.views.search', name='search'),
+    url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
+    url(r'^suche/', SearchView.as_view(), name="search"),
+    url(r'^karte/', 'wbc.core.views.map', name="map"),
+    # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
+
+    url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint')
 
 )
