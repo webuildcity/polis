@@ -139,9 +139,6 @@ class ProjectFetcher():
                         project.address = ''
                     time.sleep(1.2)
 
-
-                project.save()
-
                 print project,'(' + ', '.join([str(quarter) for quarter in quarters]) + ')'
 
         print n,'projects created'
