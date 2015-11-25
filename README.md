@@ -14,15 +14,21 @@ More about the OpenSource project: [we-build.city][we-build-city] or the company
 2. Clone [https://github.com/webuildcity/wbc][wbc-github] to a location of your choice.
 3. Clone this repository, [https://github.com/webuildcity/utopia][utopia-github], to a location of your choice.
 3.1 Rename the sub-directory "utopia" to your own "city name" i.e. "paris". 
-4. Copy `/path/to/utopia/utopia/default.local.py` to `/path/to/utopia/utopia/local.py`.
-5. Edit `/path/to/utopia/utopia/local.py` to match your setup. At least edit the path to the 'lib' directory within the 'wbc' repository and update the database adapter settings. For testing purposes, use the sqlite3 adapter.
-6. Install the dependencies using pip `pip install -r /path/to/utopia/requirements.txt`. You might want to use a [virtualenv][virtualenv] for this.
-7. Change to the `utopia` directory and execute `python manage.py migrate` to set up the database structure.
-8. Use `python manage.py load-fixtures` to load test data of the administrative information about our "utopia test city" Hamburg into the database.
-9. Run `python manage.py createsuperuser` to create an admin account.
-10. Start the development server using `python manage.py runserver`.
-11. Open a browser and go to [http://localhost:8000/][utopia-home]. A map of our "utopia test city" Hamburg should appear.
-12. Use [http://localhost:8000/admin/][utopia-admin] to log in. Under *region* and *process*, districts, departments, places and publications can be added or edited.
+4. Make a copy of your local settings:
+4.1 Copy `/path/to/utopia/city/default.local.py` to `/path/to/utopia/city/local.py`.
+4.2 Edit `/path/to/utopia/city/local.py` to match your setup. 
+
+4.3 Edit the path to the 'wbc' library directory within the 'wbc' repository and update the database adapter settings. For testing purposes, use the sqlite3 adapter.
+4.4 Edit the `HAYSTACK_CONNECTIONS` block, edit the name of the index.
+
+7. Install the dependencies using pip `pip install -r /path/to/city/requirements.txt`. You might want to use a [virtualenv][virtualenv] for this.
+8. Change to the home-directory of the city repository and execute `python manage.py migrate` to set up the database structure.
+
+9. Use `python manage.py load-fixtures` to load test data of the administrative information about our "utopia test city" Hamburg into the database.
+10. Run `python manage.py createsuperuser` to create an admin account.
+11. Start the development server using `python manage.py runserver`.
+12. Open a browser and go to [http://localhost:8000/][utopia-home]. A map of our "utopia test city" Hamburg should appear.
+13. Use [http://localhost:8000/admin/][utopia-admin] to log in. Under *region* and *process*, districts, departments, places and publications can be added or edited.
 
 
 
