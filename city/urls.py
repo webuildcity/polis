@@ -9,7 +9,7 @@ from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpda
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', StartView.as_view(template_name="core/hamburg.html"), name='start'),
+    url(r'^$', StartView.as_view(template_name="core/city.html"), name='start'),
 
     url(r'^lexikon/$', 'wbc.process.views.process', name="process"),
     url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.process.views.process', name="process_step"),
