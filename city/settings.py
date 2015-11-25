@@ -70,8 +70,8 @@ TEMPLATES = [
     },
 ]
 
-ROOT_URLCONF = 'hamburg.urls'
-WSGI_APPLICATION = 'hamburg.wsgi.application'
+ROOT_URLCONF = 'city.urls'
+WSGI_APPLICATION = 'city.wsgi.application'
 SITE_ID = 1
 
 INTERNAL_IPS = ('127.0.0.1',)
