@@ -1,6 +1,6 @@
 # coding=utf8
 import os,sys
-sys.path.append('/path/to/wbc/lib')
+#sys.path.append('/path/to/wbc/lib')
 
 DEBUG = True
 
@@ -43,12 +43,12 @@ HAYSTACK_CONNECTIONS = {
     # },
 }
 
-SITE_TITLE = 'Wir bauen Hamburg'
+SITE_TITLE = 'Utopia - by www.We-Build.City'
 SITE_ROOT = os.path.dirname(os.path.dirname(__file__))
 SITE_URL = 'http://localhost:8000'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_FROM = 'info@wir-bauen-hamburg.de'
+EMAIL_FROM = 'utopia@we-build.city'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'localhost'
