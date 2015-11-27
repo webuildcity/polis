@@ -1,19 +1,41 @@
-$primary-color-dark: #1b2342;
-$primary-color: #434b6b;
-$primary-color-light: #8288a1;
+/* Fonts */
+
+@font-face {
+  font-family: titillium;
+  src: url('/static/font/TitilliumText25L.otf'); }
+
+@font-face {
+  font-family: dejavu;
+  src: url('/static/font/DejaVuSansCondensed.ttf'); }
+
+@font-face {
+  font-family: dejavu;
+  src: url('/static/font/DejaVuSansCondensed-Bold.ttf');
+  font-weight: bold; }
+
+$font-nav: bold 1em titillium;
+$font-body-copy: 1em dejavu;
+$font-h1: bold 2.25em dejavu;
+$font-h2: 1.75em titillium;
+$font-h3: bold 1em/1.25em dejavu;
+$font-h4: bold 0.875em/1.25em dejavu;
+
+/* Palette */
+
+$primary-color: #c20e1e;
+$primary-color-dark: darken($primary-color, 20%);
+$primary-color-light: lighten($primary-color, 80%);
 
 
 $headline-color: $primary-color;
-$highlight-color: #4caf50;
+$highlight-color: $primary-color;
 
-$primary-text: #212121;
+$primary-text: #646262;
 $secondary-text: #fff;
-$primary-secondary: #727272;
-$divider-color: #b6b6b6;
 
 $icon-color: #fff;
 
-
+$background-color: #fff;
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
 $startpage-image: url(static('img/startpage.jpg'));
