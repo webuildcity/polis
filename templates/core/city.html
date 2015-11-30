@@ -8,9 +8,10 @@
                 <div id="top-container">
                     <div class="container">
                         <div class="top-overlay text-center">
-                            <h1>Informiere dich über Bauvorhaben in deinem Stadtteil.</h1>
+                            <h1>Moin!   Willkommen in der Demografiewerkstatt.</h1>
+                            <h3>Beteilige dich an der Zukunftsgestaltung deines Landkreis Friesland - hier online!</h3>
                             <div class="search-container">
-                                <wbc-search text="Suche nach Themen, Bauprojekten oder Stadtteilen"></wbc-search>
+                                <wbc-search text="Suche nach Euren Ideen, Veranstaltungen, Lösungsvorschlägen, Projekten, usw."></wbc-search>
                             </div>
                         </div>
                     </div>
@@ -22,11 +23,11 @@
             {% block nav-boxes %}
             
             <div class="bottom-block">
-            <h2 class="wbc-headline"> Was können Sie hier tun? </h2>
+            <h2 class="wbc-headline"> Was kannst Du hier tun?</h2>
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <p>Sie können sich über <a href="{% url 'search' %}">laufende Stadtplanungsprojekte</a> informieren, detaillierte Informationen zu  bestimmten Projekten (z.B. [Tag-Olympia, Tag-Elbphilharmonie, Tag-Hildegarden] bekommen und auf einer <a href="{% url 'search' %}">Karte</a>   stöbern, was gerade in Hamburg passiert. Darüber hinaus lernen Sie <a href="{% url 'process' %}">Stadtplanungs- und Verwaltungsprozesse</a> besser zu verstehen.</p>
+              <p>Du kannst dich hier &uuml;ber die  <a href="{% url 'search' %}">laufenden Ideen & L&ouml;sungsans&auml;tze</a> informieren, dich beteiligen und immer auf dem neusten Stand bleiben!</p> 
 
               <div id="navigation-boxes" class="container">
 
@@ -34,7 +35,7 @@
                     <a href="{% url 'search' %}">
                         <div class="teaser">
                             <i class='fa fa-search'></i>
-                            <p>Suche nach Themen, Bauprojekten oder Stadtteilen.</p>
+                            <p>Suche nach Ideen, Projekten oder Regionen.</p>
                         </div>
                     </a>
                 </div>
@@ -42,7 +43,7 @@
                     <a href="{% url 'process' %}">
                         <div class="teaser">
                             <i class='fa fa-book'></i>
-                            <p>Lexikon: Informiere dich über die Gesetzeslage in deiner Stadt</p>
+                            <p>Lexikon: Informiere dich über die Demografiewerkstatt.</p>
                         </div>
                     </a>
                 </div>
@@ -50,7 +51,7 @@
                     <a href="{% url 'map' %}">
                         <div class="teaser">
                             <i class='fa fa-bell-o'></i>
-                            <p>Erhalte Benachrichtigungen zu Bauprojekten deiner Wahl.</p>
+                            <p>Erhalte Benachrichtigungen zu Projekten die dich interessieren!</p>
                         </div>
                     </a>
                 </div>
@@ -63,7 +64,7 @@
 <!-- Optional Navigation Menu at the bottom of the  -->
 <!-- To activate, remove the comments in the startpage.html> -->
 
-            {% block nav-tabs %}
+<!--        {% block nav-tabs %}
 
             <ul class="nav nav-tabs" data-tabs="tabs">
                     <li class="active"><a href="#start-tab" data-toggle="tab">Startseite</a></li>
@@ -71,7 +72,7 @@
                     <li><a href="#" data-toggle="tab">Impressum</a></li>
                   </ul> 
 
-            {% endblock %}
+            {% endblock %} -->
 
 
 <!-- Content Blocks i.e. with questions or other content -->
@@ -80,14 +81,11 @@
 
             <!-- block -->
             <div class="bottom-block">
-                <h2 class="wbc-headline">Wie kann mich Wir bauen Hamburg unterstützen?</h2>
+                <h2 class="wbc-headline">Was ist die Demografiewerkstatt?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    Bleiben Sie auf dem Laufenden durch regelmäßige Besuche und E-Mail-Benachrichtungen.
-                    <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> bekommt regelmäßig und automatisiert neue
-                    Informationen vom "Transparenz-Portal"[transparenz.hamburg.de] der Freien- und Hansestadt
-                    Hamburg. [hamburg.de]
+                    Die <strong>Demografiewerkstatt</strong> erm&ouml;glicht es Jugendlichen, sich wirkungsvoll an der politischen Gestaltung des demografischen Wandels in ihrer Region zu beteiligen und eigene Lösungsans&auml;tze zu entwickeln. Es handelt sich um eine Weiterentwicklung des Konzeptes der Zukunftswerkstatt mit Elementen des Stationenlaufs, die auch im Großgruppensetting durchgeführt werden kann. <a href="{% url 'process' %}">Weitere Informationen hier.</a>
                   </p>
                 </div>
             </div>
@@ -95,15 +93,11 @@
             <!-- block -->
             
             <div class="bottom-block">
-                <h2 class="wbc-headline">Wer betreibt diese Platform?</h2>
+                <h2 class="wbc-headline">Wer betreibt diese Plattform?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> ist eine freie Open Source Software
-                    Plattform die von We-Build.City [www.we-build.city] betrieben wird. Die Software wurde
-                    im Rahmen der Open Knowledge-Labs des [CodeforBerlins] und [CodeforHamburgs] entwickelt
-                    sowie von einer einer Förderung der EU-Kommission mitfinanziert.
-                    Wir verstehen uns als Brückenbauer zwischen Stadt, Verwaltung, Bürgern und Investoren. Gute und effektive Kommunikation ist in unseren Augen das A und O einer gelungenen Stadtentwicklung und die Grundlage von Demokratie. [services.we-build.city].
+                    Die Demografie-Werkstatt Friesland wird bereitgestellt von der Leuphana Universität Lüneburg. Das Projekt wird im Rahmen des Forschungsprojektes "Jugend-Demografie-Dialog" durchgeführt und vom Bundesministerium finanziert.
                   </p>
                 </div>
             </div>

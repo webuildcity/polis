@@ -106,7 +106,7 @@ COMPRESS_PRECOMPILERS = (
 
 LOGIN_URL = '/login'
 
-FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
+FEED_TITLE = "Jugend-Demografie-Dialog - by www.We-Build.City (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
 
 
