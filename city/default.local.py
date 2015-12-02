@@ -43,12 +43,12 @@ HAYSTACK_CONNECTIONS = {
     # },
 }
 
-SITE_TITLE = 'Utopia - by www.We-Build.City'
+SITE_TITLE = 'Polis - by www.We-Build.City'
 SITE_ROOT = os.path.dirname(os.path.dirname(__file__))
 SITE_URL = 'http://localhost:8000'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_FROM = 'utopia@we-build.city'
+EMAIL_FROM = 'polis@we-build.city'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'localhost'
