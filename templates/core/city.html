@@ -1,42 +1,148 @@
 {% extends 'core/startpage.html' %}
 {% load staticfiles %}
 
+<!-- In this file you can edit the content of the wbc-startpage -->
 
-{% block description %}
-<p>Sie können sich über <a href="{% url 'search' %}">laufende Stadtplanungsprojekte</a> informieren,
-  detaillierte Informationen zu bestimmten Projekten (z.B. [Tag-Olympia, Tag-Elbphilharmonie, Tag-Hildegarden]
-  bekommen und auf einer <a href="{% url 'search' %}">Karte</a> stöbern, was gerade in Hamburg passiert.
-  Darüber hinaus lernen Sie <a href="{% url 'process' %}">Stadtplanungs- und Verwaltungsprozesse</a>
-  besser zu verstehen.</p>
-{% endblock %}
+<!-- Top of the startpage with headline, search bar and background image -->
+            {% block top %}
+                <div id="top-container">
+                    <div class="container">
+                        <div class="top-overlay text-center">
+                            <h1>Informiere dich über Bauvorhaben in deinem Stadtteil.</h1>
+                            <div class="search-container">
+                                <wbc-search text="Suche nach Themen, Bauprojekten oder Stadtteilen"></wbc-search>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
 
-{% block questions %}
-<div class="bottom-block">
-    <h2 class="wbc-headline">Wie kann mich Wir bauen Hamburg unterstützen?</h2>
-    <div class="wbc-divider"></div>
-    <div class="container">
-      <p>
-        Bleiben Sie auf dem Laufenden durch regelmäßige Besuche und E-Mail-Benachrichtungen.
-        <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> bekommt regelmäßig und automatisiert neue
-        Informationen vom <a href="https://transparenz.hamburg.de">Transparenz-Portal</a> der Freien-
-        und Hansestadt <a href="https://www.hamburg.de">Hamburg</a>.
-      </p>
-    </div>
-</div>
-<div class="bottom-block">
-    <h2 class="wbc-headline">Wer betreibt diese Platform?</h2>
-    <div class="wbc-divider"></div>
-    <div class="container">
-      <p>
-        <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> ist eine freie Open Source Software
-        Plattform die von <a href="http://www.we-build.city">We-Build.City</a> betrieben wird.
-        Die Software wurde im Rahmen der Open Knowledge-Labs <a href"http://codefor.de/berlin/">Code for Berlin</a>
-        und <a href="http://codefor.de/hamburg/">Code for Hamburg</a> entwickelt sowie von einer
-        einer Förderung der EU-Kommission mitfinanziert.
-        Wir verstehen uns als Brückenbauer zwischen Stadt, Verwaltung, Bürgern und Investoren.
-        Gute und effektive Kommunikation ist in unseren Augen das A und O einer gelungenen
-        Stadtentwicklung und die Grundlage von Demokratie.
-      </p>
-    </div>
-</div>
-{% endblock %}
+
+<!-- Block of Navigation Boxes -->
+            {% block nav-boxes %}
+            
+            <div class="bottom-block">
+            <h2 class="wbc-headline"> Was können Sie hier tun? </h2>
+            <div class="wbc-divider"></div>
+            <div class="container">
+
+              <p>Sie können sich über <a href="{% url 'search' %}">laufende Stadtplanungsprojekte</a> informieren, detaillierte Informationen zu  bestimmten Projekten (z.B. [Tag-Olympia, Tag-Elbphilharmonie, Tag-Hildegarden] bekommen und auf einer <a href="{% url 'search' %}">Karte</a>   stöbern, was gerade in Hamburg passiert. Darüber hinaus lernen Sie <a href="{% url 'process' %}">Stadtplanungs- und Verwaltungsprozesse</a> besser zu verstehen.</p>
+
+              <div id="navigation-boxes" class="container">
+
+                <div class="col-md-4">
+                    <a href="{% url 'search' %}">
+                        <div class="teaser">
+                            <i class='fa fa-search'></i>
+                            <p>Suche nach Themen, Bauprojekten oder Stadtteilen.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'process' %}">
+                        <div class="teaser">
+                            <i class='fa fa-book'></i>
+                            <p>Lexikon: Informiere dich über die Gesetzeslage in deiner Stadt</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'map' %}">
+                        <div class="teaser">
+                            <i class='fa fa-bell-o'></i>
+                            <p>Erhalte Benachrichtigungen zu Bauprojekten deiner Wahl.</p>
+                        </div>
+                    </a>
+                </div>
+              </div>
+            </div>
+            {% endblock %}
+
+
+
+<!-- Optional Navigation Menu at the bottom of the  -->
+<!-- To activate, remove the comments in the startpage.html> -->
+
+            {% block nav-tabs %}
+
+            <ul class="nav nav-tabs" data-tabs="tabs">
+                    <li class="active"><a href="#start-tab" data-toggle="tab">Startseite</a></li>
+                    <li><a href="#news-tab" data-toggle="tab">Aktuelles</a></li>
+                    <li><a href="#" data-toggle="tab">Impressum</a></li>
+                  </ul> 
+
+            {% endblock %}
+
+
+<!-- Content Blocks i.e. with questions or other content -->
+
+            {% block questions %}
+
+            <!-- block -->
+            <div class="bottom-block">
+                <h2 class="wbc-headline">Wie kann mich Wir bauen Hamburg unterstützen?</h2>
+                <div class="wbc-divider"></div>
+                <div class="container">
+                  <p>
+                    Bleiben Sie auf dem Laufenden durch regelmäßige Besuche und E-Mail-Benachrichtungen.
+                    <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> bekommt regelmäßig und automatisiert neue
+                    Informationen vom "Transparenz-Portal"[transparenz.hamburg.de] der Freien- und Hansestadt
+                    Hamburg. [hamburg.de]
+                  </p>
+                </div>
+            </div>
+
+            <!-- block -->
+            
+            <div class="bottom-block">
+                <h2 class="wbc-headline">Wer betreibt diese Platform?</h2>
+                <div class="wbc-divider"></div>
+                <div class="container">
+                  <p>
+                    <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> ist eine freie Open Source Software
+                    Plattform die von We-Build.City [www.we-build.city] betrieben wird. Die Software wurde
+                    im Rahmen der Open Knowledge-Labs des [CodeforBerlins] und [CodeforHamburgs] entwickelt
+                    sowie von einer einer Förderung der EU-Kommission mitfinanziert.
+                    Wir verstehen uns als Brückenbauer zwischen Stadt, Verwaltung, Bürgern und Investoren. Gute und effektive Kommunikation ist in unseren Augen das A und O einer gelungenen Stadtentwicklung und die Grundlage von Demokratie. [services.we-build.city].
+                  </p>
+                </div>
+            </div>
+            {% endblock %}
+
+
+<!-- Upcomming Events -->
+
+<!--         {% if upcoming %}
+        <div class="bottom-block">
+            <h2 class="wbc-headline">Aktuelle Veranstaltungen &amp; Projekte mit Bürgerbeteiligung</h2>
+            <div class="wbc-divider"></div>
+            <div class="upcoming container">
+                    {% for project in upcoming %}
+                    <a href="{{project.get_absolute_url}}">
+                        <div class="project-description col-md-4">
+                            {% if project.gallery %}
+                            <img class="description_img" src="{{project.gallery.photos.all.0.get_description_url}}" />
+                            {% else %}
+                            <img class="description_img" src="{% static 'img/person_placeholder.png' %}" />
+                            {% endif %}
+                            <div>
+                                <h3>{{project.name}} {% if project.identifier %} ({{project.identifier}}) {% endif %}</h3>
+                                {% if project.address_obj %}
+                                <p >{{project.address_obj.street}}  {{ project.address_obj.streetnumber }}</p>
+                                <p>{{project.get_teaser}}</p>
+                                {% endif %}
+                            </div>
+                            {% if project.get_next_date %}
+                            <div class="next-date">
+                                <p title="Nächste Veranstaltung"><i class="fa fa-calendar"> </i>
+                                {{project.get_next_date.title}}</p>
+                                <p  class="date text-muted">{{project.get_next_date.begin}}</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </a>
+                    {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+-->

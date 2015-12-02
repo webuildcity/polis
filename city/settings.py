@@ -106,8 +106,8 @@ COMPRESS_PRECOMPILERS = (
 
 LOGIN_URL = '/login'
 
-FEED_TITLE = "Utopia - by www.We-Build.City (Veröffentlichungen)"
-FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Utopia - by www.We-Build.City"
+FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
+FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
 
 
 TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.jpg'
