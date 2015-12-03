@@ -39,3 +39,11 @@ $background-color: #fff;
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
 $startpage-image: url(static('img/startpage.jpg'));
+
+@mixin branding() {
+  padding-top: 9px;
+
+  img {
+      height: 24px;
+  }
+}
