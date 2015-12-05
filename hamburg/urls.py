@@ -49,35 +49,35 @@ urlpatterns = patterns('',
     url(r'^benutzerkonto/$', 'wbc.accounts.views.profile_update', name='profile_update'),
 
     # change password
-    url(r'^passwort/aendern/$', auth_views.password_change, {
+    url(r'^benutzerkonto/passwort/aendern/$', auth_views.password_change, {
             'template_name': 'accounts/password_change.html'
         }, name='password_change'),
-    url(r'^passwort/aendern/fertig/$', auth_views.password_change_done, {
+    url(r'^benutzerkonto/passwort/aendern/fertig/$', auth_views.password_change_done, {
             'template_name': 'accounts/password_change_done.html'
         }, name='password_change_done'),
 
     # reset password
-    url(r'^passwort/vergessen/$', auth_views.password_reset, {
-            'template_name': 'accounts/password_reset.html',
-            'email_template_name': 'accounts/mail/password_reset.html',
-            'subject_template_name': 'accounts/mail/password_reset_subject.txt'
+    url(r'^benutzerkonto/passwort/vergessen/$', auth_views.password_reset, {
+            'template_name': 'accounts/password_reset_form.html',
+            'email_template_name': 'accounts/password_reset_email.txt',
+            'subject_template_name': 'accounts/password_reset_subject.txt'
         }, name='password_reset'),
-    url(r'^passwort/vergessen/info/$', auth_views.password_reset_done, {
+    url(r'^benutzerkonto/passwort/vergessen/info/$', auth_views.password_reset_done, {
             'template_name': 'accounts/password_reset_done.html'
         }, name='password_reset_done'),
-    url(r'^passwort/vergessen/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', auth_views.password_reset_confirm, {
+    url(r'^benutzerkonto/passwort/vergessen/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', auth_views.password_reset_confirm, {
             'template_name': 'accounts/password_reset_confirm.html'
         }, name='password_reset_confirm'),
-    url(r'^passwort/vergessen/fertig/$', auth_views.password_reset_complete, {
+    url(r'^benutzerkonto/passwort/vergessen/fertig/$', auth_views.password_reset_complete, {
             'template_name': 'accounts/password_reset_complete.html'
         }, name='password_reset_complete'),
 
     # register account
-    url(r'^registrieren/$', RegistrationView.as_view(template_name='accounts/registration_form.html'), name='registration_register'),
-    url(r'^registrieren/info/$', TemplateView.as_view(template_name='accounts/registration_complete.html'), name='registration_complete'),
-    url(r'^aktivieren/komplett/$', TemplateView.as_view(template_name='accounts/activation_complete.html'), name='registration_activation_complete'),
-    url(r'^aktivieren/(?P<activation_key>\w+)/$', ActivationView.as_view(), name='registration_activate'),
-    url(r'^registrieren/geschlossen/$', TemplateView.as_view(template_name='accounts/registration_closed.html'), name='registration_disallowed'),
+    url(r'^benutzerkonto/registrieren/$', RegistrationView.as_view(), name='registration_register'),
+    url(r'^benutzerkonto/registrieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/registration_complete.html'), name='registration_complete'),
+    url(r'^benutzerkonto/aktivieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/activation_complete.html'), name='registration_activation_complete'),
+    url(r'^benutzerkonto/aktivieren/(?P<activation_key>\w+)/$', ActivationView.as_view(), name='registration_activate'),
+    url(r'^benutzerkonto/registrieren/geschlossen/$', TemplateView.as_view(template_name='registration/registration_closed.html'), name='registration_disallowed'),
 
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),

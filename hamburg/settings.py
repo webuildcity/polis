@@ -104,7 +104,8 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
-LOGIN_URL = '/login'
+LOGIN_URL = '/login/'
+LOGOUT_URL = '/logout/'
 
 FEED_TITLE = "Wir bauen Hamburg (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Hamburg"
