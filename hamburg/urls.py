@@ -4,7 +4,7 @@ from django.views.generic import TemplateView,RedirectView
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
-from registration.views import RegistrationView
+from registration.backends.default.views import RegistrationView, ActivationView
 
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
@@ -46,15 +46,17 @@ urlpatterns = patterns('',
     url(r'^benachrichtigungen/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
     # accounts module
-    url(r'^registrieren/$', RegistrationView.as_view(template_name='accounts/registration_form.html')),
-    url(r'^profil/$', 'wbc.accounts.views.profile_update', name='profile_update'),
+    url(r'^benutzerkonto/$', 'wbc.accounts.views.profile_update', name='profile_update'),
 
+    # change password
     url(r'^passwort/aendern/$', auth_views.password_change, {
             'template_name': 'accounts/password_change.html'
         }, name='password_change'),
     url(r'^passwort/aendern/fertig/$', auth_views.password_change_done, {
             'template_name': 'accounts/password_change_done.html'
         }, name='password_change_done'),
+
+    # reset password
     url(r'^passwort/vergessen/$', auth_views.password_reset, {
             'template_name': 'accounts/password_reset.html',
             'email_template_name': 'accounts/mail/password_reset.html',
@@ -69,6 +71,13 @@ urlpatterns = patterns('',
     url(r'^passwort/vergessen/fertig/$', auth_views.password_reset_complete, {
             'template_name': 'accounts/password_reset_complete.html'
         }, name='password_reset_complete'),
+
+    # register account
+    url(r'^registrieren/$', RegistrationView.as_view(template_name='accounts/registration_form.html'), name='registration_register'),
+    url(r'^registrieren/info/$', TemplateView.as_view(template_name='accounts/registration_complete.html'), name='registration_complete'),
+    url(r'^aktivieren/komplett/$', TemplateView.as_view(template_name='accounts/activation_complete.html'), name='registration_activation_complete'),
+    url(r'^aktivieren/(?P<activation_key>\w+)/$', ActivationView.as_view(), name='registration_activate'),
+    url(r'^registrieren/geschlossen/$', TemplateView.as_view(template_name='accounts/registration_closed.html'), name='registration_disallowed'),
 
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),

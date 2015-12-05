@@ -123,3 +123,7 @@ DEFAULT_VIEW = {
     'lon': 10.0,
     'zoom': 11
 }
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_EMAIL_HTML = False
+
