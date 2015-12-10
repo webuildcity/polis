@@ -6,10 +6,14 @@ from django.contrib import admin
 from wbc.core.views import SearchView, StartView
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
+from wbc.blog.views import BlogView
 admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', StartView.as_view(template_name="core/city.html"), name='start'),
+    
+    url(r'^blog/$', BlogView.as_view(), name='blog'),
+    url(r'^blog/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.blog.views.blogentry', name='blogentry'),
 
     url(r'^lexikon/$', 'wbc.process.views.process', name="process"),
     url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.process.views.process', name="process_step"),
@@ -20,10 +24,6 @@ urlpatterns = patterns('',
     url(r'^projekt/neu/$', ProjectCreate.as_view(), name='project_create'),
     url(r'^projekt/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
     url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='projectslug'),
-    # url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/map/$', 'wbc.projects.views.projectslug', name='projectslug'),
-    # url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/gallery/$', 'wbc.projects.views.projectslug', name='projectslug'),
-    # url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/timeline/$', 'wbc.projects.views.projectslug', name='projectslug'),
-    # url(r'^project_map/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project_for_map', name='project_map'),
 
     url(r'^projekt/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
     url(r'^projekt/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
@@ -54,6 +54,7 @@ urlpatterns = patterns('',
     url(r'^events/', include('wbc.events.urls')),
     url(r'^project/', include('wbc.projects.urls')),
     url(r'^stakeholder/', include('wbc.stakeholder.urls')),
+    url(r'^blog_api/', include('wbc.blog.urls')),
 
     # buildings
     # url(r'^buildings/(?P<pk>[0-9]+)/$', 'wbc.buildings.views.building', name='buildings'),
@@ -81,6 +82,7 @@ urlpatterns = patterns('',
     url(r'^karte/', 'wbc.core.views.map', name="map"),
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
-    url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint')
+    url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint'),
+    url('^markdown/', include( 'django_markdown.urls')),
 
 )

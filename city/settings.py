@@ -31,6 +31,7 @@ INSTALLED_APPS = (
     'wbc.tags',
     'wbc.projects',
     'wbc.events',
+    'wbc.blog',
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',
@@ -39,7 +40,8 @@ INSTALLED_APPS = (
     'taggit',
     'taggit_templatetags',
     # 'taggit_labels',
-    'haystack'
+    'haystack',
+    'django_markdown',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -98,7 +100,7 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
@@ -126,3 +128,5 @@ DEFAULT_VIEW = {
     'zoom': 11
 }
 
+#MARKDOWN SETTINGS
+MARKDOWN_EDITOR_SKIN = 'simple'
