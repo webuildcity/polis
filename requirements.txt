@@ -25,3 +25,5 @@ elasticsearch==1.7.0
 
 # uncomment this if you plan to use postgres
 #psycopg2>=2.5.1,<2.6
+
+django-markdown==0.8.4
