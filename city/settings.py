@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'wbc.projects',
     'wbc.events',
     'wbc.blog',
+    'wbc.accounts',
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',
@@ -42,6 +43,7 @@ INSTALLED_APPS = (
     # 'taggit_labels',
     'haystack',
     'django_markdown',
+    'registration'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,7 +108,8 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
-LOGIN_URL = '/login'
+LOGIN_URL = '/login/'
+LOGOUT_URL = '/logout/'
 
 FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
@@ -128,5 +131,9 @@ DEFAULT_VIEW = {
     'zoom': 11
 }
 
-#MARKDOWN SETTINGS
+
 MARKDOWN_EDITOR_SKIN = 'simple'
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_EMAIL_HTML = False
+INFO_EMAIL = "info@we-build.city"

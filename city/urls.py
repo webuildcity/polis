@@ -2,6 +2,9 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView,RedirectView
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
+
+from registration.backends.default.views import RegistrationView, ActivationView
 
 from wbc.core.views import SearchView, StartView
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
@@ -10,6 +13,7 @@ from wbc.blog.views import BlogView
 admin.autodiscover()
 
 urlpatterns = patterns('',
+
     url(r'^$', StartView.as_view(template_name="core/city.html"), name='start'),
     
     url(r'^blog/$', BlogView.as_view(), name='blog'),
@@ -48,6 +52,40 @@ urlpatterns = patterns('',
     url(r'^benachrichtigungen/abbestellen/(?P<email>.*)$', 'wbc.notifications.views.unsubscribe'),
     url(r'^benachrichtigungen/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
+    # accounts module
+    url(r'^benutzerkonto/$', 'wbc.accounts.views.profile_update', name='profile_update'),
+
+    # change password
+    url(r'^benutzerkonto/passwort/aendern/$', auth_views.password_change, {
+            'template_name': 'accounts/password_change.html'
+        }, name='password_change'),
+    url(r'^benutzerkonto/passwort/aendern/fertig/$', auth_views.password_change_done, {
+            'template_name': 'accounts/password_change_done.html'
+        }, name='password_change_done'),
+
+    # reset password
+    url(r'^benutzerkonto/passwort/vergessen/$', auth_views.password_reset, {
+            'template_name': 'accounts/password_reset_form.html',
+            'email_template_name': 'accounts/password_reset_email.txt',
+            'subject_template_name': 'accounts/password_reset_subject.txt'
+        }, name='password_reset'),
+    url(r'^benutzerkonto/passwort/vergessen/info/$', auth_views.password_reset_done, {
+            'template_name': 'accounts/password_reset_done.html'
+        }, name='password_reset_done'),
+    url(r'^benutzerkonto/passwort/vergessen/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', auth_views.password_reset_confirm, {
+            'template_name': 'accounts/password_reset_confirm.html'
+        }, name='password_reset_confirm'),
+    url(r'^benutzerkonto/passwort/vergessen/fertig/$', auth_views.password_reset_complete, {
+            'template_name': 'accounts/password_reset_complete.html'
+        }, name='password_reset_complete'),
+
+    # register account
+    url(r'^benutzerkonto/registrieren/$', RegistrationView.as_view(), name='registration_register'),
+    url(r'^benutzerkonto/registrieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/registration_complete.html'), name='registration_complete'),
+    url(r'^benutzerkonto/aktivieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/activation_complete.html'), name='registration_activation_complete'),
+    url(r'^benutzerkonto/aktivieren/(?P<activation_key>\w+)/$', ActivationView.as_view(), name='registration_activate'),
+    url(r'^benutzerkonto/registrieren/geschlossen/$', TemplateView.as_view(template_name='registration/registration_closed.html'), name='registration_disallowed'),
+
     # region, process and projects modules, urls by djangorestframework, do not change
     url(r'^region/', include('wbc.region.urls')),
     url(r'^process/', include('wbc.process.urls')),
@@ -64,8 +102,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # user login
-    url(r'^login/', 'wbc.core.views.login_user'),
-    url(r'^logout/', 'wbc.core.views.logout_user'),
+    url(r'^login/', 'wbc.core.views.login_user', name='login'),
+    url(r'^logout/', 'wbc.core.views.logout_user', name='logout'),
 
     # serve media files
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
