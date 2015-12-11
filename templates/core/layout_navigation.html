@@ -9,9 +9,9 @@
     {% if user.is_authenticated %}
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
         {% if user.profile.stakeholder.picture %}
-            <img class="stakeholder_img" src="{{ user.profile.stakeholder.picture.get_thumbnail_url }}" />
+            <img class="user_img" src="{{ user.profile.stakeholder.picture.get_thumbnail_url }}" />
         {% else %}
-            <img class="stakeholder_img" src="{% static 'img/person_placeholder.png' %}" />
+            <img class="user_img" src="{% static 'img/person_placeholder.png' %}" />
         {% endif %}  
         </i>{{user.username}} <span class="caret"></span>
     </a>
