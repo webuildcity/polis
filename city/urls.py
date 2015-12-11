@@ -19,13 +19,13 @@ urlpatterns = patterns('',
     url(r'^blog/$', BlogView.as_view(), name='blog'),
     url(r'^blog/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.blog.views.blogentry', name='blogentry'),
 
+    # encyclopedia
+    url(r'^lexikon/$', 'wbc.encyclopedia.views.encyclopedia', name="encyclopedia"),
+    url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.encyclopedia.views.encyclopedia', name="encyclopedia_entry"),
+
     url(r'^lexikon/$', 'wbc.process.views.process', name="process"),
     url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.process.views.process', name="process_step"),
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
-
-    # encyclopedia
-    url(r'^encyclopedia/$', 'wbc.encyclopedia.views.encyclopedia', name="encyclopedia"),
-    url(r'^encyclopedia/(?P<pk>[0-9]+)/$', 'wbc.encyclopedia.views.encyclopedia', name="encyclopedia_entry"),
 
     # projects
     url(r'^projekte/$', RedirectView.as_view(url='/liste/', permanent=True)),
