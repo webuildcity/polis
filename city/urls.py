@@ -122,5 +122,6 @@ urlpatterns = patterns('',
 
     url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint'),
     url('^markdown/', include( 'django_markdown.urls')),
+    url('^tinymce/', include( 'tinymce.urls')),
 
 )

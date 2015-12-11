@@ -4,6 +4,17 @@
 <li>
     <a href="/lexikon"><i class='fa fa-book'></i>Lexikon</a>
 </li>
-<li>
-    <a href="/login"><i class='fa fa-user'></i>Login</a>
+<li role="presentation" class="dropdown">
+    {% if user.is_authenticated %}
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><i class='fa fa-user'></i>{{user.username}} <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        test
+    </ul>
+    {% else %}
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><i class='fa fa-user'></i>Login <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        test
+    </ul>
+    <a href="/benutzerkonto"><i class='fa fa-user'></i>Login</a>
+    {% endif %}
 </li>

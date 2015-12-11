@@ -43,7 +43,9 @@ INSTALLED_APPS = (
     # 'taggit_labels',
     'haystack',
     'django_markdown',
-    'registration'
+    'tinymce',
+    'registration',
+    'simple_history'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,6 +57,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'simple_history.middleware.HistoryRequestMiddleware',
 )
 
 TEMPLATES = [
@@ -137,3 +140,17 @@ MARKDOWN_EDITOR_SKIN = 'simple'
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_EMAIL_HTML = False
 INFO_EMAIL = "info@we-build.city"
+
+
+TINYMCE_JS_URL = os.path.join(STATIC_URL, "tiny_mce/tiny_mce.js")
+
+TINYMCE_JS_ROOT = os.path.join(STATIC_URL, "tiny_mce/")
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    'relative_urls' : False
+}
+
+# TINYMCE_SPELLCHECKER = True
+# TINYMCE_COMPRESSOR = True
