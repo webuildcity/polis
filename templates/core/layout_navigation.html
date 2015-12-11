@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <li>
     <a href="/blog"><i class='fa fa-book'></i>Blog</a>
 </li>
@@ -6,15 +7,38 @@
 </li>
 <li role="presentation" class="dropdown">
     {% if user.is_authenticated %}
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><i class='fa fa-user'></i>{{user.username}} <span class="caret"></span></a>
-    <ul class="dropdown-menu">
-        test
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        {% if user.profile.stakeholder.picture %}
+            <img class="stakeholder_img" src="{{ user.profile.stakeholder.picture.get_thumbnail_url }}" />
+        {% else %}
+            <img class="stakeholder_img" src="{% static 'img/person_placeholder.png' %}" />
+        {% endif %}  
+        </i>{{user.username}} <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-right">
+        <li>
+            <a href="{% url 'profile' user.profile.pk %}">Dein Profil</a>
+        </li>
+        <li>
+            <a href="{% url 'profile_update' %}">Deine Einstellungen</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a href="{% url 'start' %}">Deine Projekte</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a href="{% url 'logout' %}">Abmelden</a>
+        </li>
     </ul>
     {% else %}
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><i class='fa fa-user'></i>Login <span class="caret"></span></a>
-    <ul class="dropdown-menu">
-        test
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class='fa fa-user'></i>Anmelden <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-right">
+        <li>
+        {% include "core/login.html" %}
+        </li>
     </ul>
-    <a href="/benutzerkonto"><i class='fa fa-user'></i>Login</a>
     {% endif %}
 </li>
