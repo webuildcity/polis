@@ -15,9 +15,13 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     url(r'^$', StartView.as_view(template_name="core/city.html"), name='start'),
-    
+
     url(r'^blog/$', BlogView.as_view(), name='blog'),
     url(r'^blog/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.blog.views.blogentry', name='blogentry'),
+
+    # encyclopedia
+    url(r'^lexikon/$', 'wbc.encyclopedia.views.encyclopedia', name="encyclopedia"),
+    url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.encyclopedia.views.encyclopedia', name="encyclopedia_entry"),
 
     url(r'^lexikon/$', 'wbc.process.views.process', name="process"),
     url(r'^lexikon/(?P<pk>[0-9]+)/$', 'wbc.process.views.process', name="process_step"),
