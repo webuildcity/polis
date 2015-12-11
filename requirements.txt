@@ -27,3 +27,5 @@ elasticsearch==1.7.0
 #psycopg2>=2.5.1,<2.6
 
 django-markdown==0.8.4
+django-simple-history==1.7.0
+django-tinymce==2.0.6
