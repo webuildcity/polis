@@ -22,7 +22,7 @@ $font-h4: bold 0.875em/1.25em dejavu;
 
 /* Palette */
 
-$primary-color: #c20e1e;
+$primary-color: #FF3934;
 $primary-color-dark: darken($primary-color, 20%);
 $primary-color-light: lighten($primary-color, 80%);
 
@@ -30,7 +30,7 @@ $primary-color-light: lighten($primary-color, 80%);
 $headline-color: $primary-color;
 $highlight-color: $primary-color;
 
-$primary-text: #646262;
+$primary-text: #000000;
 $secondary-text: #fff;
 
 $icon-color: #fff;
@@ -38,7 +38,7 @@ $icon-color: #fff;
 $background-color: #fff;
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
-$startpage-image: url(static('img/startpage.jpg'));
+$startpage-image: url(static('title.png'));
 
 @mixin branding() {
   padding-top: 9px;
