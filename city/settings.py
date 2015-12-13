@@ -46,7 +46,8 @@ INSTALLED_APPS = (
     'django_markdown',
     'tinymce',
     'registration',
-    'simple_history'
+    'simple_history',
+    'guardian'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -59,6 +60,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
+    'django.contrib.auth.backends.ModelBackend',
+    'guardian.backends.ObjectPermissionBackend',
 )
 
 TEMPLATES = [
@@ -155,3 +158,6 @@ TINYMCE_DEFAULT_CONFIG = {
 
 # TINYMCE_SPELLCHECKER = True
 # TINYMCE_COMPRESSOR = True
+
+#GUARDIAN
+ANONYMOUS_USER_ID = None
