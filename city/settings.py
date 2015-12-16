@@ -59,8 +59,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'simple_history.middleware.HistoryRequestMiddleware',
-    'django.contrib.auth.backends.ModelBackend',
+    'simple_history.middleware.HistoryRequestMiddleware'
+)
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend', # this is default
     'guardian.backends.ObjectPermissionBackend',
 )
 
