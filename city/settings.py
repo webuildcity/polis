@@ -164,3 +164,6 @@ TINYMCE_DEFAULT_CONFIG = {
 
 #GUARDIAN
 ANONYMOUS_USER_ID = None
+
+
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
