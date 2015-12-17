@@ -35,6 +35,7 @@ urlpatterns = patterns('',
 
     url(r'^projekt/(?P<pk>[0-9]+)/bearbeiten/$', ProjectUpdate.as_view(), name='project_update'),
     url(r'^projekt/(?P<pk>[0-9]+)/entfernen/$', ProjectDelete.as_view(), name='project_delete'),
+    url(r'^projekt/(?P<pk>[0-9]+)/follow/$', 'wbc.projects.views.follow', name='project_follow'),
 
     #tags
     url(r'^tags/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.tags.views.tagview', name='tag'),
