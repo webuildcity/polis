@@ -10,6 +10,7 @@ from wbc.core.views import SearchView, StartView
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
 from wbc.blog.views import BlogView
+from wbc.accounts.views import WbcRegistrationView
 admin.autodiscover()
 
 urlpatterns = patterns('',
