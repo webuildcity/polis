@@ -26,7 +26,7 @@ INSTALLED_APPS = (
     'wbc.region',
     'wbc.process',
     'wbc.notifications',
-    'wbc.comments',
+    # 'wbc.comments',
     'wbc.stakeholder',
     'wbc.tags',
     'wbc.projects',
@@ -47,7 +47,10 @@ INSTALLED_APPS = (
     'tinymce',
     'registration',
     'simple_history',
-    'guardian'
+    'guardian',
+    'threadedcomments',
+    'django_comments',
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -167,3 +170,8 @@ ANONYMOUS_USER_ID = None
 
 
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+COMMENTS_APP = 'threadedcomments'
+# FLUENT_COMMENTS_EXCLUDE_FIELDS = ('url')
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+

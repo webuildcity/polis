@@ -128,7 +128,10 @@ urlpatterns = patterns('',
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
     url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint'),
-    url('^markdown/', include( 'django_markdown.urls')),
-    url('^tinymce/', include( 'tinymce.urls')),
+    url(r'^markdown/', include( 'django_markdown.urls')),
+    url(r'^tinymce/', include( 'tinymce.urls')),
+
+    url(r'^comments/', include('fluent_comments.urls')),
+    url(r'^comments/post/', 'wbc.core.views.comment_post_wrapper'),
 
 )
