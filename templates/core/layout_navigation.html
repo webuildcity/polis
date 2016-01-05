@@ -7,7 +7,7 @@
 </li>
 <li role="presentation" class="dropdown">
     {% if user.is_authenticated %}
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
         {% if user.profile.stakeholder.picture %}
             <img class="user_img" src="{{ user.profile.stakeholder.picture.get_thumbnail_url }}" />
         {% else %}
@@ -32,7 +32,7 @@
         </li>
     </ul>
     {% else %}
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
         <i class='fa fa-user'></i>Anmelden <span class="caret"></span>
     </a>
     <ul id="login-dropdown" class="dropdown-menu dropdown-menu-right login-dropdown">

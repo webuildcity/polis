@@ -131,7 +131,7 @@ urlpatterns = patterns('',
     url(r'^markdown/', include( 'django_markdown.urls')),
     url(r'^tinymce/', include( 'tinymce.urls')),
 
-    url(r'^comments/', include('fluent_comments.urls')),
+    url(r'^comments/', include('django_comments.urls')),
     url(r'^comments/post/', 'wbc.core.views.comment_post_wrapper'),
 
 )
