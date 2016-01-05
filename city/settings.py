@@ -51,7 +51,6 @@ INSTALLED_APPS = (
     'threadedcomments',
     'django_comments',
     'crispy_forms',
-    'fluent_comments',
 )
 
 MIDDLEWARE_CLASSES = (
