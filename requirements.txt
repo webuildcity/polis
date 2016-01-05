@@ -34,3 +34,4 @@ django-guardian==1.3.2
 
 django-threadedcomments==1.0.1
 django-crispy-forms==1.5.2
+django-fluent-comments
