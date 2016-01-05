@@ -31,6 +31,8 @@ More about the OpenSource project: [we-build.city][we-build-city] or the company
 13. Use [http://localhost:8000/admin/][polis-admin] to log in. Under *region* and *process*, districts, departments, places and publications can be added or edited.
 
 
+Version: 0.2.2
+Name: WBC-C1-demo-en
 
 [polis]: http://polis.we-build.city
 [polis-github]: https://github.com/webuildcity/polis
