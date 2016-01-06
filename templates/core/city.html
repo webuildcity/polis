@@ -8,9 +8,9 @@
                 <div id="top-container">
                     <div class="container">
                         <div class="top-overlay text-center">
-                            <h1>Informiere dich über Bauvorhaben in deinem Stadtteil.</h1>
+                            <h1>OpenPlots - know where to invest in real estates</h1>
                             <div class="search-container">
-                                <wbc-search text="Suche nach Themen, Bauprojekten oder Stadtteilen"></wbc-search>
+                                <wbc-search text="Search for plots, key plans, construction permits..."></wbc-search>
                             </div>
                         </div>
                     </div>
@@ -21,11 +21,14 @@
  <!-- Block of Navigation Boxes -->
             {% block nav-boxes %}            
             <div class="bottom-block">
-            <h2 class="wbc-headline"> Was können Sie hier tun? </h2>
+            <h2 class="wbc-headline"> What can you do here? </h2>
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <p>Sie können sich über <a href="{% url 'search' %}">laufende Stadtplanungsprojekte</a> informieren, detaillierte Informationen zu  bestimmten Projekten (z.B. [Tag-Olympia, Tag-Elbphilharmonie, Tag-Hildegarden] bekommen und auf einer <a href="{% url 'search' %}">Karte</a>   stöbern, was gerade in Hamburg passiert. Darüber hinaus lernen Sie <a href="{% url 'process' %}">Stadtplanungs- und Verwaltungsprozesse</a> besser zu verstehen.</p>
+              <p>Find new plots <a href="{% url 'search' %}">of currently running</a> planning projects <strong>approx.3 years before</strong> the construction phase.</a> 
+              You don't wanna checkout every day the urban development? <br>
+              Stay informed and get <a href="{% url 'search' %}">notifications</a> early as possible! 
+              To understand better the urban planning and public authorities <a href="{% url 'process' %}">processes</a> click here.</p>
 
               <div id="navigation-boxes" class="container">
 
@@ -33,7 +36,7 @@
                     <a href="{% url 'search' %}">
                         <div class="teaser">
                             <i class='fa fa-search'></i>
-                            <p>Suche nach Themen, Bauprojekten oder Stadtteilen.</p>
+                            <p>Find your perfect plot!</p>
                         </div>
                     </a>
                 </div>
@@ -41,7 +44,7 @@
                     <a href="{% url 'process' %}">
                         <div class="teaser">
                             <i class='fa fa-book'></i>
-                            <p>Lexikon: Informiere dich über die Gesetzeslage in deiner Stadt</p>
+                            <p>Encyclopaedia</p>
                         </div>
                     </a>
                 </div>
@@ -49,7 +52,7 @@
                     <a href="{% url 'map' %}">
                         <div class="teaser">
                             <i class='fa fa-bell-o'></i>
-                            <p>Erhalte Benachrichtigungen zu Bauprojekten deiner Wahl.</p>
+                            <p>Subscribe for Notifications</p>
                         </div>
                     </a>
                 </div>
@@ -62,7 +65,7 @@
 <!-- Optional Navigation Menu at the bottom of the  -->
 <!-- To activate, remove the comments in the startpage.html> -->
 
-            {% block nav-tabs %}
+<!--        {% block nav-tabs %}
 
             <ul class="nav nav-tabs" data-tabs="tabs">
                     <li class="active"><a href="#start-tab" data-toggle="tab">Startseite</a></li>
@@ -72,6 +75,7 @@
 
             {% endblock %}
 
+-->
 
 <!-- Content Blocks i.e. with questions or other content -->
 
@@ -79,14 +83,11 @@
 
             <!-- block -->
             <div class="bottom-block">
-                <h2 class="wbc-headline">Wie kann mich Wir bauen Hamburg unterstützen?</h2>
+                <h2 class="wbc-headline">What is OpenPlots?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    Bleiben Sie auf dem Laufenden durch regelmäßige Besuche und E-Mail-Benachrichtungen.
-                    <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> bekommt regelmäßig und automatisiert neue
-                    Informationen vom "Transparenz-Portal"[transparenz.hamburg.de] der Freien- und Hansestadt
-                    Hamburg. [hamburg.de]
+                    OpenPlots is an <strong> open data-based </strong> platform for accessing information on concrete building projects up to three years in advance and information on location factors - facilitating decision-making for real estate developers, architects, urban planners and any stakeholder interested in real estate.
                   </p>
                 </div>
             </div>
@@ -94,15 +95,11 @@
             <!-- block -->
             
             <div class="bottom-block">
-                <h2 class="wbc-headline">Wer betreibt diese Platform?</h2>
+                <h2 class="wbc-headline">Who runs this platform?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    <strong>Wir&nbsp;bauen&nbsp;Hamburg</strong> ist eine freie Open Source Software
-                    Plattform die von We-Build.City [www.we-build.city] betrieben wird. Die Software wurde
-                    im Rahmen der Open Knowledge-Labs [CodeforBerlins] und [CodeforHamburgs] entwickelt
-                    sowie von einer einer Förderung der EU-Kommission mitfinanziert.
-                    Wir verstehen uns als Brückenbauer zwischen Stadt, Verwaltung, Bürgern und Investoren. Gute und effektive Kommunikation ist in unseren Augen das A und O einer gelungenen Stadtentwicklung und die Grundlage von Demokratie. [services.we-build.city].
+                    WE-BUILD.CITY SERVICES UG (haftungsbeschränkt) is an aspiring company from Hamburg & Berlin (Germany) that seeks to develop innovative programs to support the public authority's work in relation to urban planning. As a <strong>software and service provider </strong> for the public authorities and the citizens, we provide digital solutions for making urban planning and administration processes more transparent for the citizens and more legitimate, on basis of our <strong>Open Source Platform We-build.city</strong>. We support public administrations and operators of local news platforms (e.g. local newspapers, blogs, etc.) in their work, making their communication process faster, more effective and easier.
                   </p>
                 </div>
             </div>

@@ -3,7 +3,7 @@
     <a href="/blog"><i class='fa fa-book'></i>Blog</a>
 </li>
 <li>
-    <a href="/lexikon"><i class='fa fa-book'></i>Lexikon</a>
+    <a href="/lexikon"><i class='fa fa-book'></i>Encyclopaedia</a>
 </li>
 <li role="presentation" class="dropdown">
     {% if user.is_authenticated %}
@@ -17,23 +17,23 @@
     </a>
     <ul class="dropdown-menu dropdown-menu-right">
         <li>
-            <a href="{% url 'profile' user.profile.pk %}">Dein Profil</a>
+            <a href="{% url 'profile' user.profile.pk %}">Your profile</a>
         </li>
         <li>
-            <a href="{% url 'profile_update' %}">Deine Einstellungen</a>
-        </li>
-        <li role="separator" class="divider"></li>
-        <li>
-            <a href="{% url 'start' %}">Deine Projekte</a>
+            <a href="{% url 'profile_update' %}">Your settings</a>
         </li>
         <li role="separator" class="divider"></li>
         <li>
-            <a href="{% url 'logout' %}">Abmelden</a>
+            <a href="{% url 'start' %}">Your projects Projekte</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a href="{% url 'logout' %}">Logout</a>
         </li>
     </ul>
     {% else %}
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        <i class='fa fa-user'></i>Anmelden <span class="caret"></span>
+        <i class='fa fa-user'></i>Login <span class="caret"></span>
     </a>
     <ul id="login-dropdown" class="dropdown-menu dropdown-menu-right login-dropdown">
         <li>
