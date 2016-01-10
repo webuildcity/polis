@@ -9,7 +9,7 @@
     {% if user.is_authenticated %}
     <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
         {% if user.profile.stakeholder.picture %}
-            <img class="user_img" src="{{ user.profile.stakeholder.picture.get_thumbnail_url }}" />
+            <img class="user_img" src="{{ user.profile.stakeholder.thumbnail.url }}" />
         {% else %}
             <img class="user_img" src="{% static 'img/person_placeholder.png' %}" />
         {% endif %}  
