@@ -52,7 +52,7 @@ INSTALLED_APPS = (
     'django_comments',
     'crispy_forms',
     'rosetta',
-    'django_makemessages_xgettext',
+    'django_makemessages_xgettext',    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,6 +105,8 @@ USE_TZ = True
 LOCALE_PATHS = (
     "locale",
 )
+
+from django.utils.translation import ugettext_lazy as _
 
 LANGUAGES = [
     ('de', _('German')),
