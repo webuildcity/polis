@@ -9,8 +9,7 @@
                 <div id="top-container">
                     <div class="container">
                         <div class="top-overlay text-center">
-                            <h1>
-                            Informiere dich über Bauvorhaben in deinem Stadtteil.</h1>
+                     <h1>{% trans "Informiere dich über Bauvorhaben in deiner Stadt." %}</h1>
                             <div class="search-container">
                                 <wbc-search text="Suche nach Themen, Bauprojekten oder Stadtteilen"></wbc-search>
                             </div>
@@ -19,6 +18,9 @@
                 </div>
             {% endblock %}
 
+<h1>{% trans "This is the h1 title." %}</h1>
+
+<h3>{% trans "This is the h3 title ." %}</h3>
 
  <!-- Block of Navigation Boxes -->
             {% block nav-boxes %}            
