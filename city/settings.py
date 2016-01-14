@@ -129,10 +129,11 @@ FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
 
 
-TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.jpg'
+#TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.jpg'
+TILES_URL = 'http://{abc}.tile.openstreetmap.org/zoom/x/y.png'
 
 TILES_OPT = {
-    'attribution': 'Map data &copy; 2012 OpenStreetMap contributors',
+    'attribution': 'Map data &copy; 2016 OpenStreetMap contributors',
     'maxZoom': 17,
     'minZoom': 10,
     'zIndex': 0,
@@ -140,8 +141,8 @@ TILES_OPT = {
 }
 
 DEFAULT_VIEW = {
-    'lat': 53.550556,
-    'lon': 10.0,
+    'lat': 50.636712,
+    'lon': 11.12,
     'zoom': 11
 }
 
