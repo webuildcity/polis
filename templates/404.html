@@ -1,7 +1,13 @@
 {% extends 'core/page.html' %}
+{% load compress %}
+{% block css %}
+    {% compress css %}
+    {{block.super}}
+    {% endcompress %}
+{% endblock %}
 
-{% block content %}
+{% block page %}
     <div class="container">
-        Sorry - nicht gefunden :-/
+        404 - Sorry - nicht gefunden :-/
     </div>
 {% endblock %}
