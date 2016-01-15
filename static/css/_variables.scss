@@ -42,9 +42,9 @@ $background-image-light: none;
 $startpage-image: url(static('img/startpage.jpg'));
 
 @mixin branding() {
-  padding-top: 9px;
+  padding-top: 5px;
 
   img {
-      height: 24px;
+      height: 32px;
   }
 }

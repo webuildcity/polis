@@ -9,7 +9,7 @@
                     <div class="container">
                         <div class="top-overlay text-center">
                             <h1>Willkommen beim Jugend-Demografie-Dialog</h1>
-                            <h3>Beteilige dich an der Zukunftsgestaltung deines Landkreis Lichtenfels!</h3>
+                            <h3>Beteilige Dich an der Zukunftsgestaltung Deines Landkreises Lichtenfels!</h3>
                             <div class="search-container">
                                 <wbc-search text="Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."></wbc-search>
                             </div>
@@ -22,14 +22,14 @@
 
 
  <!-- Block of Navigation Boxes -->
-            {% block nav-boxes %}            
+            {% block nav-boxes %}
             <div class="bottom-block">
             <h2 class="wbc-headline"> Was kannst du hier tun? </h2>
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <p>Hier kannst Du dich über die <a href="{% url 'search' %}">laufenden Ideen, Projekte und Lösungsvorschlägen</a> informieren. Du kannst ein <a href="{% url 'registration_register' %}">Benutzerkonto anlegen</a> und damit auch online deine Projekte abonnieren und beitreten. 
-              Natürlich kannst du auch <a href="{% url 'search' %}">einfach nur stöbern</a> was für Idee gerade für den Landkreis Lichtenfels geplant werden. Weiter Infos zu den nächsten Veranstaltungen des Projekts <a href="{% url 'encyclopedia' %}">"Jugend-Demografie-Dialog"</a> gibt es im <a href="{% url 'encyclopedia' %}">Lexikon</a>.</p>
+              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge</a> informieren. Du kannst ein <a href="{% url 'registration_register' %}">Benutzerkonto anlegen</a>, um damit online Projekten beizutreten, mitzuarbeiten und über Änderungen auf dem Laufenden gehalten zu werden.
+              Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was gerade für den Landkreis Lichtenfels geplant ist. Weitere Infos zu den nächsten Veranstaltungen des Projekts <a href="{% url 'encyclopedia' %}">"Jugend-Demografie-Dialog"</a> gibt es im <a href="{% url 'blog' %}">Blog</a>.</p>
 
               <div id="navigation-boxes" class="container">
 
@@ -59,19 +59,19 @@
                     </a>
                 </div>
               </div>
-            </div> 
+            </div>
             {% endblock %}
 
 
 <!-- Block of Topic Boxes -->
             {% block topic-boxes %}
-            
+
             <div class="bottom-block">
             <h2 class="wbc-headline"> Themen</h2>
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <p>Themen um die es hier geht: <a href="{% url 'search' %}">laufenden Ideen & L&ouml;sungsans&auml;tze</a> informieren, dich beteiligen und immer auf dem neusten Stand bleiben!</p> 
+              <!-- p>Themen, um die es hier geht: <a href="{% url 'search' %}">laufenden Ideen & L&ouml;sungsans&auml;tze</a> informieren, Dich beteiligen und immer auf dem neusten Stand bleiben!</p -->
 
               <div id="navigation-boxes" class="container">
 
@@ -126,6 +126,19 @@
             {% block questions %}
 
             <!-- block -->
+
+            <div class="bottom-block">
+                <h2 class="wbc-headline">Was ist der <strong>Jugend-Demografie-Dialog?</strong></h2>
+                <div class="wbc-divider"></div>
+                <div class="container">
+                  <p>
+                    Der <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>„Jugend-Demografie-Dialog“</a> ist ein Forschungsprojekt der Leuphana Universität Lüneburg. Seit Februar 2015 ist Prof.&nbsp;Dr.&nbsp;Waldemar&nbsp;Stange vom Institut für Sozialarbeit und Sozialpädagogik mit seinem Team im Rahmen des Forschungsprojekts „Jugend-Demografie-Dialog“ damit beauftragt, den Partizipationsprozess für die direkte Einbeziehung von Jugendlichen aus den vier Modelllandkreisen in die Arbeitsgemeinschaft „Jugend gestaltet Zukunft“ forschungsbasiert zu konzipieren, durchzuführen und zu evaluieren. <br>
+                    Auf verschiedenen Veranstaltungen werden die Beteiligten vorbereitet, gecoacht und weiterqualifiziert.
+                  </p>
+                </div>
+            </div>
+
+            <!-- block -->
             <div class="bottom-block">
                 <h2 class="wbc-headline">Was hab ich vom Projekt Jugend-Demografie-Dialog?</h2>
                 <div class="wbc-divider"></div>
@@ -136,26 +149,13 @@
             </div>
 
             <!-- block -->
-            
-            <div class="bottom-block">
-                <h2 class="wbc-headline">Was ist der <strong>Jugend-Demografie-Dialog?</strong></h2>
-                <div class="wbc-divider"></div>
-                <div class="container">
-                  <p>
-                    Der <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>"Jugend-Demografie-Dialog"</a> ist ein Forschungsprojekt der Leuphana Universität Lüneburg. Seit Februar 2015 ist Prof. Dr. Waldemar Stange vom Institut für Sozialarbeit und Sozialpädagogik mit seinem Team im Rahmen des Forschungsprojekts „Jugend-Demografie-Dialog“ damit beauftragt, den Partizipationsprozess für die direkte Einbeziehung von Jugendlichen aus den vier Modelllandkreisen in die Arbeitsgemeinschaft „Jugend gestaltet Zukunft“ forschungsbasiert zu konzipieren, durchzuführen und zu evaluieren. <br>
-                    Auf verschiedenen Veranstaltungen werden die Beteiligten vorbereitet, gecoacht und weiterqualifiziert.
-                  </p>
-                </div>
-            </div>
 
-            <!-- block -->
-            
             <div class="bottom-block">
                 <h2 class="wbc-headline">Ziel des <strong>Jugend-Demografie-Dialogs</strong></h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    Das <strong>Ziel</strong> des Jugend-Demografie-Dialogs ist es, die beteiligten Jugendlichen darauf vorzubereiten, sich wirkungsvoll an der politischen Gestaltung des demografischen Wandels in ihrer Region zu beteiligen und <strong>eigene Lösungsansätze</strong> zu entwickeln.
+                    Das <strong>Ziel</strong> des Jugend-Demografie-Dialogs ist, es den beteiligten Jugendlichen zu ermöglichen, sich wirkungsvoll an der politischen Gestaltung des demografischen Wandels in ihrer Region zu beteiligen und <strong>eigene Lösungsansätze</strong> zu entwickeln.
                   </p>
                 </div>
             </div>
@@ -165,22 +165,22 @@
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    Das <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog Team </a> der Leuphana Universität Lüneburg unterstützt Euch gerne! Bei Fragen, sprecht uns einfach an: </p>
-                    
-                     <div>
+                    Das <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog Team</a> der Leuphana Universität Lüneburg unterstützt Euch gerne! Bei Fragen sprecht uns einfach an:</p>
+
+                     <div class="col-md-4">
                         <h3>Prof. Dr. Waldemar Stange</h3>
                         <img src="/static/img/stange.jpg">
-                        <p>Fon +49.4131.677-2379<br><a href="mailto:stange@uni.leuphana.de">stange@uni.leuphana.de</a></p>
+                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-2379<br><a href="mailto:stange@uni.leuphana.de">stange@uni.leuphana.de</a></p>
                     </div>
-                    <div>
+                    <div class="col-md-4">
                         <h3>Anja Bentrup, M.A.</h3>
                         <img src="/static/img/bentrup.jpg">
-                        <p>Fon +49.4131.677-2383<br><a href="mailto:anja.bentrup@leuphana.de">anja.bentrup@leuphana.de</a></p>
+                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-2383<br><a href="mailto:anja.bentrup@leuphana.de">anja.bentrup@leuphana.de</a></p>
                     </div>
-                    <div>
+                    <div class="col-md-4">
                         <h3>Timo Bleck­we­del, M.A.</h3>
                         <img src="/static/img/bleckwedel.jpg">
-                        <p>Fon +49.4131.677-1681<br><a href="mailto:timo.bleckwedel@leuphana.de">timo.bleckwedel@leuphana.de</a></p>
+                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-1681<br><a href="mailto:timo.bleckwedel@leuphana.de">timo.bleckwedel@leuphana.de</a></p>
                     </div>
                 </div>
             </div>
