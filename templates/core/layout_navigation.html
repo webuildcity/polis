@@ -17,7 +17,7 @@
     </a>
     <ul class="dropdown-menu dropdown-menu-right">
         <li>
-            <a href="{% url 'profile' user.profile.pk %}">Dein Profil</a>
+            <a href="{% url 'stakeholder' user.profile.stakeholder.slug %}">Dein Profil</a>
         </li>
         <li>
             <a href="{% url 'profile_update' %}">Deine Einstellungen</a>
