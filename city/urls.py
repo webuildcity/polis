@@ -59,7 +59,7 @@ urlpatterns = patterns('',
     url(r'^benachrichtigungen/validieren/(?P<code>.*)$', 'wbc.notifications.views.validate'),
 
     # accounts module
-    url(r'^benutzer/(?P<pk>[0-9]+)$', 'wbc.accounts.views.profile', name='profile'),
+    # url(r'^benutzer/(?P<pk>[0-9]+)$', 'wbc.accounts.views.profile', name='profile'),
     url(r'^benutzerkonto/$', 'wbc.accounts.views.profile_update', name='profile_update'),
 
     # change password
