@@ -37,6 +37,7 @@ $icon-color: #fff;
 $icon-admin-edit-color: $primary-color;
 
 $background-color: #fff;
+$background-color-comments: #f2f2f2;
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
 $startpage-image: url(static('img/startpage.jpg'));
@@ -45,6 +46,6 @@ $startpage-image: url(static('img/startpage.jpg'));
   padding-top: 5px;
 
   img {
-      height: 32px;
+      height: 36px;
   }
 }
