@@ -45,13 +45,13 @@ INSTALLED_APPS = (
     'haystack',
     'django_markdown',
     'tinymce',
-    'registration',
     'simple_history',
     'guardian',
     'threadedcomments',
     'django_comments',
     'crispy_forms',
-    'imagekit'
+    'imagekit',
+    'registration'
 )
 
 MIDDLEWARE_CLASSES = (
