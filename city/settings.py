@@ -172,7 +172,7 @@ TINYMCE_DEFAULT_CONFIG = {
 ANONYMOUS_USER_ID = None
 
 
-# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 COMMENTS_APP = 'threadedcomments'
 # FLUENT_COMMENTS_EXCLUDE_FIELDS = ('url')
