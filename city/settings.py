@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     'wbc.blog',
     'wbc.accounts',
     'wbc.encyclopedia',
+    'wbc.images',
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',
