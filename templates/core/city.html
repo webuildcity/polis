@@ -9,7 +9,7 @@
                     <div class="container">
                         <div class="top-overlay text-center">
                             <h1>Willkommen beim Jugend-Demografie-Dialog</h1>
-                            <h3>Beteilige Dich an der Zukunftsgestaltung Deines Landkreises Lichtenfels!</h3>
+                            <h3>Beteilige Dich an der Zukunftsgestaltung deines Landkreises Lichtenfels!</h3>
                             <div class="search-container">
                                 <wbc-search text="Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."></wbc-search>
                             </div>
@@ -28,7 +28,7 @@
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge</a> informieren. Du kannst ein <a href="{% url 'registration_register' %}">Benutzerkonto anlegen</a>, um damit online Projekten beizutreten, mitzuarbeiten und über Änderungen auf dem Laufenden gehalten zu werden.
+              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge</a> informieren. Du kannst ein <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">Benutzerkonto anlegen</a> um damit online Projekten beizutreten, mitzuarbeiten und über Änderungen auf dem Laufenden gehalten zu werden.
               Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was gerade für den Landkreis Lichtenfels geplant ist. Weitere Infos zu den nächsten Veranstaltungen des Projekts <a href="{% url 'blog' %}">"Jugend-Demografie-Dialog"</a> gibt es im <a href="{% url 'blog' %}">Blog</a>.</p>
 
               <div id="navigation-boxes" class="container">
