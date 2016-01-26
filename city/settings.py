@@ -55,9 +55,9 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -78,11 +78,13 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.csrf',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'wbc.core.context_processors.settings'
+                'wbc.core.context_processors.settings',
+#                'csrfdjango.template.context_processors',
             ],
         },
     },
@@ -129,10 +131,10 @@ FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
 
 
-TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.jpg'
+TILES_URL = 'http://{s}.tiles.we-build.city/lichtenfels/{z}/{x}/{y}.png'
 
 TILES_OPT = {
-    'attribution': 'Map data &copy; 2012 OpenStreetMap contributors',
+    'attribution': 'Map data &copy; 2016 OpenStreetMap contributors',
     'maxZoom': 17,
     'minZoom': 10,
     'zIndex': 0,
@@ -140,9 +142,9 @@ TILES_OPT = {
 }
 
 DEFAULT_VIEW = {
-    'lat': 53.550556,
-    'lon': 10.0,
-    'zoom': 11
+    'lat': 50.13,
+    'lon': 11.03,
+    'zoom': 12
 }
 
 
@@ -170,7 +172,7 @@ TINYMCE_DEFAULT_CONFIG = {
 ANONYMOUS_USER_ID = None
 
 
-# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 COMMENTS_APP = 'threadedcomments'
 # FLUENT_COMMENTS_EXCLUDE_FIELDS = ('url')

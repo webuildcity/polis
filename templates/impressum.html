@@ -1,37 +1,39 @@
 {% extends 'core/page.html' %}
+{% load compress %}
+{% block css %}
+    {% compress css %}
+    {{block.super}}
+    {% endcompress %}
+{% endblock %}
 
 {% block page %}
 
 <h2>Impressum</h2>
 
-
-
-
-
-<table>
-	<tr>
-		<td>darker</td> <td></td>
-		<td>dark</td> <td></td>
-		<td>default</td> <td></td>
-		<td>light</td> <td></td>
-		<td>lighter</td> <td></td>
-	</tr>
-
-</table>
-
-
 <p style="line-height: 1.5em;">
-    Timo Lundelius<br />
+    Prof. Dr. Waldemar Stange<br>
+    Leuphana Universität Lüneburg<br> 
+    Scharnhorststraße 1<br>
+    21335 Lüneburg 
+</p>
+
+
+
+
+Technische Umsetzung und Bereitstellung der Website:
+<p style="line-height: 1.5em;">
+    We-Build.city Services UG (haftungsbeschränkt)
+    <br />
     Eidelstedter Weg 9<br />
     20255 Hamburg
 </p>
 
-<p>info@wir-bauen-hamburg.de</p>
+<p>info@we-build.city</p>
 
-<h4>Software</h4>
+<h4>Software von We-Build.City</h4>
 
 <p>
-    Die Software von wir-bauen-hamburg.de ist frei und quelloffen unter der GPL-Lizenz 3 auf <a href="https://github.com/webuildcity/" target="_blank">GitHub</a> verfügbar.
+    Die innovative Software Plattform für Bürgerbeteiligung und Projekt-Management von <a href="http://services.we-build.city">We-build.city Services</a> für das Projekt <a href="http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html">Jugend-Demografie-Dialog.de</a> ist frei und quelloffen unter der <a href="http://www.gnu.org/licenses/lgpl-3.0.de.html">LGPL-Lizenz 3 auf <a href="https://github.com/webuildcity/" target="_blank">GitHub</a> verfügbar.
 </p>
 
 <h4>Haftung für Inhalte</h4>
@@ -53,7 +55,7 @@
 </p>
 
 <p>
-    <a href="http://wir-bauen-hamburg.de">wir-bauen-hamburg.de</a> verwendet das Webanalysetool <a href="http://piwik.org/" target="_blank">Piwik</a>. Verarbeitet werden folgende Daten:
+    <a href="http://Jugend-Demografie-Dialog.de">Jugend-Demografie-Dialog.de</a> verwendet das Webanalysetool <a href="http://piwik.org/" target="_blank">Piwik</a>. Verarbeitet werden folgende Daten:
 </p>
 
 <ul>
