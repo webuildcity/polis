@@ -8,11 +8,10 @@
                 <div id="top-container">
                     <div class="container">
                         <div class="top-overlay text-center">
-                            <h1>Willkommen beim Jugend-Demografie-Dialog</h1>
-                            <h3>Beteilige Dich an der Zukunftsgestaltung Deines Landkreises Lichtenfels!</h3>
-                            <div class="search-container">
+                            <h3></h3>
+                            <!-- <div class="search-container">
                                 <wbc-search text="Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."></wbc-search>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -24,37 +23,34 @@
  <!-- Block of Navigation Boxes -->
             {% block nav-boxes %}
             <div class="bottom-block">
-            <h2 class="wbc-headline"> Was kannst du hier tun? </h2>
+            <h2 class="wbc-headline"> Projects Google DNI supports</h2>
             <div class="wbc-divider"></div>
             <div class="container">
-
-              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge</a> informieren. Du kannst ein <a href="{% url 'registration_register' %}">Benutzerkonto anlegen</a>, um damit online Projekten beizutreten, mitzuarbeiten und über Änderungen auf dem Laufenden gehalten zu werden.
-              Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was gerade für den Landkreis Lichtenfels geplant ist. Weitere Infos zu den nächsten Veranstaltungen des Projekts <a href="{% url 'blog' %}">"Jugend-Demografie-Dialog"</a> gibt es im <a href="{% url 'blog' %}">Blog</a>.</p>
-
               <div id="navigation-boxes" class="container">
 
                 <div class="col-md-4">
                     <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-lightbulb-o'></i>
-                            <p>Suche nach Ideen & Projekten</p>
+                            <i class="material-icons">lightbulb_outline</i>
+                            <!-- <i class='fa fa-lightbulb-o'></i> -->
+                            <p>PROJECTS</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <div class="teaser">
-                        <i class='fa fa-bell-o'></i>
-                            <p>
-                                <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">Abonniere Projekte<br></a>
-                                (Benutzerkonto registrieren)
-                            </p>
+                    <a href="{% url 'search' %}">
+                        <div class="teaser">
+                            <!-- <i class="material-icons">info_outline</i> -->
+                            <img src="static/img/logo-dni.png" style="width: 50%; height: 50%"/>​
+                            <p>ABOUT GOOGLE DNI</p>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
                     <a href="{% url 'process' %}">
                         <div class="teaser">
-                            <i class='fa fa-book'></i>
-                            <p>Im Lexikon stöbern</p>
+                            <i class="material-icons">people_outline</i>
+                            <p>PARTICIPANTS</p>
                         </div>
                     </a>
                 </div>
@@ -67,7 +63,7 @@
             {% block topic-boxes %}
 
             <div class="bottom-block">
-            <h2 class="wbc-headline"> Themen</h2>
+            <h2 class="wbc-headline"> Projects</h2>
             <div class="wbc-divider"></div>
             <div class="container">
 
@@ -76,42 +72,53 @@
               <div id="navigation-boxes" class="container">
 
                 <div class="col-md-4">
-                    <a href="suche/#/searchTerm=&tags%5B%5D=Arbeit+&+Wirtschaft">
+                    <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-clock-o'></i>
-                            <p>Arbeit &amp; Wirtschaft</p>
+                            <i class="material-icons">audiotrack</i>
+                            <p>Prototype Track</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-heart'></i>
-                            <p>Familie &amp; Wohnen</p>
+                            <i class="material-icons">audiotrack</i>
+                            <i class="material-icons">audiotrack</i>
+                            <p>Medium Track</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-train'></i>
-                            <p>Mobilität &amp; Infrastruktur</p>
+                            <i class="material-icons">audiotrack</i>
+                            <i class="material-icons">audiotrack</i>
+                            <i class="material-icons">audiotrack</i>
+                            <p>Large Track</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-graduation-cap'></i>
-                            <p>Ausbildung &amp; Bildung</p>
+                            <i class="material-icons">timeline</i>
+                            <p>Project Phases</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="{% url 'process' %}">
+                    <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-hand-paper-o'></i>
-                            <p>Zivilgesellschaft</p>
+                            <i class="material-icons">label_outline</i>
+                            <p>Categories</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="suche/#/searchTerm=&tags%5B%5D=">
+                        <div class="teaser">
+                            <i class="material-icons">flag</i>
+                            <p>Countries</p>
                         </div>
                     </a>
                 </div>
@@ -127,61 +134,11 @@
 
             <!-- block -->
 
-            <div class="bottom-block">
-                <h2 class="wbc-headline">Was ist der <strong>Jugend-Demografie-Dialog?</strong></h2>
+            <div class="block-grey">
+                <h2 class="wbc-headline">Timeline</strong></h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
-                  <p>
-                    Der <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog</a> ist ein Forschungsprojekt der Leuphana Universität Lüneburg. Seit Februar 2015 ist Prof.&nbsp;Dr.&nbsp;Waldemar&nbsp;Stange vom Institut für Sozialarbeit und Sozialpädagogik mit seinem Team im Rahmen des Forschungsprojekts „Jugend-Demografie-Dialog“ damit beauftragt, den Partizipationsprozess für die direkte Einbeziehung von Jugendlichen aus den vier Modelllandkreisen in die Arbeitsgemeinschaft „Jugend gestaltet Zukunft“ forschungsbasiert zu konzipieren, durchzuführen und zu evaluieren. <br>
-                    Auf verschiedenen Veranstaltungen werden die Beteiligten vorbereitet, gecoacht und weiterqualifiziert.
-                  </p>
-                </div>
-            </div>
-
-            <!-- block -->
-            <div class="bottom-block">
-                <h2 class="wbc-headline">Was hab ich vom Projekt Jugend-Demografie-Dialog?</h2>
-                <div class="wbc-divider"></div>
-                <div class="container">
-                  <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                  </p>
-                </div>
-            </div>
-
-            <!-- block -->
-
-            <div class="bottom-block">
-                <h2 class="wbc-headline">Ziel des <strong>Jugend-Demografie-Dialogs</strong></h2>
-                <div class="wbc-divider"></div>
-                <div class="container">
-                  <p>
-                    Das <strong>Ziel</strong> des Jugend-Demografie-Dialogs ist, es den beteiligten Jugendlichen zu ermöglichen, sich wirkungsvoll an der politischen Gestaltung des demografischen Wandels in ihrer Region zu beteiligen und <strong>eigene Lösungsansätze</strong> zu entwickeln.
-                  </p>
-                </div>
-            </div>
-
-            <div class="bottom-block">
-                <h2 class="wbc-headline">Wer organisiert das hier?</strong></h2>
-                <div class="wbc-divider"></div>
-                <div class="container">
-                  <p>
-                    Das <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog Team</a> der Leuphana Universität Lüneburg unterstützt Euch gerne! Bei Fragen sprecht uns einfach an:</p>
-
-                     <div class="col-md-4">
-                        <h4>Prof. Dr. Waldemar Stange</h4>
-                        <img src="/static/img/stange.jpg">
-                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-2379<br><a href="mailto:stange@uni.leuphana.de">stange@uni.leuphana.de</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Anja Bentrup, M.A.</h4>
-                        <img src="/static/img/bentrup.jpg">
-                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-2383<br><a href="mailto:anja.bentrup@leuphana.de">anja.bentrup@leuphana.de</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Timo Bleck­we­del, M.A.</h4>
-                        <img src="/static/img/bleckwedel.jpg">
-                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-1681<br><a href="mailto:timo.bleckwedel@leuphana.de">timo.bleckwedel@leuphana.de</a></p>
-                    </div>
+                    <img src="/static/img/timeline.png" width="700" height="300">
                 </div>
             </div>
 
