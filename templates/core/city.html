@@ -1,5 +1,6 @@
 {% extends 'core/startpage.html' %}
 {% load staticfiles %}
+{% load i18n %}
 
 <!-- In this file you can edit the content of the wbc-startpage -->
 
@@ -8,8 +9,10 @@
                 <div id="top-container">
                     <div class="container">
                         <div class="top-overlay text-center">
-                            <h1>Willkommen beim Jugend-Demografie-Dialog</h1>
-                            <h3>Beteilige Dich an der Zukunftsgestaltung Deines Landkreises Lichtenfels!</h3>
+
+                     <h1>{% trans "H1: Welcome to our platform!" %}</h1>
+                     <h3>{% trans "H3 Claim: Use our platform to make the best out of our platform!" %}</h3>
+
                             <div class="search-container">
                                 <wbc-search text="Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."></wbc-search>
                             </div>
@@ -18,7 +21,11 @@
                 </div>
             {% endblock %}
 
-<!-- <a href="https://commons.wikimedia.org/wiki/File:Vierzehnheiligen_I.JPG#/media/File:Vierzehnheiligen_I.JPG">Vierzehnheiligen I</a>Schubbay<a href="//commons.wikimedia.org/wiki/User:Schubbay" title="User:Schubbay">Schubbay</a> assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims).. Lizenziert unter <a title="Creative Commons Attribution-Share Alike 3.0" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> über <a href="https://commons.wikimedia.org/wiki/">Wikimedia Commons</a>. -->
+
+
+<h1>{% trans "This is the h1 title." %}</h1>
+
+<h3>{% trans "This is the h3 title ." %}</h3>
 
 
  <!-- Block of Navigation Boxes -->

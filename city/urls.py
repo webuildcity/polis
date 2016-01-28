@@ -134,4 +134,7 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django_comments.urls')),
     url(r'^comments/post/', 'wbc.core.views.comment_post_wrapper'),
 
+    # translation
+    url(r'^rosetta/', include('rosetta.urls')),
+
 )
