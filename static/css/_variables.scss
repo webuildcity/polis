@@ -1,46 +1,55 @@
 /* Fonts */
 
 @font-face {
-  font-family: titillium;
-  src: url('/static/font/TitilliumText25L.otf'); }
+  font-family: roboto;
+  font-weight: 400;
+  src: url('/static/font/Roboto-Light.ttf'); }
 
 @font-face {
-  font-family: dejavu;
-  src: url('/static/font/DejaVuSansCondensed.ttf'); }
+  font-family: opensans;
+  src: url('/static/font/OpenSans-Light.ttf'); }
 
 @font-face {
-  font-family: dejavu;
-  src: url('/static/font/DejaVuSansCondensed-Bold.ttf');
+  font-family: roboto;
+  src: url('/static/font/Roboto-Light.ttf');
   font-weight: bold; }
 
-$font-nav: bold 1em titillium;
-$font-body-copy: 1em dejavu;
-$font-h1: bold 2.25em dejavu;
-$font-h2: 1.75em titillium;
-$font-h3: bold 1em/1.25em dejavu;
-$font-h4: bold 0.875em/1.25em dejavu;
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/font/MaterialIcons-Regular.woff2') format('woff2'); }  
+
+$font-nav: bold 1em roboto;
+$font-body-copy: 1em roboto;
+$font-h1: bold 1.75em roboto;
+$font-h2: 1.45em roboto;
+$font-h3: bold 1em/1.25em roboto;
+$font-h4: bold 0.875em/1.25em roboto;
 
 /* Palette */
 
-$primary-color: #c20e1e;
+$primary-color: #444;
 $primary-color-dark: darken($primary-color, 20%);
 $primary-color-light: lighten($primary-color, 30%);
 
 
 $headline-color: $primary-color;
-$highlight-color: $primary-color;
 
-$primary-text: #646262;
-$secondary-text: #fff;
+$highlight-color: #4285f4;
 
-$icon-color: #fff;
+$primary-text: #444;
+$secondary-text: #FFFFFF;
+
+$icon-color: #f6f6f6;
 $icon-admin-edit-color: $primary-color;
 
-$background-color: #fff;
+$background-color: #FFFFFF;
 $background-color-comments: #f2f2f2;
+$secondary-background-color: #f6f6f6;
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
-$startpage-image: url(static('img/startpage.jpg'));
+$startpage-image: url(static('img/startpage3.png'));
 
 @mixin branding() {
   padding-top: 5px;
