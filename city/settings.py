@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',
-    'photologue',
     # 'sorl.thumbnail',
     'taggit',
     'taggit_templatetags',
