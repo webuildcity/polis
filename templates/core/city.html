@@ -1,6 +1,5 @@
 {% extends 'core/startpage.html' %}
 {% load staticfiles %}
-{% load i18n %}
 
 <!-- In this file you can edit the content of the wbc-startpage -->
 
@@ -9,24 +8,17 @@
                 <div id="top-container">
                     <div class="container">
                         <div class="top-overlay text-center">
-
-                     <h1>{% trans "H1: Welcome to our platform!" %}</h1>
-                     <h3>{% trans "H3 Claim: Use our platform to make the best out of our platform!" %}</h3>
-
+                            <h1>Willkommen bei Wir-bauen-Hamburg</h1>
+                            <h3>Beteilige Dich an der Zukunftsgestaltung deiner Hansestadt Hamburg!</h3>
                             <div class="search-container">
-                                <wbc-search text="Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."></wbc-search>
+                                <wbc-search text="Suche nach Ideen, Bauprojekten, Bebauungsplanverfahren, 3D Visualisierungen, ..."></wbc-search>
                             </div>
                         </div>
                     </div>
                 </div>
             {% endblock %}
 
-
-
-<h1>{% trans "This is the h1 title." %}</h1>
-
-<h3>{% trans "This is the h3 title ." %}</h3>
-
+<!-- Have to be add: Link & Credit to author of the image: https://www.flickr.com/photos/lobostudio/5070193235 -->
 
  <!-- Block of Navigation Boxes -->
             {% block nav-boxes %}
@@ -35,25 +27,26 @@
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge</a> informieren. Du kannst ein <a href="{% url 'registration_register' %}">Benutzerkonto anlegen</a>, um damit online Projekten beizutreten, mitzuarbeiten und über Änderungen auf dem Laufenden gehalten zu werden.
-              Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was gerade für den Landkreis Lichtenfels geplant ist. Weitere Infos zu den nächsten Veranstaltungen des Projekts <a href="{% url 'blog' %}">"Jugend-Demografie-Dialog"</a> gibt es im <a href="{% url 'blog' %}">Blog</a>.</p>
+              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Stadtplanungsverfahren</a> informieren. Du kannst ein <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">kostenloses Benutzerkonto anlegen</a> um über Änderungen auf dem Laufenden gehalten zu werden!
+              Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Stadtteil, in Hamburg und Umgebung entwickelt! 
+              Weitere Informationen zu Stadtentwicklung und Bürgerbeteiligung findest Du im <a href="{% url 'encyclopedia' %}">Lexikon</a> oder im <a href="{% url 'blog' %}">Blog</a>.</p>
 
               <div id="navigation-boxes" class="container">
 
                 <div class="col-md-4">
                     <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-lightbulb-o'></i>
-                            <p>Suche nach Ideen & Projekten</p>
+                            <i class='fa fa-map-o'></i>
+                            <p>Suche nach Ideen &amp; Projekten</p>
                         </div>
                     </a>
-                </div>
+                </div> 
                 <div class="col-md-4">
                     <div class="teaser">
                         <i class='fa fa-bell-o'></i>
                             <p>
                                 <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">Abonniere Projekte<br></a>
-                                (Benutzerkonto registrieren)
+                                (kostenlos registrieren)
                             </p>
                         </div>
                 </div>
@@ -83,42 +76,66 @@
               <div id="navigation-boxes" class="container">
 
                 <div class="col-md-4">
-                    <a href="suche/#/searchTerm=&tags%5B%5D=Arbeit+&+Wirtschaft">
+                    <a href="/suche/order=&tags=Arbeit">
                         <div class="teaser">
-                            <i class='fa fa-clock-o'></i>
-                            <p>Arbeit &amp; Wirtschaft</p>
+                            <i class='fa fa-lightbulb-o'></i>
+                            <p>Bauprojekte</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="{% url 'search' %}">
+                    <a href="/suche/order=&tags=Arbeit">
                         <div class="teaser">
-                            <i class='fa fa-heart'></i>
-                            <p>Familie &amp; Wohnen</p>
+                            <i class='fa fa-building-o'></i>
+                            <p>Stadtteile</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="{% url 'search' %}">
-                        <div class="teaser">
-                            <i class='fa fa-train'></i>
-                            <p>Mobilität &amp; Infrastruktur</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="{% url 'search' %}">
-                        <div class="teaser">
-                            <i class='fa fa-graduation-cap'></i>
-                            <p>Ausbildung &amp; Bildung</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="{% url 'process' %}">
+                    <a href="/suche/order=&tags=Familie">
                         <div class="teaser">
                             <i class='fa fa-hand-paper-o'></i>
-                            <p>Zivilgesellschaft</p>
+                            <p>Aktuelle Bürgerbeteiligung</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Ausbildung">
+                        <div class="teaser">
+                            <i class='fa fa-cubes'></i>
+                            <p>3D Modelle</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Ausbildung">
+                        <div class="teaser">
+                            <i class='fa fa-users'></i>
+                            <p>Bürgerinitiativen &amp; NGOs</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Ausbildung">
+                        <div class="teaser">
+                            <i class='fa fa-university'></i>
+                            <p>Verwaltung der Stadt</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="col-md-4">
+                    <a href="/suche/order=&tags=Ausbildung">
+                        <div class="teaser">
+                            <i class='fa fa-bar-chart'></i>
+                            <p>Baufirmen</p>
+                        </div> 
+                    </a>
+                </div> -->
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Zivilgesellschaft">
+                        <div class="teaser">
+                            <i class='fa fa-code'></i>
+                            <p>OpenData &amp; OpenSource</p>
                         </div>
                     </a>
                 </div>
@@ -135,18 +152,17 @@
             <!-- block -->
 
             <div class="bottom-block">
-                <h2 class="wbc-headline">Was ist der <strong>Jugend-Demografie-Dialog?</strong></h2>
+                <h2 class="wbc-headline">Was ist Wir-bauen-Hamburg?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    Der <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog</a> ist ein Forschungsprojekt der Leuphana Universität Lüneburg. Seit Februar 2015 ist Prof.&nbsp;Dr.&nbsp;Waldemar&nbsp;Stange vom Institut für Sozialarbeit und Sozialpädagogik mit seinem Team im Rahmen des Forschungsprojekts „Jugend-Demografie-Dialog“ damit beauftragt, den Partizipationsprozess für die direkte Einbeziehung von Jugendlichen aus den vier Modelllandkreisen in die Arbeitsgemeinschaft „Jugend gestaltet Zukunft“ forschungsbasiert zu konzipieren, durchzuführen und zu evaluieren. <br>
-                    Auf verschiedenen Veranstaltungen werden die Beteiligten vorbereitet, gecoacht und weiterqualifiziert.
+                    Unsere Wir-Bauen-Hamburg Plattform macht Hamburgs Stadtplanung verständlicher, zugänglicher und fördert die Kommunikation zwischen Bürgern, der Stadt und allen Interessierten. Wir eröffnen einen neuen, frischen Blick auf die eigene Stadt, ihre Planung und Entwicklung. Außerdem zeigen wir Beteiligungsmöglichkeiten auf, um selbst die Zukunft Hamburg kreativ mitgestalten zu können!
                   </p>
                 </div>
             </div>
 
             <!-- block -->
-            <div class="bottom-block">
+            <!-- <div class="bottom-block">
                 <h2 class="wbc-headline">Was hab ich vom Projekt Jugend-Demografie-Dialog?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
@@ -154,45 +170,83 @@
                   </p>
                 </div>
             </div>
-
+            -->
             <!-- block -->
 
             <div class="bottom-block">
-                <h2 class="wbc-headline">Ziel des <strong>Jugend-Demografie-Dialogs</strong></h2>
+                <h2 class="wbc-headline">Vision</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    Das <strong>Ziel</strong> des Jugend-Demografie-Dialogs ist, es den beteiligten Jugendlichen zu ermöglichen, sich wirkungsvoll an der politischen Gestaltung des demografischen Wandels in ihrer Region zu beteiligen und <strong>eigene Lösungsansätze</strong> zu entwickeln.
+                    Wir wollen zukünftige Stadtplanung die offen, partizipativ und demokratiefördernd ist - im Einklang mit ihren Bürgern. Deshalb bieten wir den Bürgern und allen Interessierten die Möglichkeit, sich einfach und unterhaltsam über Bauvorhaben und andere Projekten, sowie Verwaltungsprozesse der Stadt zu informieren.
                   </p>
                 </div>
             </div>
 
             <div class="bottom-block">
-                <h2 class="wbc-headline">Wer organisiert das hier?</strong></h2>
+                <h2 class="wbc-headline">Wer organisiert das hier?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
-                  <p>
-                    Das <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog Team</a> der Leuphana Universität Lüneburg unterstützt Euch gerne! Bei Fragen sprecht uns einfach an:</p>
-
+                     <div>
+                        <p style="padding-bottom: 1em;">
+                            Wir sind ein aufstrebendes dynamisches Unternehmen aus Hamburg &amp; Berlin welches es sich zum Ziel gesetzt hat eine innovative Informations- und Kommunikationsplattform zu entwickeln, um Stadtplanung transparenter &amp; partizipativer zu machen.Unser Team besteht aus erfahrenen IT Experten, Open Data Enthusiasten, Politik-, Kommunikations- und Kulturwissenschaftlern... 
+                        </p>
+                     </div>
                      <div class="col-md-4">
-                        <h4>Prof. Dr. Waldemar Stange</h4>
-                        <img src="/static/img/stange.jpg">
-                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-2379<br><a href="mailto:stange@uni.leuphana.de">stange@uni.leuphana.de</a></p>
+                        <img src="/static/img/timo_lundelius.jpg">
+                        <h3>Timo Lundelius</h3>
+                        <p style="padding-left: 0; padding-top: 1em;">Fon +4940 609430490<br><a href="mailto:timo.lundelius@we-build.city">timo.lundelius@we-build.city</a></p>
                     </div>
                     <div class="col-md-4">
-                        <h4>Anja Bentrup, M.A.</h4>
-                        <img src="/static/img/bentrup.jpg">
-                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-2383<br><a href="mailto:anja.bentrup@leuphana.de">anja.bentrup@leuphana.de</a></p>
+                        <img src="/static/img/solveig_schroeder.jpg">
+                        <h3>Solveig Schröder</h3>
+                        <p style="padding-left: 0; padding-top: 1em;">Fon +4940 609430490<br><a href="mailto:solveig.schroeder@we-build.city">solveig.schroeder@we-build.city</a></p>
                     </div>
-                    <div class="col-md-4">
-                        <h4>Timo Bleck­we­del, M.A.</h4>
-                        <img src="/static/img/bleckwedel.jpg">
-                        <p style="padding-left: 0; padding-top: 1em;">Fon +49.4131.677-1681<br><a href="mailto:timo.bleckwedel@leuphana.de">timo.bleckwedel@leuphana.de</a></p>
+                </div>
+
+                <div class="container">
+                    <p> Wir - das Team von We-Build.City - verstehen uns als Brückenbauer zwischen Stadt,Verwaltung, Bürgern und Investoren. Gute und effektive Kommunikation ist in unseren Augen das A und O einer gelungenen Stadtentwicklung und die Grundlage von Demokratie. Mit diesem Leitbild vor Augen haben wir eine Informations- und Kommunikationsplattform für Stadtplanung entwickelt.<br>
+                    Entstanden ist das Projekt 2012 im Rahmen ehrenamtlicher Arbeit in den Open Knowledge Labs von Codefor.de. Unter dem Namen buergerbautstadt.de wurde für die Stadt Berlin eine Plattform für Bebauungs- und Planfeststellungsverfahren von Magdalena Noffke, Jochen Klar und Weiteren gebaut.<br>
+                    Die Weiterentwicklung und Ausgründung des Projektes fand im Oktober 2014 statt. Bei einem EU-Förderwettbewerb der Europäischen Kommnission landete die Projektidee von We-build.city auf Platz 5 von 183 eingereichten Bewerbungen. Diese finanzielle Ausstattung ermöglichte es uns, das Konzept und die Software zu einem marktreifen Produkt weiterzuentwickeln und zu professionalisieren.<br>
+                    Die Ausgründung erlaubt es uns die Software als sogenannte Open Software as a Service Modell (OpenSaaS) anbieten und betreiben zu können. Die Anwendungsbereiche der Plattform sind so vielfältig, wie die Stadtentwicklung selbst. Haben wir Ihr Interesse als Stadtverwaltung, Bürgerinitiative, NGO oder Firma geweckt? Dann <a href="mailto:team@we-build.city">schreiben Sie uns</a> einfach. Wir sind gespannt auf die Herausforderung die Sie für uns haben!
                     </div>
                 </div>
             </div>
 
             {% endblock %}
+
+<!-- Startpage Footer -->
+
+            {% block footer %}
+
+            <div class="bottom-block">
+            <div class="wbc-divider"></div>
+            <div class="container">
+            
+
+
+            <div class="col-md-4">
+                <h4>
+                    <a href="http://we-build.city" target="_blank">We-Build.City Services UG</a>
+                </h4>
+            </div>
+                
+            <div class="col-md-4">
+                <h4>
+                    <a href="/impressum/">Impressum &amp; Datenschutzerklärung</a>
+                </h4>
+            </div>
+
+            <div class="col-md-4">
+                <h4>
+                    <a href="https://github.com/webuildcity" target="_blank">Offener Quellcode</a>
+                </h4>
+            </div>
+
+            {% endblock %}
+
+
+
 
 <!-- Upcomming Events -->
 
