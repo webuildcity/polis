@@ -1,5 +1,6 @@
 {% extends 'core/startpage.html' %}
 {% load staticfiles %}
+{% load i18n %}
 
 <!-- In this file you can edit the content of the wbc-startpage -->
 
@@ -8,10 +9,10 @@
                 <div id="top-container">
                     <div class="container">
                         <div class="top-overlay text-center">
-                            <h1>Willkommen bei Wir-bauen-Hamburg</h1>
-                            <h3>Beteilige Dich an der Zukunftsgestaltung deiner Hansestadt Hamburg!</h3>
+                            <h1>{% trans "H1: Welcome to our platform" %}</h1>
+                            <h3>{% trans "H3 Claim: Use our platform to make the best out of our platform!" %}</h3>
                             <div class="search-container">
-                                <wbc-search text="Suche nach Ideen, Bauprojekten, Bebauungsplanverfahren, 3D Visualisierungen, ..."></wbc-search>
+                                <wbc-search text=" {% trans "Search Box: Search for Ideas, Projects, everything what you want..." %}"> </wbc-search>
                             </div>
                         </div>
                     </div>
@@ -23,13 +24,13 @@
  <!-- Block of Navigation Boxes -->
             {% block nav-boxes %}
             <div class="bottom-block">
-            <h2 class="wbc-headline"> Was kannst du hier tun? </h2>
+            <h2 class="wbc-headline"> {% trans "Nav-boxes headline: What can you do here?" %}</h2>
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Stadtplanungsverfahren</a> informieren. Du kannst ein <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">kostenloses Benutzerkonto anlegen</a> um über Änderungen auf dem Laufenden gehalten zu werden!
+              <p>{% trans "Nav-boxes paragraph: Hier kannst Du Dich über" %} <a href="{% url 'search' %}">{% trans "laufende Ideen, Projekte und Stadtplanungsverfahren" %}</a> {% trans "informieren. Du kannst ein" %} <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %}
               Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Stadtteil, in Hamburg und Umgebung entwickelt! 
-              Weitere Informationen zu Stadtentwicklung und Bürgerbeteiligung findest Du im <a href="{% url 'encyclopedia' %}">Lexikon</a> oder im <a href="{% url 'blog' %}">Blog</a>.</p>
+              Weitere Informationen zu Stadtentwicklung und Bürgerbeteiligung findest Du im <a href="{% url 'encyclopedia' %}">Lexikon</a> oder im <a href="{% url 'blog' %}">Blog</a>.</p> 
 
               <div id="navigation-boxes" class="container">
 
@@ -37,16 +38,16 @@
                     <a href="{% url 'search' %}">
                         <div class="teaser">
                             <i class='fa fa-map-o'></i>
-                            <p>Suche nach Ideen &amp; Projekten</p>
+                            <p>{% trans "Suche nach Ideen &amp; Projekten" %}</p>
                         </div>
                     </a>
                 </div> 
                 <div class="col-md-4">
                     <div class="teaser">
                         <i class='fa fa-bell-o'></i>
-                            <p>
+                            <p>{% trans "
                                 <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">Abonniere Projekte<br></a>
-                                (kostenlos registrieren)
+                                (kostenlos registrieren)" %}
                             </p>
                         </div>
                 </div>
