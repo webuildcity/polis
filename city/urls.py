@@ -133,4 +133,6 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django_comments.urls')),
     url(r'^comments/post/', 'wbc.core.views.comment_post_wrapper'),
 
+    url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
+
 )

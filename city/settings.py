@@ -51,7 +51,8 @@ INSTALLED_APPS = (
     'threadedcomments',
     'django_comments',
     'crispy_forms',
-    'imagekit'
+    'imagekit',
+    'star_ratings'
 )
 
 MIDDLEWARE_CLASSES = (
