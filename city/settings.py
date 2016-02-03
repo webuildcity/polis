@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',
-    'photologue',
     # 'sorl.thumbnail',
     'taggit',
     'taggit_templatetags',
@@ -54,7 +53,8 @@ INSTALLED_APPS = (
     'crispy_forms',
     'imagekit',
     'rosetta',
-    'django_makemessages_xgettext'
+    'django_makemessages_xgettext',
+    'star_ratings'
 )
 
 MIDDLEWARE_CLASSES = (
