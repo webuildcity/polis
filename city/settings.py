@@ -156,8 +156,8 @@ TILES_OPT = {
 }
 
 DEFAULT_VIEW = {
-    'lat': 50.13,
-    'lon': 11.03,
+    'lat': 53.5493422,
+    'lon': 9.9896876,
     'zoom': 12
 }
 
