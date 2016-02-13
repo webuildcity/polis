@@ -34,10 +34,10 @@ INSTALLED_APPS = (
     'wbc.blog',
     'wbc.accounts',
     'wbc.encyclopedia',
+    'wbc.images',
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',
-    'photologue',
     # 'sorl.thumbnail',
     'taggit',
     'taggit_templatetags',
@@ -51,7 +51,10 @@ INSTALLED_APPS = (
     'django_comments',
     'crispy_forms',
     'imagekit',
-    'registration'
+    'registration',
+    'rosetta',
+    'django_makemessages_xgettext',
+    'star_ratings',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,7 +66,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'simple_history.middleware.HistoryRequestMiddleware'
+    'simple_history.middleware.HistoryRequestMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -84,7 +88,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'wbc.core.context_processors.settings',
-#                'csrfdjango.template.context_processors',
             ],
         },
     },
@@ -96,11 +99,22 @@ SITE_ID = 1
 
 INTERNAL_IPS = ('127.0.0.1',)
 
-LANGUAGE_CODE = 'de-de'
+LANGUAGE_CODE = 'de-DE'
 TIME_ZONE = 'Europe/Berlin'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+
+LOCALE_PATHS = (
+    "locale",
+)
+
+from django.utils.translation import ugettext_lazy as _
+
+LANGUAGES = [
+    ('de', _('German')),
+    ('en', _('English')),
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(SITE_ROOT,'media_root/')
@@ -177,4 +191,8 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 COMMENTS_APP = 'threadedcomments'
 # FLUENT_COMMENTS_EXCLUDE_FIELDS = ('url')
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+#Translation Rosetta
+#ROSETTA_WSGI_AUTO_RELOAD
+#ROSETTA_UWSGI_AUTO_RELOAD
 

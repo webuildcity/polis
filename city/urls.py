@@ -120,7 +120,6 @@ urlpatterns = patterns('',
     (r'^sitemap\.xml$', TemplateView.as_view(template_name='sitemap.xml', content_type='text/plain')),
 
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
-    url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
     url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
     url(r'^suche/', SearchView.as_view(), name="search"),
@@ -133,5 +132,11 @@ urlpatterns = patterns('',
 
     url(r'^comments/', include('django_comments.urls')),
     url(r'^comments/post/', 'wbc.core.views.comment_post_wrapper'),
+
+    # translation
+    url(r'^rosetta/', include('rosetta.urls')),
+    
+    #ratings
+    url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 
 )
