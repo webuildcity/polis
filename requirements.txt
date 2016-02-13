@@ -34,3 +34,4 @@ django-threadedcomments==1.0.1
 django-crispy-forms==1.5.2
 django-imagekit==3.3
 django-rosetta==0.7.8
+django_makemessages_xgettext==0.1.1
