@@ -43,9 +43,12 @@ $secondary-text: #FFFFFF;
 $icon-color: #f6f6f6;
 $icon-admin-edit-color: $primary-color;
 
-$background-color: #FFFFFF;
+$background-color: #FAF5F5;
+$background-color-header: $background-color;
+$background-color-startpage-content: $highlight-color;
 $background-color-comments: #f2f2f2;
 $background-color-timeline-content: #f2f2f2;
+$background-color-search-result: #FFFFFF;
 $secondary-background-color: #f6f6f6;
 
 
@@ -58,7 +61,8 @@ $background-image: url(static('img/background.png'));
 $background-image-light: none;
 
 
-/* 
+/* No function at the moment 
+
 $project-placeholder: url(static('img/project_placeholder.png'));
 $person-placeholder: url(static('img/person_placeholder.png'));
 
@@ -70,6 +74,7 @@ $no-participation: url(static('img/no-participation.png'));
 
 $startpage-person1: url(static('img/wbc-timo-lundelius.jpg'));
 $startpage-person2: url(static('img/wbc-solveig-schroeder.jpg')); 
+
 */
 
 @mixin branding() {
