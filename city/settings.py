@@ -107,6 +107,8 @@ USE_TZ = True
 
 LOCALE_PATHS = (
     "locale",
+    '../wbc/'
+    # os.path.join(SITE_ROOT, 'wbc/core/locale'),
 )
 
 from django.utils.translation import ugettext_lazy as _

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-29 14:07+0100\n"
+"POT-Creation-Date: 2016-02-14 17:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,50 +17,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: city/settings.py:115
+#: city/settings.py:117
 msgid "German"
 msgstr "Deutsch"
 
-#: city/settings.py:116
+#: city/settings.py:118
 msgid "English"
 msgstr "Englisch"
 
-#: templates/core/city.html:12
+#: templates/core/city.html:11
 msgid "H1: Welcome to our platform"
 msgstr ""
 
-#: templates/core/city.html:13
+#: templates/core/city.html:12
 msgid "H3 Claim: Use our platform to make the best out of our platform!"
 msgstr ""
 
-#: templates/core/city.html:15
+#: templates/core/city.html:14
 msgid "Search Box: Search for Ideas, Projects, everything what you want..."
 msgstr ""
 
-#: templates/core/city.html:27
+#: templates/core/city.html:26
 msgid "Nav-boxes headline: What can you do here?"
 msgstr ""
 
-#: templates/core/city.html:31
+#: templates/core/city.html:30
 msgid "Nav-boxes paragraph: Hier kannst Du Dich über"
 msgstr ""
 
-#: templates/core/city.html:31
+#: templates/core/city.html:30
 msgid "laufende Ideen, Projekte und Stadtplanungsverfahren"
 msgstr ""
 
-#: templates/core/city.html:31
+#: templates/core/city.html:30
 msgid "informieren. Du kannst ein"
 msgstr ""
 
-#: templates/core/city.html:31
+#: templates/core/city.html:30
 msgid "kostenloses Benutzerkonto anlegen"
 msgstr ""
 
-#: templates/core/city.html:31
+#: templates/core/city.html:30
 msgid "um über Änderungen auf dem Laufenden gehalten zu werden!"
 msgstr ""
 
-#: templates/core/city.html:41
+#: templates/core/city.html:40
 msgid "Suche nach Ideen &amp; Projekten"
 msgstr ""
