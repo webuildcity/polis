@@ -47,6 +47,9 @@ SITE_TITLE = 'Polis - by www.We-Build.City'
 SITE_ROOT = os.path.dirname(os.path.dirname(__file__))
 SITE_URL = 'http://localhost:8000'
 
+FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
+FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_FROM = 'polis@we-build.city'
 
