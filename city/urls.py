@@ -120,7 +120,6 @@ urlpatterns = patterns('',
     (r'^sitemap\.xml$', TemplateView.as_view(template_name='sitemap.xml', content_type='text/plain')),
 
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
-    url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
     url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
     url(r'^suche/', SearchView.as_view(), name="search"),
@@ -128,10 +127,19 @@ urlpatterns = patterns('',
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
     url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint'),
+    url(r'^staerken/', TemplateView.as_view(template_name='staerken.html'), name='staerken'),
+    url(r'^schwaechen/', TemplateView.as_view(template_name='schwaechen.html'), name='schwaechen'),
+    url(r'^ziele/', TemplateView.as_view(template_name='ziele.html'), name='ziele'),
     url(r'^markdown/', include( 'django_markdown.urls')),
     url(r'^tinymce/', include( 'tinymce.urls')),
 
     url(r'^comments/', include('django_comments.urls')),
     url(r'^comments/post/', 'wbc.core.views.comment_post_wrapper'),
+
+    # translation
+    url(r'^rosetta/', include('rosetta.urls')),
+    
+    #ratings
+    url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 
 )

@@ -1,5 +1,6 @@
 {% extends 'core/startpage.html' %}
 {% load staticfiles %}
+{% load i18n %}
 
 <!-- In this file you can edit the content of the wbc-startpage -->
 
@@ -11,23 +12,19 @@
                             <h1>Willkommen beim Jugend-Demografie-Dialog</h1>
                             <h3>Beteilige Dich an der Zukunftsgestaltung deines Landkreises Lichtenfels!</h3>
                             <div class="search-container">
-                                <wbc-search text="Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."></wbc-search>
+                                <wbc-search text="Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."> </wbc-search>
                             </div>
                         </div>
                     </div>
                 </div>
             {% endblock %}
 
-<!-- <a href="https://commons.wikimedia.org/wiki/File:Vierzehnheiligen_I.JPG#/media/File:Vierzehnheiligen_I.JPG">Vierzehnheiligen I</a>Schubbay<a href="//commons.wikimedia.org/wiki/User:Schubbay" title="User:Schubbay">Schubbay</a> assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims).. Lizenziert unter <a title="Creative Commons Attribution-Share Alike 3.0" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> über <a href="https://commons.wikimedia.org/wiki/">Wikimedia Commons</a>. -->
-
-
  <!-- Block of Navigation Boxes -->
             {% block nav-boxes %}
             <div class="bottom-block">
-            <h2 class="wbc-headline"> Was kannst du hier tun? </h2>
+            <h2 class="wbc-headline">Was kannst du hier tun?</h2>
             <div class="wbc-divider"></div>
             <div class="container">
-
               <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge</a> informieren. Du kannst ein <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">Benutzerkonto anlegen</a> um damit online Projekten beizutreten, mitzuarbeiten und über Änderungen auf dem Laufenden gehalten zu werden.
               Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was gerade für den Landkreis Lichtenfels geplant ist. Weitere Infos zu den nächsten Veranstaltungen des Projekts <a href="{% url 'blog' %}">"Jugend-Demografie-Dialog"</a> gibt es im <a href="{% url 'blog' %}">Blog</a>.</p>
 
@@ -36,17 +33,17 @@
                 <div class="col-md-4">
                     <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-lightbulb-o'></i>
-                            <p>Suche nach Ideen & Projekten</p>
+                            <i class='fa fa-map-o'></i>
+                            <p>Suche nach Ideen &amp; Projekten</p>
                         </div>
                     </a>
-                </div>
+                </div> 
                 <div class="col-md-4">
                     <div class="teaser">
                         <i class='fa fa-bell-o'></i>
                             <p>
                                 <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">Abonniere Projekte<br></a>
-                                (Benutzerkonto registrieren)
+                                (kostenlos registrieren)
                             </p>
                         </div>
                 </div>
@@ -60,21 +57,55 @@
                 </div>
               </div>
             </div>
-            {% endblock %}
+            </div>
+            <div class="bottom-block">
+            <h2 class="wbc-headline">Ziele, St&auml;rken &amp; Schw&auml;chen</h2>
+            <div class="wbc-divider"></div>
+            <div class="container">
+              <p>Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...Lorem Ipsum...</p>
 
+        <div id="navigation-boxes" class="container">
+
+                <div class="col-md-4">
+                    <a href="/ziele/">
+                        <div class="teaser">
+                            <i class='fa fa-trophy'></i>
+                            <p>Ziele des Landkreises</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="col-md-4">
+                    <a href="/staerken/">
+                    <div class="teaser">
+                        <i class='fa fa-battery-full'></i>
+                            <p>
+                                Stärken des Landkreises
+                            </p>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <a href="/schwaechen">
+                        <div class="teaser">
+                            <i class='fa fa-battery-quarter'></i>
+                            <p>
+                            Schwächen des Landkreises
+                            </p>
+                        </div>
+                    </a>
+                </div>
+              </div>
+        </div>
+            {% endblock %}
 
 <!-- Block of Topic Boxes -->
             {% block topic-boxes %}
 
             <div class="bottom-block">
-            <h2 class="wbc-headline"> Themen</h2>
+            <h2 class="wbc-headline"> Ideen &amp; L&ouml;sungsans&auml;tze</h2>
             <div class="wbc-divider"></div>
             <div class="container">
 
-              <!-- p>Themen, um die es hier geht: <a href="{% url 'search' %}">laufenden Ideen & L&ouml;sungsans&auml;tze</a> informieren, Dich beteiligen und immer auf dem neusten Stand bleiben!</p -->
-
               <div id="navigation-boxes" class="container">
-
                 <div class="col-md-4">
                     <a href="/suche/order=&tags=Arbeit">
                         <div class="teaser">
@@ -115,7 +146,16 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Umwelt">
+                        <div class="teaser">
+                            <i class='fa fa-pagelines'></i>
+                            <p>Umwelt</p>
+                        </div>
+                    </a>
+                </div>
               </div>
+            </div>
             </div>
             {% endblock %}
 
@@ -128,6 +168,37 @@
             <!-- block -->
 
             <div class="bottom-block">
+                <h2 class="wbc-headline">St&auml;rken des Landkreises</h2>
+                <div class="wbc-divider"></div>
+                <div class="container">
+                  <img src="/static/img/lichtenfels-staerken.png" height="70%" width="70%" class="img-responsive" margin-top>
+                  <p>Kurzer Beschreibungstext wie sich diese Grafik von der Datenlage her zusammensetzt, was sie aussagt, etc.. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
+            </div>
+
+
+<!--             <div class="bottom-block">
+                <h2 class="wbc-headline">Schw&auml;chen des Landkreises</h2>
+                <div class="wbc-divider"></div>
+                <div class="container">
+                  <img src="/static/img/lichtenfels-schwaechen.png" height="50%" width="50%">
+                </div>
+            </div>  -->
+
+            <!-- block -->
+
+            <div class="bottom-block">
+                <h2 class="wbc-headline">Vision</h2>
+                <div class="wbc-divider"></div>
+                <div class="container">
+                  <p>
+                    Die Vision von Jugend-Demografie-Dialog.de ist, dass Jugendliche lernen sich selbst um den Mist der Eltern zu kümmern und hinter den vorhergehenden Generationen aufräumen... 
+                  </p>
+                </div>
+            </div>
+
+            <div class="bottom-block">
                 <h2 class="wbc-headline">Was ist der <strong>Jugend-Demografie-Dialog?</strong></h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
@@ -137,18 +208,6 @@
                   </p>
                 </div>
             </div>
-
-            <!-- block -->
-            <!-- <div class="bottom-block">
-                <h2 class="wbc-headline">Was hab ich vom Projekt Jugend-Demografie-Dialog?</h2>
-                <div class="wbc-divider"></div>
-                <div class="container">
-                  <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                  </p>
-                </div>
-            </div>
-            -->
-            <!-- block -->
 
             <div class="bottom-block">
                 <h2 class="wbc-headline">Ziel des <strong>Jugend-Demografie-Dialogs</strong></h2>
@@ -161,11 +220,12 @@
             </div>
 
             <div class="bottom-block">
-                <h2 class="wbc-headline">Wer organisiert das hier?</strong></h2>
+                <h2 class="wbc-headline">Wer organisiert das hier?</h2>
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p>
-                    Das <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog Team</a> der Leuphana Universität Lüneburg unterstützt Euch gerne! Bei Fragen sprecht uns einfach an:</p>
+                    Das <a href=http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html>Jugend-Demografie-Dialog Team</a> der Leuphana Universität Lüneburg unterstützt Euch gerne!<br>
+                    Bei Fragen sprecht uns einfach an:</p>
 
                      <div class="col-md-4">
                         <h4>Prof. Dr. Waldemar Stange</h4>
@@ -185,13 +245,61 @@
                 </div>
             </div>
 
+            <div class="bottom-block">
+                <h2 class="wbc-headline">Projekttr&auml;ger und F&ouml;rderer</h2>
+                <div class="wbc-divider"></div>
+                <div class="container">
+                  <p></p>
+
+                     <div class="col-md-4">
+                        <img src="/static/img/logo_leuphana.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/img/logo_BMFSFJ.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/img/logo_demografiestrategie.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+
+
+            {% endblock %}
+
+<!-- Startpage Footer -->
+
+            {% block footer %}
+
+            <div class="bottom-block">
+            <div class="wbc-divider"></div>
+            <div class="container">
+
+                <div class="col-md-4">
+                    <h4>
+                        <a href="http://www.leuphana.de/institute/ifsp/forschung-projekte/jugend-demografie-dialog.html" target="_blank">Leuphana Universität Lüneburg</a>
+                    </h4>
+                </div>
+                
+                <div class="col-md-4">
+                    <h4>
+                        <a href="/impressum/">Impressum &amp; Datenschutzerklärung</a>
+                    </h4>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>
+                        <a href="https://github.com/webuildcity" target="_blank">Offener Quellcode</a>
+                    </h4>
+                </div>
+            </div>   
+            </div>
             {% endblock %}
 
 <!-- Upcomming Events -->
 
-<!--         {% if upcoming %}
+        {% if upcoming %}
         <div class="bottom-block">
-            <h2 class="wbc-headline">Aktuelle Veranstaltungen &amp; Projekte mit Bürgerbeteiligung</h2>
+            <h2 class="wbc-headline">Aktuelle Ideen &amp; Lösungsansätze</h2>
             <div class="wbc-divider"></div>
             <div class="upcoming container">
                     {% for project in upcoming %}
@@ -200,7 +308,7 @@
                             {% if project.gallery %}
                             <img class="description_img" src="{{project.gallery.photos.all.0.get_description_url}}" />
                             {% else %}
-                            <img class="description_img" src="{% static 'img/person_placeholder.png' %}" />
+                            <img class="description_img" src="{% static 'img/project_placeholder.png' %}" />
                             {% endif %}
                             <div>
                                 <h3>{{project.name}} {% if project.identifier %} ({{project.identifier}}) {% endif %}</h3>
@@ -222,4 +330,3 @@
             </div>
         </div>
         {% endif %}
--->

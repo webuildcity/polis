@@ -1,0 +1,34 @@
+{% extends 'core/layout_split.html' %}
+{% load staticfiles compress i18n %}
+
+{% block css %}
+    {% compress css %}
+    {{block.super}}
+
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/process.scss" %}" />
+
+    {% endcompress %}
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
+
+{% block controller %}
+DefaultController
+{% endblock %}
+
+{% block side_content %}
+
+    <div id="process_sidebar">
+        <h2>Ziele des Landkreises</h2>
+            <p>Inhalt folgt...</p>
+
+{% endblock %}
+
+
+{% block main_content %}
+
+        <p>Inhalt folgt...</p>
+
+{% endblock %}
