@@ -22,6 +22,7 @@ INSTALLED_APPS = (
     'markdown',
     'compressor',
     # we build city apps
+    'wbc',
     'wbc.core',
     'wbc.region',
     'wbc.process',
@@ -105,10 +106,8 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-LOCALE_PATHS = (
+LOCALE_PATHS = (    
     "locale",
-    '../wbc/'
-    # os.path.join(SITE_ROOT, 'wbc/core/locale'),
 )
 
 from django.utils.translation import ugettext_lazy as _
@@ -116,6 +115,7 @@ from django.utils.translation import ugettext_lazy as _
 LANGUAGES = [
     ('de', _('German')),
     ('en', _('English')),
+    ('wbh', _('WBH')),
 ]
 
 MEDIA_URL = '/media/'
