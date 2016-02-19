@@ -30,15 +30,15 @@
 
               <div id="navigation-boxes" class="container">
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <a href="{% url 'search' %}">
                         <div class="teaser">
-                            <i class='fa fa-map-o'></i>
+                            <i class='fa fa-search'></i>
                             <p>Suche nach Ideen &amp; Projekten</p>
                         </div>
                     </a>
                 </div> 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="teaser">
                         <i class='fa fa-bell-o'></i>
                             <p>
@@ -47,14 +47,15 @@
                             </p>
                         </div>
                 </div>
-                <div class="col-md-4">
+<!--                 <div class="col-md-4">
                     <a href="{% url 'process' %}">
                         <div class="teaser">
                             <i class='fa fa-book'></i>
                             <p>Im Lexikon stöbern</p>
                         </div>
                     </a>
-                </div>
+                </div> -->
+
               </div>
             </div>
             </div>
@@ -107,42 +108,51 @@
 
               <div id="navigation-boxes" class="container">
                 <div class="col-md-4">
-                    <a href="/suche/order=&tags=Arbeit">
-                        <div class="teaser">
-                            <i class='fa fa-clock-o'></i>
-                            <p>Arbeit &amp; Wirtschaft</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="/suche/order=&tags=Familie">
-                        <div class="teaser">
-                            <i class='fa fa-heart'></i>
-                            <p>Familie &amp; Wohnen</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
                     <a href="/suche/order=&tags=Mobilität">
                         <div class="teaser">
-                            <i class='fa fa-train'></i>
-                            <p>Mobilität &amp; Infrastruktur</p>
+                            <i class='fa fa-car'></i>
+                            <p>Mobilität</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="/suche/order=&tags=Ausbildung">
+                    <a href="/suche/order=&tags=Familienfreundlichkeit">
+                        <div class="teaser">
+                            <i class='fa fa-heart'></i>
+                            <p>Familienfreundlichkeit fördern</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Arbeitsmarkt">
+                        <div class="teaser">
+                            <i class='fa fa-clock-o'></i>
+                            <p>Arbeitsmarkt</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Bildung">
                         <div class="teaser">
                             <i class='fa fa-graduation-cap'></i>
-                            <p>Ausbildung &amp; Bildung</p>
+                            <p>Bildung</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="/suche/order=&tags=Zivilgesellschaft">
+                    <a href="/suche/order=&tags=Infrastruktur">
                         <div class="teaser">
-                            <i class='fa fa-hand-paper-o'></i>
-                            <p>Zivilgesellschaft</p>
+                            <i class='fa fa-train'></i>
+                            <p>Infrastruktur</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Kultur">
+                        <div class="teaser">
+                            <i class='fa fa-coffee'></i>
+                            <p>Kultur und Freizeit</p>
                         </div>
                     </a>
                 </div>
@@ -151,6 +161,38 @@
                         <div class="teaser">
                             <i class='fa fa-pagelines'></i>
                             <p>Umwelt</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Benachteiligungen">
+                        <div class="teaser">
+                            <i class='fa fa fa-ban'></i>
+                            <p>Benachteiligungen abbauen</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=RegionaleProdukte">
+                        <div class="teaser">
+                            <i class='fa fa-compass'></i>
+                            <p>Regionale Produkte</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Tourismus">
+                        <div class="teaser">
+                            <i class='fa fa-map-o'></i>
+                            <p>Tourismus</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/suche/order=&tags=Miteinander">
+                        <div class="teaser">
+                            <i class='fa fa-thumbs-o-up'></i>
+                            <p>Gutes Miteinander</p>
                         </div>
                     </a>
                 </div>
@@ -250,15 +292,14 @@
                 <div class="wbc-divider"></div>
                 <div class="container">
                   <p></p>
-
-                     <div class="col-md-4">
-                        <img src="/static/img/logo_leuphana.png" class="img-responsive">
-                    </div>
                     <div class="col-md-4">
                         <img src="/static/img/logo_BMFSFJ.jpg" class="img-responsive">
                     </div>
                     <div class="col-md-4">
                         <img src="/static/img/logo_demografiestrategie.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/img/logo_leuphana.png" class="img-responsive">
                     </div>
                 </div>
             </div>
