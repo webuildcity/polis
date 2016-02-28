@@ -11,7 +11,8 @@
 {% endblock %}
 
 {% block js %}
-
+    <script src='https://www.google.com/jsapi'></script>
+    <script type="text/javascript" src="{% static 'js/staerken.js' %}"></script>
 {% endblock %}
 
 {% block controller %}
@@ -19,18 +20,35 @@ DefaultController
 {% endblock %}
 
 {% block side_content %}
-
     <div id="process_sidebar">
-        <h2>Stärken des Landkreises</h2>
-            <p>Inhalt folgt...</p>
+        <h2>Ergebnisse der Demografiewerkstatt</h2>
+        
+        <a href="/ziele/">
+        <h3>Ziele des Landkreises</h3>
+        </a>
 
+        <h3>Stärken des Landkreises</h3>
+        
+        <a href="/schwaechen/">
+            <h3>Schwächen des Landkreises</h3>
+        </a>
+    </div>
 {% endblock %}
 
 
 {% block main_content %}
 
-    <div id="process_mainbar">
-        <p>Inhalt folgt...</p>
+    <h2>Die Stärken des Landkreises</h2>
+
+    <p>Nachfolgend die Stärken des Landkreises Lichtenfels sowie die grafische Auswertung der Ergebnisse aus der Demografiewerkstatt welche am 21. und 22. Januar 2016 in Lichtenfels auf Kloster Banz stattfand:</p>
+    
+
+    <div class="container">
+        <div class="grid">
+            <!-- <div class="col-1-1"> -->
+                <div id="chart_div1" class="chart"></div>
+        </div>
+    </div>
             
 
 

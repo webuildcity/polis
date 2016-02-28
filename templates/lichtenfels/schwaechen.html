@@ -1,15 +1,57 @@
-{% extends 'core/page.html' %}
-{% load compress %}
+{% extends 'core/layout_split.html' %}
+{% load staticfiles compress i18n %}
+
 {% block css %}
     {% compress css %}
     {{block.super}}
+
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/process.scss" %}" />
+
     {% endcompress %}
 {% endblock %}
 
-{% block page %}
+{% block js %}
+    <script src='https://www.google.com/jsapi'></script>
+    <script type="text/javascript" src="{% static 'js/schwaechen.js' %}"></script>
+{% endblock %}
 
-<h2>Schwächen des Landkreises</h2>
+{% block controller %}
+DefaultController
+{% endblock %}
 
-<p>Inhalt folgt...</p>
+
+{% block side_content %}
+    <div id="process_sidebar">
+        <h2>Ergebnisse der Demografiewerkstatt</h2>
+        
+        <a href="/ziele/">
+        <h3>Ziele des Landkreises</h3>
+        </a>
+
+        <a href="/staerken/">
+            <h3>Stärken des Landkreises</h3>
+        </a>
+        
+        
+        <h3>Schwächen des Landkreises</h3>    
+    </div>
+
+{% endblock %}
+
+
+{% block main_content %}
+    <!--h2 class="spacer">&nbsp;</h2-->
+    <h2>Die Schwächen des Landkreises</h2>
+
+    <p>Nachfolgend die Schwächen des Landkreises Lichtenfels sowie die grafische Auswertung der Ergebnisse aus der Demografiewerkstatt welche am 21. und 22. Januar 2016 in Lichtenfels auf Kloster Banz stattfand:</p>
+    
+
+    <div class="container">
+        <div class="grid">
+            <!-- <div class="col-1-1"> -->
+                <div id="chart_div1" class="chart"></div>
+        </div>
+    </div>
+    
 
 {% endblock %}
