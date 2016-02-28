@@ -33,9 +33,16 @@ $primary-color: #444;
 $primary-color-dark: darken($primary-color, 20%);
 $primary-color-light: lighten($primary-color, 30%);
 
+
+/* Links */
+$link-color: #AC1010;
+$link-color-dark: darken($link-color, 20%);
+$link-color-light: lighten($link-color, 30%);
+
+
 $headline-color: $primary-color;
 
-$highlight-color: #4285f4;
+$highlight-color: #AC1010;
 
 $primary-text: #444;
 $secondary-text: #FFFFFF;
