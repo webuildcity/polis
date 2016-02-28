@@ -127,9 +127,9 @@ urlpatterns = patterns('',
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
     url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint'),
-    url(r'^staerken/', TemplateView.as_view(template_name='staerken.html'), name='staerken'),
-    url(r'^schwaechen/', TemplateView.as_view(template_name='schwaechen.html'), name='schwaechen'),
-    url(r'^ziele/', TemplateView.as_view(template_name='ziele.html'), name='ziele'),
+    url(r'^staerken/', TemplateView.as_view(template_name='lichtenfels/staerken.html'), name='staerken'),
+    url(r'^schwaechen/', TemplateView.as_view(template_name='lichtenfels/schwaechen.html'), name='schwaechen'),
+    url(r'^ziele/', TemplateView.as_view(template_name='lichtenfels/ziele.html'), name='ziele'),
     url(r'^markdown/', include( 'django_markdown.urls')),
     url(r'^tinymce/', include( 'tinymce.urls')),
 
