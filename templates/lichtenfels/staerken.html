@@ -2,6 +2,7 @@
 {% load staticfiles compress i18n %}
 
 {% block css %}
+
     {% compress css %}
     {{block.super}}
 
@@ -14,7 +15,7 @@
 {% endblock %}
 
 {% block js %}
-    <script src='https://www.google.com/jsapi'></script>
+   <!-- <script src='https://www.google.com/jsapi'></script> -->
     <script type="text/javascript" src="{% static 'js/staerken.js' %}"></script>
 {% endblock %}
 
@@ -22,37 +23,149 @@
 DefaultController
 {% endblock %}
 
+
 {% block side_content %}
     <div id="process_sidebar">
-        <h2>Ergebnisse der Demografiewerkstatt</h2>
+        <h2>Ergebnisse der Trendkonferenz</h2>
         
-        <a href="/ziele/">
-        <h3>Ziele des Landkreises</h3>
-        </a>
+            <h3>Stärken für den Landkreis</h3>
+            <ol>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+                <li>
+                    <a href="/ziele/">Die Schul- und Unterrichtssituation ist verbessert (24 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+            </ol>
 
-        <h3>Stärken des Landkreises</h3>
-        
-        <a href="/schwaechen/">
-            <h3>Schwächen des Landkreises</h3>
-        </a>
+            <a href="/staerken/">Stärken des Landkreises</a></li>
+            <li>
+                <a href="/schwaechen/">
+                    <h3>Schwächen des Landkreises</h3>
+                </a>
+            </li>
+        </ul>
     </div>
 {% endblock %}
 
 
 {% block main_content %}
+    <!--h2 class="spacer">&nbsp;</h2-->
+    <h2>Stärken des Landkreises</h2>
 
-    <h2>Die Stärken des Landkreises</h2>
 
-    <p>Nachfolgend die Stärken des Landkreises Lichtenfels sowie die grafische Auswertung der Ergebnisse aus der Demografiewerkstatt welche am 21. und 22. Januar 2016 in Lichtenfels auf Kloster Banz stattfand:</p>
-    
+    <p>Die Jugendlichen haben sowohl in den Trendkonferenzen im Kloster Banz als auch im Jugendzentrum Lichtenfels in Minigruppen à drei Personen zunächst Stärken des Landkreises und anschließend Schwächen des Landkreises gesammelt. Für diese Arbeitsschritte wurden die Leitfragen „ Was sind die Stärken des Landkreises Lichtenfels?“ und „Was sind die Schwächen des Landkreises Lichtenfels?“ verwendet.
+    Die Karten aller Minigruppen wurden an Stellwänden thematisch sortiert (zu Stärken- und Schwä-chenkomplexen zusammengefasst) und mit einem Oberbegriff versehen. Abschließend vergaben die Jugendlichen je drei Klebepunkte an die aus ihrer Sicht wichtigsten Stärken- und Schwächenkomplexe.</p>
+    <p>Die Ergebnisse von allen Trendkonferenzen sind gemeinsam ausgewertet worden. Dadurch ist ein gruppenübergreifendes Stärken-Schwächen-Profil des Landkreises entstanden, der nachfolgend dar-gestellt wird.</p>
+    <p>
+    Die Ergebnisse von allen Trendkonferenzen sind gemeinsam ausgewertet worden. Die Kartenbeiträge aus den einzelnen Kleingruppen wurden in einzelnen Textblöcken zu den jeweiligen Oberzielen zu-sammengefasst. Dadurch ist ein umfassender und gruppenübergreifender Zielkatalog des Landkrei-ses entstanden, der nachfolgend dargestellt wird.</p>
 
     <div class="container">
         <div class="grid">
-            <!-- <div class="col-1-1"> -->
                 <div id="chart_div1" class="chart"></div>
         </div>
     </div>
-            
 
+    <!-- <p>Nachfolgend die Ziele des Landkreises Lichtenfels sowie die grafische Auswertung der Ergebnisse aus der Demografiewerkstatt welche am 21. und 22. Januar 2016 in Lichtenfels auf Kloster Banz stattfand:</p> -->
+    
+    <ol>
+        <li>
+            <h3>Bier-, Gasthaus und Brauereikultur (75 Punkte)</h3>
+            <p>Als größte Stärken nennen die Jugendlichen die Qualität und die Vielfalt der Brauereien und Gast-häuser in Lichtenfels. Das „gute Bier“ wird von vielen besonders hervorgehoben. Neben der hohen Dichte an Brauereihäusern werden regionale kulinarische Spezialitäten gelobt. Als Lokalitäten wer-den das „Nepomuk“ und der „Irish Pub“ genannt. Auch Bäckereien und Hausmetzgereien tragen für die Jugendlichen zur Lebensqualität in Lichtenfels bei.</p>
+            <p>
+            In diesem Zusammenhang kommen auch die zahlreichen Dorffeste, Vereine und ein starker Zusam-menhalt in den Dörfern zur Sprache. </p>
+        </li>
+
+        <li>
+            <h3>Touristische Sehenswürdigkeiten und Landwirtschaft (58 Punkte)</h3>
+            <p>Die Jugendlichen sehen eine weitere Stärke des Landkreises in seiner touristischen Attraktivität. Die-se sei vor allem geprägt durch die Schönheit der Landschaft, die historische Bedeutung der Korbpro-duktion und die Kur- und Wellnessangebote. Als besondere historisch-kulturelle Sehenswürdigkeiten werden der Gottesgarten Obermain, die Therme, die Wallfahrtskirche, der „Berg der Franken“, das Schustermuseum, Kloster Banz, Vierzehnheiligen, der Korbmarkt, das Allstadtfest, die vielen Gast-häuser, Staffelstein und der Staffelberg genannt. Lichtenfels als „Korbstadt“ wird als „Alleinstel-lungsmerkmal“ und „Eigene Kultur“ genannt. Der Wander- und Radtourismus werde durch die vielen Wanderwege, die vielfältige Landschaft und die Nähe zur Natur begünstigt. Die gepflegten Grünanla-gen und die zahlreichen Baggerseen werden auch lobend erwähnt.</p>
+        </li>
+        <li>
+            <h3>Gutes Freizeitangebot und Veranstaltungen (57 Punkte)</h3>
+            <p>Die Jugendlichen nehmen Lichtenfels als einen lebendigen Landkreis wahr, der der Bevölkerung ein breites Angebot an Freizeitmöglichkeiten bietet. Diese lassen sich grob gliedern in Veranstaltungen einerseits – wie die lokalen Volks- und Schützenfeste, den Korbmarkt, Faschingsfeste (Weismain) und das ProjectX – und Freizeitangebote andererseits – wie die zahlreichen Vereine in jedem Dorf, das Schwimmbad (Therme und Freibad in Burgkunstadt), die Bowlingbahn, das Kino (Freilichtkino in Lich-tenfels), die Stadthalle, das Spielmobil, die Baggerseen (Ebersfeld), der Kreisjungendring und viele Ausgehmöglichkeiten. Hierbei wird die Vielfalt der Vereine besonders hervorgehoben. Außerdem werden besonders die Jugendangebote, wie der Ferienpass erwähnt.</p>
+        </li>
+        <li>
+            <h3>Starke Wirtschaft (18 Punkte)</h3>
+            <p>Lichtenfels wird als ein wirtschaftlich interessanter Standort genannt, in dem viele starke Unterneh-men und „kleine Topunternehmen“ mit Zukunftsaussichten angesiedelt sind. Diese Unternehmen seien technisch versiert und in einigen Branchen Marktführer. Die landwirtschaftliche Prägung des Landkreises sei positiv für Brauereien und Lebensmittelunternehmen in der Region. Es werden die vielen Arbeitsplätze (Bauer, Dechant etc.) und abwechslungsreichen Jobangebote erwähnt. Für die Jugendlichen ist vor allem das breite und attraktive Angebot von Ausbildungsplätzen entscheidend. Auch gebe es für den täglichen Bedarf genügend Einkaufsmöglichkeit.</p>
+        </li>
+        <li>
+            <h3>Gutes Angebot an Bildungseinrichtungen (13 Punkte)</h3>
+            <p>Die Jugendlichen loben, dass Lichtenfels über eine leistungsstarke und plurale Bildungslandschaft verfüge. Von den Kindergärten, über die zahlreichen Schulen, die Berufsschulen und Weiterbil-dungsmöglichkeiten im Rahmen von VHS-Kursen wird das Spektrum der Bildungsbedarfe zufrieden-stellend abgedeckt. Auch gebe es Bildungsangebote speziell für Jugendliche sowie Bildungseinrich-tungen für Menschen mit Behinderung. Das gefächerte Schulsystem wird positiv bewertet. </p>
+        </li>
+        <li>
+            <h3>Freizeitangebote für Jugendliche (10 Punkte)</h3>
+            <p>Lichtenfels verfüge über viele Veranstaltungsmöglichkeiten für Jugendliche. Hierbei wird das Ferien-programm des Kreisjugendringes, das Jugendzentrum (JUZ), der Ferienpass und die Ehrenamtskarte erwähnt. Der Bürgermeister von Lichtenfels und die Jungendbeauftragten werden als engagiert be-schrieben.</p>
+        </li>
+        <li>
+            <h3>ÖPNV und Zuganbindung (10 Punkte)</h3>
+            <p>Die Verkehrsanbindung und die Mobilitätsangebote werden als positiv wahrgenommen. Bis 2016 sei der Landkreis noch mit dem ICE angebunden, es gebe eine Autobahnverbindung und auch kleinere Gemeinden seien gut zu erreichen. Für Menschen, die nicht Autofahren wollen oder können biete das Fifty-Fifty-Taxi und das Schützenfest-Shuttle eine gute Alternative. In Lichtenfels sei vieles fußläu-fig zu erreichen.</p>
+        </li>
+        <li>
+            <h3>. Niedrige Lebenshaltungskosten (8 Punkte)</h3>
+            <p>Die Jugendlichen empfinden Lichtenfels als einen Wohnort mit hohem Lebensstandard. Die Ein-kaufsmöglichkeiten seien preiswert und auch die Grundstückspreise niedrig. </p>
+        </li>
+        <li>
+            <h3>Einkaufsmöglichkeiten (7 Punkte)</h3>
+            <p>Als Einkaufsmöglichkeiten werden das Einkaufszentrum Lif.E, sowie zahlreiche kleinere Geschäfte und Supermärkte genannt. Das Preis-Leistungsverhältnis sei gut.</p>
+        </li>
+        <li>
+            <h3>Freundliche Menschen und ein gutes Miteinander (5 Punkte)</h3>
+            <p>Das Gemeinschaftsgefühl und der Zusammenhalt der BewohnerInnen des Landkreises sind den Ju-gendlichen wichtig. Traditionelle Dorffeste, die Bierkultur und die zahlreichen Gaststätten würden positiv zu diesem guten Miteinander beitragen. Viele Menschen engagierten sich ehrenamtlich (bspw. in Sportvereinen und bei der Feuerwehr) und organisierten attraktive Veranstaltungen, wie das Beachsoccer Isling. Die Menschen werden generell als freundlich und „cool“ beschrieben. Die Jugendlichen könnten ihre Meinung einbringen.</p>
+        </li>
+        <li>
+            <h3>Gute Außenanbindung (4 Punkte)</h3>
+            <p>Durch die gute Autobahn- und Zuganbindung könnten größere Städte im Umkreis schnell erreicht werden. Die geografische Lage sei zentral in Deutschland und es gebe mehrere Universitäten in der Umgebung.</p>
+        </li>
+        <li>
+            <h3>Attraktive Kreisstadt (3 Punkte)</h3>
+            <p>Die Jugendlichen sprechen von „Downtown Lichtenfels“ und bewerten den Titel „Deutsche Korbst-adt“ als positiv.</p>
+        </li>
+        <li>
+            <h3>Gute medizinische Versorgung (2 Punkte)</h3>
+            <p>Standortabhängig verfüge der Landkreis über genügend ÄrztInnen.</p>
+        </li>
+        <li><h3>Bürgernahe Kommunalpolitik (1 Punkt)</h3>
+            <p>Der Landrat wird für sein Engagement gelobt, da er Schulen besuche, um dort Meinungen und Ver-besserungsvorschläge einzuholen. Der junge und engagierte Bürgermeister von Lichtenfels setze Vorhaben durch.</p>
+        </li>
+        <li>
+            <h3>Rotlicht (1 Punkt)</h3>
+            <p>Das Etablissement „Wolke 7“ wird als Stärke des Landkreises wahrgenommen.</p>
+        </li>
+        <li>
+            <h3>Ruhige Wohngebiete (1 Punkt)</h3>
+            <p>Die ruhigen Wohngebiete in der Region werden gelobt.</p>
+        </li>
+        <li>
+            <h3>Regionalradio (0 Punkte)</h3>
+            <p>Das Regionalradio wird als Stärke wahrgenommen.</p>
+        </li>
+        <li>
+            <h3>Ausreichend Nutzflächen vorhanden (0 Punkte)</h3>
+            <p>Es gebe genügend Nutzflächen.</p>
+        </li>
+        <li>
+            <h3>Krankenhaus als gute Investition (0 Punkte)</h3>
+            <p>Das örtliche Krankenhaus wird als gute Investition beschrieben.</p>
+        </li>
+        <li>
+            <h3>Stetiger Wandel (0 Punkte)</h3>
+            <p>Lichtenfels wird als Landkreis im stetigen Wandel gesehen.</p>
+        </li>
+        <li>
+            <h3>Attraktiv für Ältere (0 Punkte)</h3>
+            <p>Für ältere Menschen biete der Landkreis ein breites und attraktives Angebot.</p>
+        </li>
 
 {% endblock %}

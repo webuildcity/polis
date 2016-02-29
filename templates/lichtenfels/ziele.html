@@ -11,11 +11,11 @@
     {% endcompress %}
 
     <link rel="stylesheet" href="{% static 'css/chart.css' %}" />
-    
+
 {% endblock %}
 
 {% block js %}
-    <script src='https://www.google.com/jsapi'></script>
+   <script src='https://www.google.com/jsapi'></script>
     <script type="text/javascript" src="{% static 'js/ziele.js' %}"></script>
 {% endblock %}
 
@@ -26,34 +26,193 @@ DefaultController
 
 {% block side_content %}
     <div id="process_sidebar">
-        <h2>Ergebnisse der Demografiewerkstatt</h2>
+        <h2>Ergebnisse der Trendkonferenz</h2>
         
-        <h3>Ziele des Landkreises</h3>
-        
-        <a href="/staerken/">
-            <h3>Stärken des Landkreises</h3>
-        </a>
-        
-        <a href="/schwaechen/">
-            <h3>Schwächen des Landkreises</h3>
-        </a>
+            <h3>Ziele für den Landkreis</h3>
+            <ol>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Der Landkreis verfügt über eine gute Infrastruktur (68 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Die Schul- und Unterrichtssituation ist verbessert (24 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+                <li>
+                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
+                </li>
+            </ol>
+
+            <a href="/staerken/">Stärken des Landkreises</a></li>
+            <li>
+                <a href="/schwaechen/">
+                    <h3>Schwächen des Landkreises</h3>
+                </a>
+            </li>
+        </ul>
     </div>
 {% endblock %}
 
 
 {% block main_content %}
     <!--h2 class="spacer">&nbsp;</h2-->
-    <h2>Die Ziele des Landkreises</h2>
+    <h2>Ziele für den Landkreis</h2>
 
-    <p>Nachfolgend die Ziele des Landkreises Lichtenfels sowie die grafische Auswertung der Ergebnisse aus der Demografiewerkstatt welche am 21. und 22. Januar 2016 in Lichtenfels auf Kloster Banz stattfand:</p>
-    
+
+    <p>In Minigruppen à drei Personen haben die Jugendlichen allgemeine, übergreifende Ziele für den Landkreis aufgeschrieben. Für diesen Arbeitsschritt wurde die Leitfrage „Welche Ziele sollte der Landkreis für seine zukünftige Entwicklung verfolgen?“ verwendet.
+    Die Karten aller Minigruppen wurden an Stellwänden thematisch sortiert (zu Zielkomplexen zusam-mengefasst) und mit einem Oberbegriff versehen. Abschließend vergaben die Jugendlichen je drei Klebepunkte an die aus ihrer Sicht wichtigsten Zielkomplexe. </p>
+    <p>
+    Die Ergebnisse von allen Trendkonferenzen sind gemeinsam ausgewertet worden. Die Kartenbeiträge aus den einzelnen Kleingruppen wurden in einzelnen Textblöcken zu den jeweiligen Oberzielen zu-sammengefasst. Dadurch ist ein umfassender und gruppenübergreifender Zielkatalog des Landkrei-ses entstanden, der nachfolgend dargestellt wird.
+    Das Diagramm auf der folgenden Seite zeigt die Ziele des Landkreises aus Sicht der Jugendlichen, geordnet nach ihrer Wichtigkeit. Über den Diagrammsäulen und in den Klammern hinter den einzel-nen Zielen im Text ist die Anzahl der erhaltenen Punkte angegeben. Im Anschluss an das Diagramm folgen die ausführlichen Beschreibungen der Oberziele.</p>
 
     <div class="container">
         <div class="grid">
-            <!-- <div class="col-1-1"> -->
                 <div id="chart_div1" class="chart"></div>
         </div>
     </div>
     
+    <p>Von den Jugendlichen wurden zwei Zielkomplexe als besonders wichtig eingestuft, zum einen das Ziel „Es gibt mehr (jugendgerechte) Freizeitangebote“ und zum anderen das Ziel „Der Landkreis verfügt über eine gute Infrastruktur“.</p>
+    <!-- <p>Nachfolgend die Ziele des Landkreises Lichtenfels sowie die grafische Auswertung der Ergebnisse aus der Demografiewerkstatt welche am 21. und 22. Januar 2016 in Lichtenfels auf Kloster Banz stattfand:</p> -->
+    
+    <ol>
+        <section id="3d_modelle">
+        <li>
+            <h3>Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Es gibt mehr (jugend-gerechte) Freizeitangebote. Dieses Ziel ist von ihnen am wichtigsten eingestuft worden.</p>
+            <p>
+            Allgemein sind mehr und neue Freizeitangebote für Jugendliche vorhanden und es gibt mehr Investi-tionen in Freizeitmöglichkeiten. Man spürt eine Verbesserung des Wohlfühlfaktors.</p>
+            <p>Außerdem sind mehr kinder- und jugendgerechte Treffpunkte eingerichtet, wie Jugendräume und Jugendzentren, aber auch Sportplätze, Grünflächen, Grünanlagen und mehr Spielplätze. Darüber hinaus gibt es mehr Schwimmbäder, Wirtshäuser, Restaurants, eine Konzerthalle, ein Shopping-Mall und eine eigene Disco in Lichtenfels.</p>
+            <p>Es gibt auch mehr und abwechslungsreichere Veranstaltungen und Aktionen für Kinder und Jugendli-che, wie Ferienprogramme, Jugendreisen, Jugendtourismus und Familienfeste. Ebenso gibt es mehr sportliche Vereine.</p>
+            <p>Genauso ist auch eine größere Auswahl an Kulturprogrammen für Kinder und Jugendliche umgesetzt, darunter Theater, Thementage, internationaler Kulturaustausch und Mittelaltermärkte, sowie die Nutzung der Stadthalle. Zur Erweiterung des Kulturangebots gehört auch die Stärkung und Unter-stützung regionaler Bands, beispielsweise durch mehr öffentliche Proberäume.</p>
+            <p>Ein weiterer Aspekt ist die bessere Werbung für bestehende und neue Angebote für Kinder und Ju-gendliche. Im Jugendzentrum werden mehr Hinweise auf Angebote gegeben und der Landkreis stellt ein Programm zusammen von dem sich die Jugendlichen inspirieren lassen können.</p>
+            <p>Abschließend zu erwähnen sind Ermäßigungen für Kinder und Jugendliche, sowie die staatliche Un-terstützung zum Aufbau für Events von Jugendlichen.</p>
+        </li>
+        </section>
+
+        <li>
+            <h3>Der Landkreis verfügt über eine gute Infrastruktur (68 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Der Landkreis verfügt über eine gute Infrastruktur. Dieses Ziel ist ebenfalls als sehr wichtig eingestuft worden.</p>
+            <p>Neben der allgemeinen Verbesserung der Infrastruktur im Landkreis lassen sich drei große Teilaspek-te dieses Ziels identifizieren. Erstens den Aspekt einer guten Mobilnetz- und Internetanbindung im Landkreis, zweitens den der Dorf- und Stadtverschönerung/-belebung und drittens den der Mobilität für Jung und Alt.</p>
+            <p>Am häufigsten erwähnt und als wichtig angesehen wird der Teilaspekt einer guten Mobilnetz- und Internetanbindung im Landkreis. Es gibt schnelleres und besseres Internet, genauso wie ein besseres Mobilfunknetz.</p>
+            <p>Im Bereich der Mobilität für Jung und Alt gibt es bessere Bus- und Bahnanbindungen und niedrigere Preise für den Nahverkehr. Dazu gehört auch der verstärkte Einsatz von Schulbussen anstelle von Linienbussen. Außerdem werden vor allem in ländlichen Bereichen mehr Straßenverbesserungsarbei-ten und der Ausbau des Nahverkehrs vorangetrieben.</p>
+            <p>Der dritte Teilaspekt dieses Ziels betrifft die Dorf- und Stadtbelebung in Lichtenfels. Es gibt mehr Einkaufs- und Shoppingmöglichkeiten, sowie mehr Wirtschaften in den Dörfern und im Allgemeinen findet eine Verschönerung der Städte und Dörfer statt. In der Stadt Lichtenfels ist die Innenstadt belebt und besser genutzt und es gibt mehr Angebote in der Fußgängerzone.
+            Allgemein werden Lebensstandards gehalten, es gibt mehr ÄrztInnen, die Spielplätze sind sicher und die Schulen sind renoviert. </p>
+        </li>
+        <li>
+            <h3>Die Schul- und Unterrichtssituation ist verbessert (24 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Die Schul- und Unterrichtssituation ist verbessert.</p>
+            <p>Die Schulen sind besser und moderner ausgestattet und kooperieren mehr untereinander und mit den Vereinen und Verbänden des Landkreises. Das Bildungsangebot wird aufrechterhalten und ver-bessert. Eine Verbreiterung des Angebots ist durch mehr exotische und auch bildungsfördernde Wahlfächer in der Schule erfolgt.</p>
+            <p>Das Gymnasium Burgkunstadt ist grundsaniert, es gibt verpflichtende Praktika an den zwei Gymnasi-en, die Lehrpläne sind individueller gestaltbar und die SchülerInnen haben mehr Zeit für Vereine und Verbände.</p>
+        </li>
+        <li>
+            <h3>Die öffentlichen Verkehrsmittel sind ausgebaut (22 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Die öffentlichen Ver-kehrsmittel sind ausgebaut.</p>
+            <p>Der Landkreis bietet bessere Mobilität und es gibt ein besseres Angebot an öffentlichen Verkehrsmitteln und eine bessere Anbindung. Dazu zählen sowohl mehr Busverbindungen zwischen Dorf und Stadt, als auch Verbindungen zu Hochschulen. Außerdem gibt es mehr Google-Autos im Landkreis.</p>
+        </li>
+        <li>
+            <h3>Es stehen bessere Aus- und Weiterbildungsmöglichkeiten zur Verfügung (21 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Es stehen bessere Aus- und Weiterbildungsmöglichkeiten zur Verfügung.</p>
+            <p>Es gibt mehr und bessere Aus-/Bildungsmöglichkeiten, sowie bessere Studienangebote, bessere Bil-dungsabschlüsse, mehr Universitäten und mehr Vielfalt an Ausbildungsberufen. Ebenso gibt es mehr Information über Ausbildungsmöglichkeiten und Infostellen, aber auch eine bessere Vorbereitung auf das Berufsleben und die Zukunft. Es werden mehr Forschungseinrichtungen geschaffen.</p>
+        </li>
+        <li>
+            <h3>Die Innenstädte sind belebt mit einer Vielfalt von Geschäften (17 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Die Innenstädte sind belebt mit einer Vielfalt von Geschäften.</p>
+            <p>Es sind mehr Geschäfte in den Innenstädten angesiedelt, beispielsweise H&M. Der Fokus liegt mehr auf die Innenstadt als auf Fachmarktzentren und es ist mehr Leben in der Innenstadt. Kleinbetriebe sind gestärkt und es gibt eine Kapitalmiete für Geschäfte in der Innenstadt. Es ist aber auch mehr „Natur“ in der Innenstadt umgesetzt worden und die Attraktivität von Sehenswürdigkeiten, wie bei-spielsweise der historische Marktplatz in Burgkunstadt, wird betont.</p>
+        </li>
+        <li>
+            <h3>Der Landkreis ist familienfreundlich (16 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Der Landkreis ist fa-milienfreundlich.</p>
+            <p>Für dieses Ziel lassen sich zwei wichtige Teilaspekte identifizieren. Erstens die Vereinbarkeit von Familie und Beruf und zweitens die finanzielle Unterstützung von Familien.</p>
+            <p>Allgemein wird beim Kinderwunsch bezüglich der möglichen Unterstützungs- und Betreuungsange-bote mehr Aufklärungsarbeit geleistet. Vereine und Aktivitäten wie Mutter-Kind-Turnen haben Präsenz nach außen. Es gibt eine nachhaltige Erhöhung der Geburtenrate.</p>
+            <p>Zur besseren Vereinbarkeit von Familie und Beruf sorgt der Landkreis für die Entlastung berufstätiger Eltern, beispielsweise durch die Förderung von Kinderbetreuung am Arbeitsplatz. Es gibt eine Arbeitsplatzgarantie für Eltern / Schwangere, sowohl vor als auch nach der Elternzeit. Eltern können verstärkt in Teilzeit arbeiten, können sich um ihre Familie kümmern und haben die Möglichkeit zusätzliche Urlaubstage zu erhalten, wenn ihre Kinder krank sind.</p>
+            <p>Der zweite große Teilaspekt dieses Ziels ist die finanzielle Unterstützung von Familien. Werdende Eltern werden unterstützt, es gibt Zuschüsse für Neubauten und Rabatte für Familien in örtlichen Läden.</p>
+        </li>
+        <li>
+            <h3>Es gibt ausreichend attraktive Arbeitsplätze (15 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Es gibt ausreichend attraktive Arbeitsplätze.</p>
+            <p>Es gibt mehr Arbeitsplätze, unter anderem auch mehr Ferien- und Nebenjobs, und der Landkreis be-findet sich im wirtschaftlichen Aufschwung. Lokale Betriebe werden gehalten, die Region ist attraktiv für große Betriebe und neue Unternehmen siedeln sich an. Das Handwerk wird gefördert (Beispiel: Korbstadt), genauso wie die Zusammenarbeit von großen und kleinen Betrieben.</p>
+            <p>Der Landkreis ist offen gegenüber neuen und innovativen Wirtschaftsformen und nimmt dabei auch Anleihen bei alternativen Konzepten, wie z.B. dem Syndikalismus.</p>
+        </li>
+        <li>
+            <h3>Der Landkreis ist attraktiv für die BewohnerInnen (9 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Der Landkreis ist attraktiv für die BewohnerInnen.</p>
+            <p>Es gibt Perspektiven für die Menschen im Landkreis, beispielsweise durch das Angebot von Arbeitsplätzen. Es gibt auch mehr und erreichbarere Freizeitmöglichkeiten sowie Sehenswürdigkeiten und Wanderwege werden attraktiver gemacht. Es bleiben mehr Menschen im Landkreis oder kehren zurück.</p>
+        </li>
+        <li>
+            <h3>Die Kinderbetreuungsangebote sind ausgebaut (8 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Die Kinderbetreu-ungsangebote sind ausgebaut.</p>
+            <p>Es gibt mehr Kindergartenplätze und die Kindergärten haben länger geöffnet. Arbeitgeber garantie-ren Kita- und Krippenplätze, sodass sich Familie und Arbeit besser miteinander vereinbaren lassen. Es gibt bessere Betreuungsmöglichkeiten für Jung und Alt.</p>
+        </li>
+        <li>
+            <h3>Die Umwelt wird geschützt (7 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Die Umwelt wird ge-schützt.</p>
+            <p>Die Müllentsorgung ist umweltfreundlicher als zuvor und es werden mehr Umweltschutzprojekte umgesetzt. Dadurch und durch den Einsatz umweltbewusster Energie wird der Schutz der Umwelt gefördert.</p>
+        </li>
+        <li>
+            <h3>Die Vielfalt der Wirtschaft wird gefördert (7 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Die Vielfalt der Wirt-schaft wird gefördert.</p>
+            <p>Es werden mehr Firmen in die Region gelockt und Anreize für innovative Industrie und Technologie geschaffen. Es entstehen mehr Arbeits- und Ausbildungsplätze und Jobs mit wenigen Voraussetzun-gen (z.B. Schulabschluss).</p>
+        </li>
+        <li>
+            <h3>Der Landkreis integriert ZuwanderInnen gut (4 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Der Landkreis inte-griert ZuwanderInnen gut.</p>
+            <p>Integrationsprojekte helfen ZuwanderInnen und Einheimische zusammen zu bringen. Insbesondere Kinder sind dabei das Ziel. Der Landkreis stärkt auch aktiv die Attraktivität des Landkreises in Bezug auf Zuwanderung und wirkt so dem negativen Trend der Bevölkerungsabnahme entgegen.</p>
+        </li>
+        <li><h3>Ehrenamtliche Strukturen werden gefördert (4 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Ehrenamtliche Struk-turen werden gefördert.</p>
+            <p>Die Unterstützungsstruktur des Landkreises bleibt erhalten und Vereine und Verbände werden noch breiter unterstützt, insbesondere durch finanzielle Förderung. Das Ehrenamt an sich ist attraktiver, beispielsweise durch Belohnungen. Dadurch werden mehr Ehrenamtliche gewonnen.</p>
+        </li>
+        <li>
+            <h3>Günstiger, innenstadtnaher Wohnraum steht zur Verfügung (4 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Günstiger, innen-stadtnaher Wohnraum steht zur Verfügung.</p>
+            <p>Es gibt bezahlbaren, günstigen Wohnraum, genauso wie mehr innenstadtnaher Wohnraum für junge Erwachsene oder Wohnbauplätze in kurzer Entfernung zum Zentrum.</p>
+        </li>
+        <li>
+            <h3>Der Kulturbereich wird gefördert (3 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Der Kulturbereich wird gefördert.</p>
+        </li>
+        <li>
+            <h3>Das Gemeinwesen ist gestärkt (3 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Das Gemeinwesen ist gestärkt.</p>
+            <p>Vereine werden besser unterstützt und die Menschen im Landkreis sind besser über Angebote und Möglichkeiten informiert.</p>
+        </li>
+        <li>
+            <h3>Im Landkreis gelingt die Kommunikation (3 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Im Landkreis gelingt die Kommunikation.</p>
+            <p>Die Kommunikation zwischen Gemeinden ist verbessert, aber auch zwischen den Gemeinden und Vereinen, sowie dem Landkreis und Vereinen. Vereine werden den StadtbewohnerInnen näher ge-bracht und durch bessere Kommunikation werden Informationen schneller und verlässlicher weiter-gegeben werden. Beispielsweise wird der Sonderurlaub von JugendleiterInnen bekannt gegeben, so dass insbesondere SchülerInnen verlässlicher informiert sind.</p>
+        </li>
+        <li>
+            <h3>Das Image des Landkreises ist aufgewertet (2 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Das Image des Land-kreises ist aufgewertet.</p>
+            <p>Der Landkreis wertet sein Prestige auf und bewirbt sich für nationale Events und Veranstaltungen. Eventuelle negative Einstellungen gegenüber dem Landkreis sind verbessert oder umgewandelt wor-den.</p>
+        </li>
+        <li>
+            <h3>Der Ausbau des Tourismus wird gefördert (2 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Der Ausbau des Tourismus wird gefördert.</p>
+        </li>
+        <li>
+            <h3>Es ist mehr Mitbestimmung möglich (2 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Es ist mehr Mitbe-stimmung möglich.</p>
+            <p>Es gibt dauerhaft und langfristig mehr Mitspracherecht bei politischen Entscheidungen und die Bevölkerung wird bei Entscheidungen mehr involviert. Beispielsweise kommt es zu Mitbestimmung beim Kulturprogramm und zu dessen schneller Umsetzung.</p>
+        </li>
+        <li>
+            <h3>Im Landkreis herrscht Toleranz (2 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Im Landkreis herrscht Toleranz.</p>
+        </li>
+        <li>
+            <h3>Der Landkreis kooperiert mit anderen Landkreisen (1 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Der Landkreis kooperiert mit anderen Landkreisen.</p>
+        </li>
+        <li>
+            <h3>Es gibt ausreichend Unterstützungsangebote (0 Punkte)</h3>
+            <p>Die Jugendlichen wünschen sich, dass in der Zukunft folgendes Ziel erreicht ist: Es gibt ausreichend Unterstützungsangebote.</p>
+            <p>Es gibt mehr Angebote für Menschen mit Behinderungen und Einrichtungen für Sozialschwächergestellte.</p>
 
 {% endblock %}
