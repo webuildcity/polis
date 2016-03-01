@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block js %}
-   <!-- <script src='https://www.google.com/jsapi'></script> -->
+   <script src='https://www.google.com/jsapi'></script>
     <script type="text/javascript" src="{% static 'js/staerken.js' %}"></script>
 {% endblock %}
 
@@ -26,37 +26,17 @@ DefaultController
 
 {% block side_content %}
     <div id="process_sidebar">
-        <h2>Ergebnisse der Trendkonferenz</h2>
+        <h2>Ergebnisse der Demografiewerkstatt</h2>
         
-            <h3>Stärken für den Landkreis</h3>
-            <ol>
-                <li>
-                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
-                </li>
-                <li>
-                    <a href="/ziele/">Die Schul- und Unterrichtssituation ist verbessert (24 Punkte)</a>
-                </li>
-                <li>
-                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
-                </li>
-                <li>
-                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
-                </li>
-                <li>
-                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
-                </li>
-                <li>
-                    <a href="Anker">Es gibt mehr (jugendgerechte) Freizeitangebote (69 Punkte)</a>
-                </li>
-            </ol>
-
-            <a href="/staerken/">Stärken des Landkreises</a></li>
-            <li>
-                <a href="/schwaechen/">
-                    <h3>Schwächen des Landkreises</h3>
-                </a>
-            </li>
-        </ul>
+        <a href="/ziele/">
+        <h3>Ziele des Landkreises</h3>
+        </a>
+        
+        <h3>Stärken des Landkreises</h3>
+                
+        <a href="/schwaechen/">
+        <h3>Schwächen des Landkreises</h3>
+        </a>  
     </div>
 {% endblock %}
 
@@ -167,5 +147,6 @@ DefaultController
             <h3>Attraktiv für Ältere (0 Punkte)</h3>
             <p>Für ältere Menschen biete der Landkreis ein breites und attraktives Angebot.</p>
         </li>
+    </ol>
 
 {% endblock %}
