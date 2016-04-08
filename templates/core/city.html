@@ -1,6 +1,5 @@
 {% extends 'core/startpage.html' %}
-{% load staticfiles %}
-{% load i18n %}
+{% load staticfiles i18n %}
 
 <!-- In this file you can edit the content of the wbc-startpage -->
 
@@ -35,25 +34,36 @@
 
         <div id="navigation-boxes" class="container">
 
-        <div class="col-md-4">
+        <div class="col-sm-4 wbc-teaser-container">
             <a href="{% url 'search' %}">
                 <div class="teaser">
                     <i class='fa fa-map-o'></i>
                     <p>{% trans "Suche nach Ideen &amp; Projekten" %}</p>
                 </div>
+                <div class="wbc-overlay">
+                </div>
             </a>
         </div> 
-        <!-- TODO: WHAT IS THIS SUPPOSED TO DO? -->
-        <div class="col-md-4">
-            <div class="teaser">
-                <i class='fa fa-bell-o'></i>
-                <p>{% trans "
-                    <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">Abonniere Projekte<br></a>
-                    (kostenlos registrieren)" %}
-                </p>
-            </div>
+
+        <div class="col-sm-4 wbc-teaser-container">
+            {% if user.is_authenticated %}
+            <a href="{% url 'stakeholder' user.profile.stakeholder.slug %}">
+                <div class="teaser">
+                    <i class='fa fa-bell-o'></i>
+                    <p>{% trans 'Abonnierte Projekte' %}</p>
+                </div>
+            </a>
+            {% else %}
+            <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">
+                <div class="teaser">
+                    <i class='fa fa-user'></i>
+                    <p>{% trans 'kostenlos registrieren' %}</p>
+                </div>
+            </a>
+            {% endif %}
         </div>
-        <div class="col-md-4">
+
+        <div class="col-sm-4">
             <a href="{% url 'process' %}">
                 <div class="teaser">
                     <i class='fa fa-book'></i>
@@ -70,79 +80,80 @@
 {% block topic-boxes %}
 
 <div class="bottom-block">
-<h2 class="wbc-headline"> Themen</h2>
-<div class="wbc-divider"></div>
-<div class="container">
+    <h2 class="wbc-headline"> Themen</h2>
+    <div class="wbc-divider"></div>
+    <div class="container">
 
   <!-- p>Themen, um die es hier geht: <a href="{% url 'search' %}">laufenden Ideen & L&ouml;sungsans&auml;tze</a> informieren, Dich beteiligen und immer auf dem neusten Stand bleiben!</p -->
 
-  <div id="navigation-boxes" class="container">
+      <div id="navigation-boxes" class="container">
 
-    <div class="col-md-4">
-        <a href="/suche/order=&tags=Arbeit">
-            <div class="teaser">
-                <i class='fa fa-lightbulb-o'></i>
-                <p>Bauprojekte</p>
-            </div>
-        </a>
+        <div class="col-sm-4">
+            <a href="/suche/order=&tags=Arbeit">
+                <div class="teaser">
+                    <i class='fa fa-lightbulb-o'></i>
+                    <p>Bauprojekte</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/suche/order=&tags=Arbeit">
+                <div class="teaser">
+                    <i class='fa fa-building-o'></i>
+                    <p>Stadtteile</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/suche/order=&tags=Familie">
+                <div class="teaser">
+                    <i class='fa fa-hand-paper-o'></i>
+                    <p>Aktuelle Bürgerbeteiligung</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/suche/order=&tags=Ausbildung">
+                <div class="teaser">
+                    <i class='fa fa-cubes'></i>
+                    <p>3D Modelle</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/suche/order=&tags=Ausbildung">
+                <div class="teaser">
+                    <i class='fa fa-users'></i>
+                    <p>Bürgerinitiativen &amp; NGOs</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/suche/order=&tags=Ausbildung">
+                <div class="teaser">
+                    <i class='fa fa-university'></i>
+                    <p>Verwaltung der Stadt</p>
+                </div>
+            </a>
+        </div>
+        <!-- <div class="col-sm-4">
+            <a href="/suche/order=&tags=Ausbildung">
+                <div class="teaser">
+                    <i class='fa fa-bar-chart'></i>
+                    <p>Baufirmen</p>
+                </div> 
+            </a>
+        </div> -->
+        <div class="col-sm-4">
+            <a href="/suche/order=&tags=Zivilgesellschaft">
+                <div class="teaser">
+                    <i class='fa fa-code'></i>
+                    <p>OpenData &amp; OpenSource</p>
+                </div>
+            </a>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4">
-        <a href="/suche/order=&tags=Arbeit">
-            <div class="teaser">
-                <i class='fa fa-building-o'></i>
-                <p>Stadtteile</p>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="/suche/order=&tags=Familie">
-            <div class="teaser">
-                <i class='fa fa-hand-paper-o'></i>
-                <p>Aktuelle Bürgerbeteiligung</p>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="/suche/order=&tags=Ausbildung">
-            <div class="teaser">
-                <i class='fa fa-cubes'></i>
-                <p>3D Modelle</p>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="/suche/order=&tags=Ausbildung">
-            <div class="teaser">
-                <i class='fa fa-users'></i>
-                <p>Bürgerinitiativen &amp; NGOs</p>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="/suche/order=&tags=Ausbildung">
-            <div class="teaser">
-                <i class='fa fa-university'></i>
-                <p>Verwaltung der Stadt</p>
-            </div>
-        </a>
-    </div>
-    <!-- <div class="col-md-4">
-        <a href="/suche/order=&tags=Ausbildung">
-            <div class="teaser">
-                <i class='fa fa-bar-chart'></i>
-                <p>Baufirmen</p>
-            </div> 
-        </a>
-    </div> -->
-    <div class="col-md-4">
-        <a href="/suche/order=&tags=Zivilgesellschaft">
-            <div class="teaser">
-                <i class='fa fa-code'></i>
-                <p>OpenData &amp; OpenSource</p>
-            </div>
-        </a>
-    </div>
-  </div>
 </div>
 {% endblock %}
 
@@ -195,12 +206,12 @@
                 Wir sind ein  jugenes Unternehmen aus Hamburg &amp; Berlin welches es sich zum Ziel gesetzt hat innovative Informations- und Kommunikationsplattformen zu entwickeln um Stadtplanung transparenter &amp; partizipativer zu machen. Unser Team besteht aus erfahrenen IT Experten, Open Data Enthusiasten, Politik-, Kommunikations- und Kulturwissenschaftlern... 
             </p>
          </div>
-         <div class="col-md-4">
+         <div class="col-sm-4">
             <img src="/static/img/wbc-timo-lundelius.jpg">
             <h3>Timo Lundelius</h3>
             <p style="padding-left: 0; padding-top: 1em;">Fon +4940 609430490<br><a href="mailto:timo.lundelius@we-build.city">timo.lundelius@we-build.city</a></p>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
             <img src="/static/img/wbc-solveig-schroeder.jpg">
             <h3>Solveig Schröder</h3>
             <p style="padding-left: 0; padding-top: 1em;">Fon +4940 609430490<br><a href="mailto:solveig.schroeder@we-build.city">solveig.schroeder@we-build.city</a></p>
@@ -228,19 +239,19 @@
 
 
 
-<div class="col-md-4">
+<div class="col-sm-4">
     <h4>
         <a href="http://we-build.city" target="_blank">We-Build.City Services UG</a>
     </h4>
 </div>
     
-<div class="col-md-4">
+<div class="col-sm-4">
     <h4>
         <a href="/impressum/">Impressum &amp; Datenschutzerklärung</a>
     </h4>
 </div>
 
-<div class="col-md-4">
+<div class="col-sm-4">
     <h4>
         <a href="https://github.com/webuildcity" target="_blank">Offener Quellcode</a>
     </h4>

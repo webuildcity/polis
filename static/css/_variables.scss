@@ -43,8 +43,8 @@ $secondary-text: #FFFFFF;
 $icon-color: #f6f6f6;
 $icon-admin-edit-color: $primary-color;
 
-$background-color: #FAF5F5;
-$background-color-header: $background-color;
+$background-color: #F8F8F8;
+$background-color-header: #FFFFFF;
 $background-color-startpage-content: $highlight-color;
 $background-color-comments: #f2f2f2;
 $background-color-timeline-content: #f2f2f2;
@@ -55,7 +55,7 @@ $secondary-background-color: #f6f6f6;
 
 /* Images */
 
-$startpage-image: url(static('img/startpage.jpg'));
+$startpage-image: url(static('img/startpage2.jpg'));
 
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
@@ -82,5 +82,6 @@ $startpage-person2: url(static('img/wbc-solveig-schroeder.jpg'));
 
   img {
       height: 36px;
+      transition: 0.3s linear height;
   }
 }
