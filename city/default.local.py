@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
-import os,sys
-sys.path.append('../wbc')
 
-DEBUG = True   
+# coding=utf8
+import os,sys
+#sys.path.append('/path/to/wbc/lib')
+
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 
@@ -10,7 +11,7 @@ ALLOWED_HOSTS = []
 
 SECRET_KEY = 'this is a not very secret key'
 
-SESSION_COOKIE_SECURE = False
+# SESSION_COOKIE_SECURE = False
 
 DATABASES = {
     # 'default': {

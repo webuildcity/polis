@@ -1,9 +1,9 @@
 {% load staticfiles %}
 <li>
-    <a href="/blog"><i class='fa fa-book'></i>Blog</a>
+    <a href="/blog">BLOG</a>
 </li>
 <li>
-    <a href="/lexikon"><i class='fa fa-book'></i>Lexikon</a>
+    <a href="/lexikon">LEXIKON</a>
 </li>
 <li role="presentation" class="dropdown">
     {% if user.is_authenticated %}
@@ -22,6 +22,9 @@
         <li>
             <a href="{% url 'profile_update' %}">Deine Einstellungen</a>
         </li>
+        <li>
+            <a href="{% url 'password_change' %}">Passwort ändern</a>
+        </li>
         <li role="separator" class="divider"></li>
         <li>
             <a href="{% url 'start' %}">Deine Projekte</a>
@@ -33,7 +36,7 @@
     </ul>
     {% else %}
     <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
-        <i class='fa fa-user'></i>Anmelden <span class="caret"></span>
+        ANMELDEN <span class="caret"></span>
     </a>
     <ul id="login-dropdown" class="dropdown-menu dropdown-menu-right login-dropdown">
         <li>

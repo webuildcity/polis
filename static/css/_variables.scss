@@ -1,4 +1,4 @@
-/* Fonts */
+  /* Fonts */
 
 @font-face {
   font-family: roboto;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: roboto;
-  src: url('/static/font/Roboto-Light.ttf');
+  src: url('/static/font/Roboto-Bold.ttf');
   font-weight: bold; }
 
 @font-face {
@@ -33,7 +33,6 @@ $primary-color: #444;
 $primary-color-dark: darken($primary-color, 20%);
 $primary-color-light: lighten($primary-color, 30%);
 
-
 $headline-color: $primary-color;
 
 $highlight-color: #4285f4;
@@ -44,18 +43,45 @@ $secondary-text: #FFFFFF;
 $icon-color: #f6f6f6;
 $icon-admin-edit-color: $primary-color;
 
-$background-color: #FFFFFF;
+$background-color: #F8F8F8;
+$background-color-header: #FFFFFF;
+$background-color-startpage-content: $highlight-color;
 $background-color-comments: #f2f2f2;
 $background-color-timeline-content: #f2f2f2;
+$background-color-search-result: #FFFFFF;
 $secondary-background-color: #f6f6f6;
+
+
+
+/* Images */
+
+$startpage-image: url(static('img/startpage.jpg'));
+
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
-$startpage-image: url(static('img/startpage.jpg'));
+
+
+/* No function at the moment 
+
+$project-placeholder: url(static('img/project_placeholder.png'));
+$person-placeholder: url(static('img/person_placeholder.png'));
+
+$logo-image: url(static('img/title.png'));
+$favicon: url(static('img/favicon.png'));
+
+$participation: url(static('img/participation.png'));
+$no-participation: url(static('img/no-participation.png'));
+
+$startpage-person1: url(static('img/wbc-timo-lundelius.jpg'));
+$startpage-person2: url(static('img/wbc-solveig-schroeder.jpg')); 
+
+*/
 
 @mixin branding() {
   padding-top: 5px;
 
   img {
       height: 36px;
+      transition: 0.3s linear height;
   }
 }

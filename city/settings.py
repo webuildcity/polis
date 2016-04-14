@@ -141,10 +141,6 @@ COMPRESS_PRECOMPILERS = (
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
-FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
-FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
-
-
 TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
 
 TILES_OPT = {
@@ -160,7 +156,6 @@ DEFAULT_VIEW = {
     'lon': 10.00,
     'zoom': 11
 }
-
 
 MARKDOWN_EDITOR_SKIN = 'simple'
 
