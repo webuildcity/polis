@@ -135,7 +135,8 @@ urlpatterns = patterns('',
 
     # translation
     url(r'^rosetta/', include('rosetta.urls')),
-    
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+
     #ratings
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 
