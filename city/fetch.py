@@ -406,8 +406,9 @@ class AusgleichsflaechenFetcher():
             #         importEvent['link'] = link.strip()
 
             #     project.events.create(**importEvent)
-
-            n += 1
+            if created: 
+                n += 1
+                
             try:
                 for quarter in quarters:
                     q = Quarter.objects.get(name=quarter)
