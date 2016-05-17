@@ -1,4 +1,5 @@
 # coding: utf-8
+import sys
 import os
 import subprocess
 import json
@@ -7,9 +8,17 @@ import time
 import re
 import csv
 from datetime import datetime
+from lxml import html
+import lxml
+import requests
+from django.core.files import File
+from django.conf import settings
+
+import wand
+from wand.image import Image
 
 from wbc.region.models import Quarter
-from wbc.projects.models import Project, BufferArea
+from wbc.projects.models import Project, BufferArea, ProjectAttachment
 
 
 class ProjectFetcher():
@@ -107,6 +116,59 @@ class ProjectFetcher():
             project_values['active'] = True
             # update the place or create a new one
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
+
+            link = feature['properties'].get('hotlink_iv', '')
+            if link:
+                #scrape pdfs from project page
+                project_page = requests.get(link)
+                try:
+                    tree = html.fromstring(project_page.content)
+                    pdfs = tree.xpath('//a[@class="nscout pdf"]')
+
+                    for pdf in pdfs:
+                        pdf_link = 'http://www.hamburg.de'+ pdf.xpath('@href')[0]
+                        
+                        #check if attachment already exists in database
+                        if not ProjectAttachment.objects.filter(source=pdf_link).exists():
+                            title = pdf.xpath('text()')[0].lstrip().split('(')[0][:-1]
+
+                            pdf_name = pdf_link.split('/')[-1]
+                            img_name = pdf_name.split('.pdf')[0] + '.png'
+
+                            raw_pdf = urllib2.urlopen(pdf_link)
+                            attachment = ProjectAttachment(name=pdf_name, project=project, source=pdf_link)
+
+                            with open('tmp_pdf', 'wb') as f:
+                                f.write(raw_pdf.read())
+
+                            with open('tmp_pdf', 'r') as f:
+                                pdf_file = File(f, 'r')
+                                attachment.attachment.save(title, pdf_file, True)
+                                attachment.save()
+                                
+                                # firstpage = PdfFileReader(pdf_file).getPage(0)
+                                # print firstpage
+                                try:
+                                    img= Image(blob=pdf_file)
+                                    img = Image(img.sequence[0])
+                                    print img.size
+                                    img.format='png'
+                                    # img.resize(300,420)
+                                    img_url = settings.MEDIA_ROOT + "project_attachments/images/"+ img_name
+                                    img.save(filename=img_url)
+                                    print img
+
+                                    # result = urllib2.urlopen('file://' +img_url).read()
+                                    # print result
+                                    attachment.image = "project_attachments/images/"+ img_name
+                                    attachment.save()
+                                except wand.exceptions.DelegateError:
+                                    print 'DelegateError'
+                            os.remove('tmp_pdf')
+                
+                except lxml.etree.XMLSyntaxError:
+                    print 'XMLSyntaxError for: ', link
+
             if created:
                 importEvent = {
                     'description': "Bauprojekt aus dem  Planportal importiert.",
@@ -114,7 +176,6 @@ class ProjectFetcher():
                     'begin': datetime.now()
                 }
 
-                link = feature['properties'].get('hotlink_iv', '')
                 if link:
                     project.link = link.strip()
                     importEvent['link'] = link.strip()
@@ -243,6 +304,34 @@ class ProjectFestgestelltFetcher():
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
 
             link = feature['properties'].get('hotlink', '')
+            if link:
+                #scrape pdfs from project page
+                project_page = requests.get(link)
+                tree = html.fromstring(project_page.content)
+                # print tree
+                # pdfs = tree.xpath('//a[@class="pdf"]/@href')
+                pdfs = tree.xpath('//a[@class="nscout pdf"]')
+                # print link
+                # print 'pdfs: ', pdfs
+                for pdf in pdfs:
+                    pdf_link = 'http://www.hamburg.de'+ pdf.xpath('@href')[0]
+                    title = pdf.xpath('text()')[0].lstrip().split('(')[0][:-1]
+
+                    pdf_name = pdf_link.split('/')[-1]
+
+                    raw_pdf = urllib2.urlopen(pdf_link)
+                    attachment = ProjectAttachment(name=pdf_name, project=project)
+
+                    with open('tmp_pdf', 'wb') as f:
+                        f.write(raw_pdf.read())
+
+                    with open('tmp_pdf', 'r') as f:
+                        pdf_file = File(f)
+                        attachment.attachment.save(pdf_name, pdf_file, True)
+                        attachment.save()   
+                    os.remove('tmp_pdf')
+
+
             date = feature['properties'].get('feststellung', '')
             if date:
                 finishEvent = {
