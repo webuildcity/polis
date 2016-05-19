@@ -19,7 +19,8 @@ from wand.image import Image
 
 from wbc.region.models import Quarter
 from wbc.projects.models import Project, BufferArea, ProjectAttachment
-
+from wbc.events.models import Publication
+from wbc.process.models import ProcessStep
 
 class ProjectFetcher():
 
@@ -149,7 +150,7 @@ class ProjectFetcher():
                                 try:
                                     img= Image(blob=pdf_file)
                                     img = Image(img.sequence[0])
-                                    img.format='png'
+                                    img.format='png' #png to counter background color bug when using jpg
                                     img_url = settings.MEDIA_ROOT + "project_attachments/images/"+ img_name
                                     img.save(filename=img_url)
                                     attachment.image = "project_attachments/images/"+ img_name
@@ -293,63 +294,62 @@ class ProjectFestgestelltFetcher():
             # except KeyError:
             #     project_values['active'] = True
             project_values['active'] = True
+
+            date = feature['properties'].get('feststellung', '')
+            project_values['finished'] = datetime.strptime(date, '%d.%m.%Y');
             # update the place or create a new one
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
 
             link = feature['properties'].get('hotlink', '')
+
             if link:
-                #scrape pdfs from project page
-                project_page = requests.get(link)
-                try:
-                    tree = html.fromstring(project_page.content)
-                    pdfs = tree.xpath('//a[@class="nscout pdf"]')
-
-                    for pdf in pdfs:
-                        pdf_link = 'http://www.hamburg.de'+ pdf.xpath('@href')[0]
-                        
-                        #check if attachment already exists in database
-                        if not ProjectAttachment.objects.filter(source=pdf_link).exists():
-                            title = pdf.xpath('text()')[0].lstrip().split('(')[0][:-1]
-
-                            pdf_name = pdf_link.split('/')[-1]
-                            img_name = pdf_name.split('.pdf')[0] + '.png'
-
-                            raw_pdf = urllib2.urlopen(pdf_link)
-                            attachment = ProjectAttachment(name=pdf_name, project=project, source=pdf_link)
-
-                            with open('tmp_pdf', 'wb') as f:
-                                f.write(raw_pdf.read())
-
-                            with open('tmp_pdf', 'r') as f:
-                                pdf_file = File(f, 'r')
-                                attachment.attachment.save(title, pdf_file, True)
-                                attachment.save()
-                                
-                                try:
-                                    img= Image(blob=pdf_file)
-                                    img = Image(img.sequence[0])
-                                    img.format='png'
-                                    img_url = settings.MEDIA_ROOT + "project_attachments/images/"+ img_name
-                                    img.save(filename=img_url)
-                                    attachment.image = "project_attachments/images/"+ img_name
-                                    attachment.save()
-                                except wand.exceptions.DelegateError:
-                                    print 'DelegateError', pdf_link
-                            os.remove('tmp_pdf')
+                pdf_link = link
                 
-                except lxml.etree.XMLSyntaxError:
-                    print 'XMLSyntaxError for: ', link
+                #check if attachment already exists in database
+                if not ProjectAttachment.objects.filter(source=pdf_link).exists():
+                    # title = pdf_link.xpath('text()')[0].lstrip().split('(')[0][:-1]
+                    try:
+                        pdf_name = pdf_link.split('/')[-1]
+                        img_name = pdf_name.split('.pdf')[0] + '.png'
+                        print pdf_link
+                        raw_pdf = urllib2.urlopen(pdf_link)
+                        attachment = ProjectAttachment(name=pdf_name, project=project, source=pdf_link)
 
+                        with open('tmp_pdf', 'wb') as f:
+                            f.write(raw_pdf.read())
 
-            date = feature['properties'].get('feststellung', '')
+                        with open('tmp_pdf', 'r') as f:
+                            pdf_file = File(f, 'r')
+                            attachment.attachment.save(pdf_name, pdf_file, True)
+                            attachment.save()
+                            
+                            try:
+                                img= Image(blob=pdf_file)
+                                img = Image(img.sequence[0])
+                                img.format='png' #png to counter background color bug when using jpg
+                                img_url = settings.MEDIA_ROOT + "project_attachments/images/"+ img_name
+                                img.save(filename=img_url)
+                                attachment.image = "project_attachments/images/"+ img_name
+                                attachment.save()
+                            except wand.exceptions.DelegateError:
+                                print 'DelegateError', pdf_link
+                        os.remove('tmp_pdf')
+                    except urllib2.HTTPError:
+                        print 'HTTP Error ', pdf_link
+
             if date:
-                finishEvent = {
-                    'description': "Bebauungsplan festgestellt.",
-                    'link': link.strip(),
-                    'begin': datetime.strptime(date, '%d.%m.%Y')
-                }
-                project.events.create(**finishEvent)
-            
+
+                # finishEvent = {
+                #     'description': "Bebauungsplan festgestellt.",
+                #     'link': link.strip(),
+                #     'begin': datetime.strptime(date, '%d.%m.%Y')
+                # }
+                if len(project.publication_set.all().filter(process_step__name='Feststellung'))==0:
+                    pub = Publication(project=project, process_step=ProcessStep.objects.get(name="Feststellung"), begin=datetime.strptime(date, '%d.%m.%Y'))
+                    # project.events.add(pub)
+                    pub.save()
+                    print pub
+
             if created:
                 importEvent = {
                     'description': "Bauprojekt aus dem  Planportal importiert.",
