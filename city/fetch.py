@@ -118,6 +118,9 @@ class ProjectFetcher():
             # update the place or create a new one
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
 
+            # add Tags
+            project.tags.add('Bebauungsplan', 'Bebauungsplan im Verfahren', 'B-Plan')
+
             link = feature['properties'].get('hotlink_iv', '')
             if link:
                 #scrape pdfs from project page
@@ -301,6 +304,8 @@ class ProjectFestgestelltFetcher():
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
 
             link = feature['properties'].get('hotlink', '')
+            
+            project.tags.add('Bebauungsplan', 'Bebauungsplan festgestellt', 'B-Plan')
 
             if link:
                 pdf_link = link
