@@ -131,7 +131,7 @@ class ProjectFetcher():
                         
                         #check if attachment already exists in database
                         if not ProjectAttachment.objects.filter(source=pdf_link).exists():
-                            title = pdf.xpath('text()')[0].lstrip().split('(')[0][:-1]
+                            # title = pdf.xpath('text()')[0].lstrip().split('(')[0][:-1]
 
                             pdf_name = pdf_link.split('/')[-1]
                             img_name = pdf_name.split('.pdf')[0] + '.png'
@@ -144,7 +144,7 @@ class ProjectFetcher():
 
                             with open('tmp_pdf', 'r') as f:
                                 pdf_file = File(f, 'r')
-                                attachment.attachment.save(title, pdf_file, True)
+                                attachment.attachment.save(pdf_name, pdf_file, True)
                                 attachment.save()
                                 
                                 try:
