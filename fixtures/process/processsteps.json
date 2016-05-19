@@ -1,1 +1,114 @@
-[{"fields": {"updated": "2015-05-14T20:10:35.935Z", "description": "In der ersten Stufe der \u00d6ffentlichkeitsbeteiligung werden die B\u00fcrgerinnen und B\u00fcrger fr\u00fchzeitig \u00fcber die Planungsabsichten informiert. Dazu werden die Unterlagen \u00f6ffentlich ausgelegt oder es wird zu einem gemeinsamen Vorstellungs- und Er\u00f6rterungstermin  eingeladen. B\u00fcrger haben dann die M\u00f6glichkeit, sich zu den Bebauungsplanentw\u00fcrfen zu \u00e4u\u00dfern. Dies ist in vielen F\u00e4llen \u00fcber die Internetseite der verantwortlichen Verwaltung m\u00f6glich. Auch die einzusehenden Unterlagen sind meist auch \u00fcber das Internet abrufbar. Alternativ liegen die Unterlagen in der entsprechenden Verwaltung aus.\r\n\r\nUnter Ber\u00fccksichtigung der Ergebnisse der fr\u00fchzeitigen \u00d6ffentlichkeitsbeteiligung erstellt der zust\u00e4ndige Fachbereich  einen Entwurf f\u00fcr das weitere Verfahren. In einzelnen F\u00e4llen kann auf die fr\u00fchzeitige \u00d6ffentlichkeitsbeteiligung verzichtet werden.", "created": "2013-06-11T20:00:00Z", "process_type": 1, "hover_icon": "/img/icons/orange_4_hover.png", "icon": "/img/icons/orange_4.png", "order": 1, "name": "Fr\u00fchzeitige \u00d6ffentlichkeitsbeteiligung"}, "model": "process.processstep", "pk": 1}, {"fields": {"updated": "2015-05-01T14:53:21.635Z", "description": "Im Rahmen der fr\u00fchzeitigen \u00d6ffentlichkeitsbeteiligung findet h\u00e4ufig ein gemeinsamer Vorstellungs- und Er\u00f6rterungstermin statt. Die Diskussion wird protokolliert und es besteht im Anschluss noch einige Wochen Zeit, Bedenken und Vorschl\u00e4ge vorzubringen.", "created": "2013-10-01T08:14:44Z", "process_type": 1, "hover_icon": "/img/icons/orange_3_hover.png", "icon": "/img/icons/orange_3.png", "order": 2, "name": "Er\u00f6rterungstermin"}, "model": "process.processstep", "pk": 2}, {"fields": {"updated": "2015-06-08T19:32:33.413Z", "description": "In der zweiten Stufe der \u00d6ffentlichkeitsbeteiligung wird der Planentwurf einschlie\u00dflich der Begr\u00fcndung f\u00fcr die Dauer eines Monats \u00f6ffentlich ausgelegt. W\u00e4hrend der \u00f6ffentlichen Auslegung kann jeder B\u00fcrger Anregungen und \u00c4nderungsw\u00fcnsche zu den Pl\u00e4nen vorbringen. Auch dies ist in vielen F\u00e4llen \u00fcber das Internet m\u00f6glich. Die Verwaltung wertet die Anregungen aus und legt sie dem entsprechenden Entscheidungsgremium - das ist je nach Verantwortlichkeit die Bezirksversammlung (BV) oder der Hamburger B\u00fcrgerschaft - zur Entscheidung vor. Den Einsendern wird das Ergebnis der Entscheidung schriftlich mitgeteilt.\r\n", "created": "2013-06-11T20:00:00Z", "process_type": 1, "hover_icon": "/img/icons/orange_2_hover.png", "icon": "/img/icons/orange_2.png", "order": 4, "name": "\u00d6ffentliche Auslegung"}, "model": "process.processstep", "pk": 3}, {"fields": {"updated": "2015-05-14T20:11:21.790Z", "description": "Wird der Planentwurf nach der Auslegung ge\u00e4ndert oder erg\u00e4nzt, wird er erneut ausgelegt. W\u00e4hrend der \u00f6ffentlichen Auslegung kann jeder Anregungen und \u00c4nderungsw\u00fcnsche zu den Pl\u00e4nen vorbringen. Dabei kann bestimmt werden, dass Stellungnahmen nur zu den ge\u00e4nderten oder erg\u00e4nzten Teilen abgegeben werden k\u00f6nnen. Die Dauer der Auslegung und die Frist zur Stellungnahme kann verk\u00fcrzt werden. ", "created": "2013-06-11T20:00:00Z", "process_type": 1, "hover_icon": "/img/icons/orange_1_hover.png", "icon": "/img/icons/orange_1.png", "order": 5, "name": "Erneute \u00f6ffentliche Auslegung"}, "model": "process.processstep", "pk": 4}, {"fields": {"updated": "2015-05-14T20:11:00.531Z", "description": "Im Rahmen der fr\u00fchzeitigen \u00d6ffentlichkeitsbeteiligung findet h\u00e4ufig eine \u00f6ffentliche Plandiskussion statt. Die Diskussion wird protokolliert und es besteht im Anschluss noch einige Wochen Zeit, Bedenken und Vorschl\u00e4ge vorzubringen.", "created": "2015-05-01T14:53:17.315Z", "process_type": 1, "hover_icon": "/img/icons/orange_3_hover.png", "icon": "/img/icons/orange_3.png", "order": 3, "name": "\u00d6ffentliche Plandiskussion"}, "model": "process.processstep", "pk": 5}, {"fields": {"updated": "2015-05-14T20:11:30.644Z", "description": "Der Bebauungsplan wird aufgestellt.", "created": "2015-05-14T20:09:02.284Z", "process_type": 1, "hover_icon": "/img/icons/orange_1_hover.png", "icon": "/img/icons/orange_1.png", "order": 6, "name": "Aufstellungsbeschluss"}, "model": "process.processstep", "pk": 6}, {"fields": {"updated": "2015-05-14T20:10:27.378Z", "description": "Das Bebauungsplanverfahren wird eingeleitet.", "created": "2015-05-14T20:10:27.378Z", "process_type": 1, "hover_icon": "/img/icons/orange_4_hover.png", "icon": "/img/icons/orange_4.png", "order": 0, "name": "Einleitung"}, "model": "process.processstep", "pk": 7}]
+[
+  {
+    "fields": {
+      "updated": "2015-05-14T20:10:35.935Z",
+      "description": "In der ersten Stufe der Öffentlichkeitsbeteiligung werden die Bürgerinnen und Bürger frühzeitig über die Planungsabsichten informiert. Dazu werden die Unterlagen öffentlich ausgelegt oder es wird zu einem gemeinsamen Vorstellungs- und Erörterungstermin  eingeladen. Bürger haben dann die Möglichkeit, sich zu den Bebauungsplanentwürfen zu äußern. Dies ist in vielen Fällen über die Internetseite der verantwortlichen Verwaltung möglich. Auch die einzusehenden Unterlagen sind meist auch über das Internet abrufbar. Alternativ liegen die Unterlagen in der entsprechenden Verwaltung aus.\r\n\r\nUnter Berücksichtigung der Ergebnisse der frühzeitigen Öffentlichkeitsbeteiligung erstellt der zuständige Fachbereich  einen Entwurf für das weitere Verfahren. In einzelnen Fällen kann auf die frühzeitige Öffentlichkeitsbeteiligung verzichtet werden.",
+      "created": "2013-06-11T20:00:00Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_4_hover.png",
+      "icon": "/img/icons/orange_4.png",
+      "order": 1,
+      "name": "Frühzeitige Öffentlichkeitsbeteiligung"
+    },
+    "model": "process.processstep",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "updated": "2015-05-01T14:53:21.635Z",
+      "description": "Im Rahmen der frühzeitigen Öffentlichkeitsbeteiligung findet häufig ein gemeinsamer Vorstellungs- und Erörterungstermin statt. Die Diskussion wird protokolliert und es besteht im Anschluss noch einige Wochen Zeit, Bedenken und Vorschläge vorzubringen.",
+      "created": "2013-10-01T08:14:44Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_3_hover.png",
+      "icon": "/img/icons/orange_3.png",
+      "order": 2,
+      "name": "Erörterungstermin"
+    },
+    "model": "process.processstep",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "updated": "2015-06-08T19:32:33.413Z",
+      "description": "In der zweiten Stufe der Öffentlichkeitsbeteiligung wird der Planentwurf einschließlich der Begründung für die Dauer eines Monats öffentlich ausgelegt. Während der öffentlichen Auslegung kann jeder Bürger Anregungen und Änderungswünsche zu den Plänen vorbringen. Auch dies ist in vielen Fällen über das Internet möglich. Die Verwaltung wertet die Anregungen aus und legt sie dem entsprechenden Entscheidungsgremium - das ist je nach Verantwortlichkeit die Bezirksversammlung (BV) oder der Hamburger Bürgerschaft - zur Entscheidung vor. Den Einsendern wird das Ergebnis der Entscheidung schriftlich mitgeteilt.\r\n",
+      "created": "2013-06-11T20:00:00Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_2_hover.png",
+      "icon": "/img/icons/orange_2.png",
+      "order": 4,
+      "name": "Öffentliche Auslegung"
+    },
+    "model": "process.processstep",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "updated": "2015-05-14T20:11:21.790Z",
+      "description": "Wird der Planentwurf nach der Auslegung geändert oder ergänzt, wird er erneut ausgelegt. Während der öffentlichen Auslegung kann jeder Anregungen und Änderungswünsche zu den Plänen vorbringen. Dabei kann bestimmt werden, dass Stellungnahmen nur zu den geänderten oder ergänzten Teilen abgegeben werden können. Die Dauer der Auslegung und die Frist zur Stellungnahme kann verkürzt werden. ",
+      "created": "2013-06-11T20:00:00Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_1_hover.png",
+      "icon": "/img/icons/orange_1.png",
+      "order": 5,
+      "name": "Erneute öffentliche Auslegung"
+    },
+    "model": "process.processstep",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "updated": "2015-05-14T20:11:00.531Z",
+      "description": "Im Rahmen der frühzeitigen Öffentlichkeitsbeteiligung findet häufig eine öffentliche Plandiskussion statt. Die Diskussion wird protokolliert und es besteht im Anschluss noch einige Wochen Zeit, Bedenken und Vorschläge vorzubringen.",
+      "created": "2015-05-01T14:53:17.315Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_3_hover.png",
+      "icon": "/img/icons/orange_3.png",
+      "order": 3,
+      "name": "Öffentliche Plandiskussion"
+    },
+    "model": "process.processstep",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "updated": "2015-05-14T20:11:30.644Z",
+      "description": "Der Bebauungsplan wird aufgestellt.",
+      "created": "2015-05-14T20:09:02.284Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_1_hover.png",
+      "icon": "/img/icons/orange_1.png",
+      "order": 6,
+      "name": "Aufstellungsbeschluss"
+    },
+    "model": "process.processstep",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "updated": "2015-05-14T20:10:27.378Z",
+      "description": "Das Bebauungsplanverfahren wird eingeleitet.",
+      "created": "2015-05-14T20:10:27.378Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_4_hover.png",
+      "icon": "/img/icons/orange_4.png",
+      "order": 0,
+      "name": "Einleitung"
+    },
+    "model": "process.processstep",
+    "pk": 7
+  },
+  {
+  "fields": {
+      "updated": "2015-05-14T20:10:27.378Z",
+      "description": "Das Bebauungsplanverfahren wird festgestellt.",
+      "created": "2015-05-14T20:10:27.378Z",
+      "process_type": 1,
+      "hover_icon": "/img/icons/orange_4_hover.png",
+      "icon": "/img/icons/orange_4.png",
+      "order": 7,
+      "name": "Feststellung"
+    },
+    "model": "process.processstep",
+    "pk": 8
+  }
+]

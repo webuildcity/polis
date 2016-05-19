@@ -36,6 +36,8 @@ $primary-color-light: lighten($primary-color, 30%);
 $headline-color: $primary-color;
 
 $highlight-color: #4285f4;
+$highlight-color-light: lighten($highlight-color, 20%);
+$highlight-color-dark: darken($highlight-color, 20%);
 
 $primary-text: #444;
 $secondary-text: #FFFFFF;
