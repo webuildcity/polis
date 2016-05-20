@@ -299,7 +299,8 @@ class ProjectFestgestelltFetcher():
             project_values['active'] = True
 
             date = feature['properties'].get('feststellung', '')
-            project_values['finished'] = datetime.strptime(date, '%d.%m.%Y');
+            if date:
+                project_values['finished'] = datetime.strptime(date, '%d.%m.%Y');
             # update the place or create a new one
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
 
