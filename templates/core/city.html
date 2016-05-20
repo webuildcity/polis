@@ -23,8 +23,8 @@
     </div>
     <div class="container">
         <div class="top-overlay text-center">
-            <h1><span class="text-on-image">{% trans "H1: Welcome to our platform" %}</span></h1>
-            <h3><span class="text-on-image">{% trans "H3 Claim: Use our platform to make the best out of our platform!" %}</span></h3>
+            <h1><span class="text-on-image">{% trans "Willkommen bei Wir-Bauen-Hamburg!" %}</span></h1>
+            <h3><span class="text-on-image">{% trans "Finde heraus was gerade Hamburg gebaut werden soll!" %}</span></h3>
             <div class="search-container">
                 <wbc-search text=" {% trans "Search Box: Search for Ideas, Projects, everything what you want..." %}"> </wbc-search>
             </div>
@@ -47,12 +47,12 @@
 ======= -->
 {% block nav-boxes %}
 <div class="bottom-block">
-    <h2 class="wbc-headline"> {% trans "Nav-boxes headline: What can you do here?" %}</h2>
+    <h2 class="wbc-headline"> {% trans "Was kannst Du hier machen?" %}</h2>
     <div class="wbc-divider"></div>
     
     <div class="container">
 
-        <p>{% trans "Nav-boxes paragraph: Hier kannst Du Dich über" %} <a href="{% url 'search' %}">{% trans "laufende Ideen, Projekte und Stadtplanungsverfahren" %}</a> {% trans "informieren. Du kannst ein" %} <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %}
+        <p>{% trans "Hier kannst Du Dich über" %} <a href="{% url 'search' %}">{% trans "laufende Ideen, Projekte und Stadtplanungsverfahren" %}</a> {% trans "informieren. Du kannst ein" %} <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %}
         Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Stadtteil, in Hamburg und Umgebung entwickelt! 
         Weitere Informationen zu Stadtentwicklung und Bürgerbeteiligung findest Du im <a href="{% url 'encyclopedia' %}">Lexikon</a> oder im <a href="{% url 'blog' %}">Blog</a>.</p> 
 
@@ -66,7 +66,7 @@
                         <p>{% trans "Suche nach Ideen &amp; Projekten" %}</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text kljlk jk jjk ksdkkkkkkkkkkk kd          kd kdddddddd kd dkkkkkkkkkk dk kdddddddd dk' %}</h2>
+                        <h2>{% trans 'Finde 3000+ Bebauungspläne' %}</h2>
                     </div>
                 </a>
             </div> 
@@ -81,7 +81,7 @@
                         <p>{% trans 'Abonnierte Projekte' %}</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'Lass dich über Bauplanungen informieren.' %}</h2>
                     </div>
                 </a>
                 {% else %}
@@ -91,7 +91,7 @@
                         <p>{% trans 'kostenlos registrieren' %}</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'Registriere dich um Projekten zu folgen.' %}</h2>
                     </div>
                 </a>
                 {% endif %}
@@ -134,7 +134,7 @@
                         <p>Im Lexikon stöbern</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'Erfahre mehr über Bebauungspläne, Gesetze und Verfahren.' %}</h2>
                     </div>
                 </a>
             </div>
@@ -158,78 +158,91 @@
 
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
-                <a href="/suche/order=&tags=Arbeit">
+                <a href="/suche/">
                     <div class="teaser">
                         <i class='fa fa-lightbulb-o'></i>
-                        <p>Bauprojekte</p>
+                        <p>Aktuelle Bauprojekte</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'Aktuell im Verfahren befindliche Bebauungspläne.' %}</h2>
                     </div>
                 </a>
             </div>
         </div>
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
-                <a href="/suche/order=&tags=Arbeit">
+                <a href="/suche/terminated=true&order=finished">
+                    <div class="teaser">
+                        <i class='fa fa-university'></i>
+                        <p>Historische Bebauungspläne</p>
+                    </div>
+                    <div class="wbc-overlay">
+                        <h2>{% trans 'Stöber durch die Hamburgische Baugeschichte seit 1949.' %}</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4 wbc-teaser-container">
+            <div class="wrapper">
+                <a href="">
                     <div class="teaser">
                         <i class='fa fa-building-o'></i>
                         <p>Stadtteile</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'In Arbeit...' %}</h2>
                     </div>
                 </a>
             </div>
         </div>
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
-                <a href="/suche/order=&tags=Familie">
+                <a href="">
                     <div class="teaser">
                         <i class='fa fa-hand-paper-o'></i>
                         <p>Aktuelle Bürgerbeteiligung</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'In Arbeit...' %}</h2>
                     </div>
                 </a>
             </div>
         </div>
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
-                <a href="/suche/order=&tags=Ausbildung">
+                <a href="">
                     <div class="teaser">
                         <i class='fa fa-cubes'></i>
                         <p>3D Modelle</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'In Arbeit...' %}</h2>
                     </div>
                 </a>
             </div>
         </div>
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
-                <a href="/suche/order=&tags=Ausbildung">
+                <a href="">
                     <div class="teaser">
                         <i class='fa fa-users'></i>
                         <p>Bürgerinitiativen &amp; NGOs</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'In Arbeit...' %}</h2>
                     </div>
                 </a>
             </div>
         </div>
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
-                <a href="/suche/order=&tags=Ausbildung">
+                <a href="">
                     <div class="teaser">
                         <i class='fa fa-university'></i>
                         <p>Verwaltung der Stadt</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'In Arbeit...' %}</h2>
                     </div>
                 </a>
             </div>
@@ -244,13 +257,13 @@
         </div> -->
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
-                <a href="/suche/order=&tags=Zivilgesellschaft">
+                <a href="">
                     <div class="teaser">
                         <i class='fa fa-code'></i>
                         <p>OpenData &amp; OpenSource</p>
                     </div>
                     <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
+                        <h2>{% trans 'In Arbeit' %}</h2>
                     </div>
                 </a>
             </div>
