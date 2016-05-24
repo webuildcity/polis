@@ -106,15 +106,8 @@ class ProjectFetcher():
             except TypeError:
                 continue
 
-            # see if is marked active
-            # try:
-            #     if feature['properties']['feststellung'].lower() == 'ja':
-            #         project_values['active'] = False
-            #     else:
-            #         project_values['active'] = True
-            # except KeyError:
-            #     project_values['active'] = True
             project_values['active'] = True
+            project_values['isFinished'] = False
             # update the place or create a new one
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
 
