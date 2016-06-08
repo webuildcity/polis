@@ -55,6 +55,8 @@ INSTALLED_APPS = (
     'rosetta',
     'django_makemessages_xgettext',
     'star_ratings',
+    'etherpad_lite'
+    # 'etherpadlite'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -193,3 +195,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 #ROSETTA_WSGI_AUTO_RELOAD
 #ROSETTA_UWSGI_AUTO_RELOAD
 
+#Etherpad 
+
+ETHERPAD_ENABLED = True
+ETHERPAD_SETTINGS = {
+    'api_key' : '70317e451c42de35e4a7be44db55948553be5c417d336229d4dce294b35e7268',
+    'base-url' : 'http://localhost:9001/api'
+}
