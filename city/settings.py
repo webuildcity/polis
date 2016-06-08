@@ -58,9 +58,9 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'wbc.core.middleware.ForceDefaultLanguageMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -68,6 +68,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -88,6 +89,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'wbc.core.context_processors.settings',
+                'django.core.context_processors.i18n',
             ],
         },
     },
@@ -99,7 +101,6 @@ SITE_ID = 1
 
 INTERNAL_IPS = ('127.0.0.1',)
 
-LANGUAGE_CODE = 'de-DE'
 TIME_ZONE = 'Europe/Berlin'
 USE_I18N = True
 USE_L10N = True
@@ -111,6 +112,7 @@ LOCALE_PATHS = (
 
 from django.utils.translation import ugettext_lazy as _
 
+LANGUAGE_CODE = 'de'
 LANGUAGES = [
     ('de', _('German')),
     ('en', _('English')),
@@ -152,9 +154,9 @@ TILES_OPT = {
 }
 
 DEFAULT_VIEW = {
-    'lat': 53.5476181,
-    'lon': 9.9777684,
-    'zoom': 12
+    'lat': 53.550556,
+    'lon': 10.00,
+    'zoom': 11
 }
 
 MARKDOWN_EDITOR_SKIN = 'simple'

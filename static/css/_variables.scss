@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: roboto;
-  src: url('/static/font/Roboto-Light.ttf');
+  src: url('/static/font/Roboto-Bold.ttf');
   font-weight: bold; }
 
 @font-face {
@@ -43,6 +43,8 @@ $link-color-light: lighten($link-color, 30%);
 $headline-color: $primary-color;
 
 $highlight-color: #AC1010;
+$highlight-color-light: lighten($highlight-color, 20%);
+$highlight-color-dark: darken($highlight-color, 20%);
 
 $primary-text: #444;
 $secondary-text: #FFFFFF;
@@ -89,5 +91,6 @@ $startpage-person2: url(static('img/wbc-solveig-schroeder.jpg'));
 
   img {
       height: 36px;
+      transition: 0.3s linear height;
   }
 }

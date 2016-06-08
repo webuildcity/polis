@@ -10,6 +10,8 @@ ALLOWED_HOSTS = []
 
 SECRET_KEY = 'this is a not very secret key'
 
+# SESSION_COOKIE_SECURE = False
+
 DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
