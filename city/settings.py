@@ -202,3 +202,15 @@ ETHERPAD_SETTINGS = {
     'api_key' : '70317e451c42de35e4a7be44db55948553be5c417d336229d4dce294b35e7268',
     'base-url' : 'http://localhost:9001/api'
 }
+
+
+DETAILS_TABS = {
+    'info' : True,
+    '3d' : True,
+    'images' : True,
+    'events' : True,
+    'stakeholder' : True,
+    'discussion' : True,
+    'map' : True,
+    'etherpad' : True,
+}
