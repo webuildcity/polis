@@ -39,3 +39,5 @@ django-star-ratings==0.5.1
 
 lxml==3.6.0
 Wand==0.4.2
+
+-e git+git://github.com/devjones/PyEtherpadLite.git#egg=PyEtherpadLite
