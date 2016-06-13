@@ -4,19 +4,6 @@
 <!-- In this file you can edit the content of the wbc-startpage -->
 
 <!-- Top of the startpage with headline, search bar and background image -->
-<!-- <<<<<<< HEAD
-                <div id="top-container">
-                    <div class="container">
-                        <div class="top-overlay text-center">
-                            <h1>Willkommen bei Wir-bauen-Hamburg</h1>
-                            <h3>Beteilige Dich an der Zukunftsgestaltung deiner Hansestadt Hamburg!</h3>
-                            <div class="search-container">
-                                <wbc-search text="Suche nach Ideen, Bauprojekten, Bebauungsplanverfahren, 3D Visualisierungen, ..."></wbc-search>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-======= -->
 {% block top %}
 <div id="top-container">
     <div class="top-container-tint">
@@ -34,17 +21,6 @@
 {% endblock %}
 <!-- Have to be add: Link & Credit to author of the image: https://www.flickr.com/photos/lobostudio/5070193235 -->
 
- <!-- Block of Navigation Boxes -->
-<!-- <<<<<<< HEAD
-            <div class="bottom-block">
-            <h2 class="wbc-headline">Was gibt es hier?</h2>
-            <div class="wbc-divider"></div>
-            <div class="container">
-
-              <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Stadtplanungsverfahren</a> informieren. Du kannst ein <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">kostenloses Benutzerkonto anlegen</a> um über Änderungen auf dem Laufenden gehalten zu werden!
-              Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Stadtteil, in Hamburg und Umgebung entwickelt! 
-              Weitere Informationen zu Stadtentwicklung und Bürgerbeteiligung findest Du im <a href="{% url 'encyclopedia' %}">Lexikon</a> oder im <a href="{% url 'blog' %}">Blog</a>.</p>
-======= -->
 {% block nav-boxes %}
 <div class="bottom-block">
     <h2 class="wbc-headline"> {% trans "Nav-boxes headline: What can you do here?" %}</h2>
@@ -98,34 +74,6 @@
             </div>
         </div>
 
-<!-- <<<<<<< HEAD
-                <div class="col-md-4">
-                    <a href="{% url 'search' %}">
-                        <div class="teaser">
-                            <i class='fa fa-map-o'></i>
-                            <p>Suche nach Ideen &amp; Projekten</p>
-                        </div>
-                    </a>
-                </div> 
-                <div class="col-md-4">
-                    <div class="teaser">
-                        <i class='fa fa-bell-o'></i>
-                            <p>
-                                <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" href="#">Abonniere Projekte<br></a>
-                                (kostenlos registrieren)
-                            </p>
-                        </div>
-                </div>
-                <div class="col-md-4">
-                    <a href="{% url 'process' %}">
-                        <div class="teaser">
-                            <i class='fa fa-book'></i>
-                            <p>Im Lexikon stöbern</p>
-                        </div>
-                    </a>
-                </div>
-              </div>
-======= -->
         <div class="col-sm-4 wbc-teaser-container">
             <div class="wrapper">
                 <a href="{% url 'process' %}">
@@ -277,18 +225,6 @@
       </p>
     </div>
 </div>
-
-<!-- block -->
-<!-- <div class="bottom-block">
-    <h2 class="wbc-headline">Was hab ich vom Projekt Jugend-Demografie-Dialog?</h2>
-    <div class="wbc-divider"></div>
-    <div class="container">
-      <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
-    </div>
-</div>
--->
-<!-- block -->
 
 <div class="bottom-block">
     <h2 class="wbc-headline">Vision</h2>
