@@ -214,3 +214,12 @@ DETAILS_TABS = {
     'map' : True,
     'etherpad' : True,
 }
+
+ORDER_BTNS = [
+    {'value' : 'name', 'text' : 'Name'},
+    {'value' : '-created', 'text' : 'Datum'},
+    # {'value' : '-num_stakeholder', 'text' : '# Beteiligte'},
+    {'value' : '-ratings_avg', 'text' : 'Bewertung'},
+    # {'value' : '-ratings_count', 'text' : '# Bewertungen'},
+
+]
