@@ -219,5 +219,4 @@ ORDER_BTNS = [
     # {'value' : '-num_stakeholder', 'text' : '# Beteiligte'},
     {'value' : '-ratings_avg', 'text' : 'Bewertung'},
     # {'value' : '-ratings_count', 'text' : '# Bewertungen'},
-
 ]
