@@ -34,58 +34,22 @@
 
         <div id="navigation-boxes" class="container">
 
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="{% url 'search' %}">
-                    <div class="teaser">
-                        <i class='fa fa-map-o'></i>
-                        <p>{% trans "Suche nach Ideen &amp; Projekten" %}</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text kljlk jk jjk ksdkkkkkkkkkkk kd          kd kdddddddd kd dkkkkkkkkkk dk kdddddddd dk' %}</h2>
-                    </div>
-                </a>
+        {% for box in topIcons %}
+            <div class="col-sm-4 wbc-teaser-container">
+                <div class="wrapper">
+                    <a href={{box.link}}>
+                        <div class="teaser">
+                            <i class='fa fa-map-o'></i>
+                            <p>{{box.text}}</p>
+                        </div>
+                        <div class="wbc-overlay">
+                            <h2>{{box.overlay}}</h2>
+                        </div>
+                    </a>
+                </div> 
             </div> 
-        </div> 
+        {% endfor %}
 
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                {% if user.is_authenticated %}
-                <a href="{% url 'stakeholder' user.profile.stakeholder.slug %}">
-                    <div class="teaser">
-                        <i class='fa fa-bell-o'></i>
-                        <p>{% trans 'Abonnierte Projekte' %}</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-                {% else %}
-                <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">
-                    <div class="teaser">
-                        <i class='fa fa-user'></i>
-                        <p>{% trans 'kostenlos registrieren' %}</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-                {% endif %}
-            </div>
-        </div>
-
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="{% url 'process' %}">
-                    <div class="teaser">
-                        <i class='fa fa-book'></i>
-                        <p>Im Lexikon stöbern</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 </div>
@@ -102,108 +66,23 @@
 
   <!-- p>Themen, um die es hier geht: <a href="{% url 'search' %}">laufenden Ideen & L&ouml;sungsans&auml;tze</a> informieren, Dich beteiligen und immer auf dem neusten Stand bleiben!</p -->
 
-      <div id="navigation-boxes" class="container">
-
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="/suche/order=&tags=Arbeit">
-                    <div class="teaser">
-                        <i class='fa fa-lightbulb-o'></i>
-                        <p>Bauprojekte</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="/suche/order=&tags=Arbeit">
-                    <div class="teaser">
-                        <i class='fa fa-building-o'></i>
-                        <p>Stadtteile</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="/suche/order=&tags=Familie">
-                    <div class="teaser">
-                        <i class='fa fa-hand-paper-o'></i>
-                        <p>Aktuelle Bürgerbeteiligung</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="/suche/order=&tags=Ausbildung">
-                    <div class="teaser">
-                        <i class='fa fa-cubes'></i>
-                        <p>3D Modelle</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="/suche/order=&tags=Ausbildung">
-                    <div class="teaser">
-                        <i class='fa fa-users'></i>
-                        <p>Bürgerinitiativen &amp; NGOs</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="/suche/order=&tags=Ausbildung">
-                    <div class="teaser">
-                        <i class='fa fa-university'></i>
-                        <p>Verwaltung der Stadt</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- <div class="col-sm-4">
-            <a href="/suche/order=&tags=Ausbildung">
-                <div class="teaser">
-                    <i class='fa fa-bar-chart'></i>
-                    <p>Baufirmen</p>
+        <div id="navigation-boxes" class="container">
+        {% for box in botIcons %}
+            <div class="col-sm-4 wbc-teaser-container">
+                <div class="wrapper">
+                    <a href={{box.link}}>
+                        <div class="teaser">
+                            <i class='fa fa-map-o'></i>
+                            <p>{{box.text}}</p>
+                        </div>
+                        <div class="wbc-overlay">
+                            <h2>{{box.overlay}}</h2>
+                        </div>
+                    </a>
                 </div> 
-            </a>
-        </div> -->
-        <div class="col-sm-4 wbc-teaser-container">
-            <div class="wrapper">
-                <a href="/suche/order=&tags=Zivilgesellschaft">
-                    <div class="teaser">
-                        <i class='fa fa-code'></i>
-                        <p>OpenData &amp; OpenSource</p>
-                    </div>
-                    <div class="wbc-overlay">
-                        <h2>{% trans 'Suche Overlay Text' %}</h2>
-                    </div>
-                </a>
-            </div>
+            </div> 
+        {% endfor %}
         </div>
-      </div>
     </div>
 </div>
 {% endblock %}
