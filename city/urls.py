@@ -140,4 +140,6 @@ urlpatterns = patterns('',
     #ratings
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 
+    #social auth
+    url('', include('social.apps.django_app.urls', namespace='social')),
 )

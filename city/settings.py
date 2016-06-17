@@ -55,8 +55,8 @@ INSTALLED_APPS = (
     'rosetta',
     'django_makemessages_xgettext',
     'star_ratings',
-    'etherpad_lite'
-    # 'etherpadlite'
+    'etherpad_lite',
+    'social.apps.django_app.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -74,6 +74,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend', # this is default
     'guardian.backends.ObjectPermissionBackend',
 )
@@ -92,6 +93,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'wbc.core.context_processors.settings',
                 'django.core.context_processors.i18n',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -202,6 +205,16 @@ ETHERPAD_SETTINGS = {
 }
 
 
+
+# SOCIAL_AUTH_STORAGE = 'social.apps.django_app.me.models.DjangoStorage'
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+
+
+
+#GENERAL SETTINGS CUSTOMIZE THIS FOR YOUR INSTANCE
+
+#defines which tabs are rendered in the details view
 DETAILS_TABS = {
     'info' : True,
     '3d' : True,
@@ -213,6 +226,7 @@ DETAILS_TABS = {
     'etherpad' : True,
 }
 
+#defines what u can order search results by
 ORDER_BTNS = [
     {'value' : 'name', 'text' : 'Name'},
     {'value' : '-created', 'text' : 'Datum'},
