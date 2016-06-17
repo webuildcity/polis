@@ -22,7 +22,6 @@ ORDER_BTNS = [
 ]
 
 #DOOOOOOOOOOOOOOO THIS
-
 GENERAL_CONTENT = {
     'blog'    : True,
     'lexikon' : True,
