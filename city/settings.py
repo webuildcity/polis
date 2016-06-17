@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 from local import *
+from content_settings import * 
 
 INSTALLED_APPS = (
     # django
@@ -55,6 +56,8 @@ INSTALLED_APPS = (
     'rosetta',
     'django_makemessages_xgettext',
     'star_ratings',
+    'etherpad_lite'
+    # 'etherpadlite'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -192,4 +195,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 #Translation Rosetta
 #ROSETTA_WSGI_AUTO_RELOAD
 #ROSETTA_UWSGI_AUTO_RELOAD
-

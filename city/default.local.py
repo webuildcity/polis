@@ -60,3 +60,14 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #EMAIL_USE_TLS = True
 
 # FACEBOOK_APIKEY = 'XXXXXXXXXXXXXXX'
+
+FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
+FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
+
+#Etherpad 
+
+ETHERPAD_ENABLED = True
+ETHERPAD_SETTINGS = {
+    'api_key' : 'key',
+    'base-url' : 'http://localhost:9001/api'
+}
