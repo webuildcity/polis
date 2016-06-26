@@ -41,4 +41,7 @@ lxml==3.6.0
 Wand==0.4.2
 
 etherpad-lite==0.5
--e git+git://github.com/devjones/PyEtherpadLite.git#egg=PyEtherpadLite
+
+-e git+https://github.com/devjones/PyEtherpadLite#egg=PyEtherpadLite
+
+#-e git+git://github.com/devjones/PyEtherpadLite.git#egg=PyEtherpadLite
