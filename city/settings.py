@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 from local import *
+from content_settings import * 
 
 INSTALLED_APPS = (
     # django
@@ -198,39 +199,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 #ROSETTA_WSGI_AUTO_RELOAD
 #ROSETTA_UWSGI_AUTO_RELOAD
 
-#Etherpad 
-ETHERPAD_SETTINGS = {
-    'api_key' : '70317e451c42de35e4a7be44db55948553be5c417d336229d4dce294b35e7268',
-    'base-url' : 'http://localhost:9001/api'
-}
-
-
-
-# SOCIAL_AUTH_STORAGE = 'social.apps.django_app.me.models.DjangoStorage'
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
-
-
-
-
-#GENERAL SETTINGS CUSTOMIZE THIS FOR YOUR INSTANCE
-
-#defines which tabs are rendered in the details view
-DETAILS_TABS = {
-    'info' : True,
-    '3d' : True,
-    'images' : True,
-    'events' : True,
-    'stakeholder' : True,
-    'discussion' : True,
-    'map' : True,
-    'etherpad' : True,
-}
-
-#defines what u can order search results by
-ORDER_BTNS = [
-    {'value' : 'name', 'text' : 'Name'},
-    {'value' : '-created', 'text' : 'Datum'},
-    # {'value' : '-num_stakeholder', 'text' : '# Beteiligte'},
-    {'value' : '-ratings_avg', 'text' : 'Bewertung'},
-    # {'value' : '-ratings_count', 'text' : '# Bewertungen'},
-]
