@@ -146,7 +146,7 @@ COMPRESS_PRECOMPILERS = (
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
-TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
+TILES_URL = 'http://{s}.tiles.we-build.city/lichtenfels/{z}/{x}/{y}.png'
 
 TILES_OPT = {
     'attribution': 'Map data &copy; 2016 OpenStreetMap contributors',
@@ -157,8 +157,8 @@ TILES_OPT = {
 }
 
 DEFAULT_VIEW = {
-    'lat': 53.550556,
-    'lon': 10.00,
+    'lat': 50.1314338,
+    'lon': 10.9424489,
     'zoom': 11
 }
 
