@@ -31,8 +31,6 @@ GENERAL_CONTENT = {
 #TOP BOXES ON STARTPAGE
 STARTPAGE_OVERVIEW_ICONS = [
     {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde mehr als 70 Ideen Projekte', 'link' : reverse_lazy('search') },
-    {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde 3000+ Baupläne', 'link' : reverse_lazy('search') },
-    {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde 3000+ Baupläne', 'link' : reverse_lazy('search') },
 ]
 
 #BOTTOM BOXES ON STARTPAGE
