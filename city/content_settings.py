@@ -35,7 +35,19 @@ STARTPAGE_OVERVIEW_ICONS = [
 
 #BOTTOM BOXES ON STARTPAGE
 STARTPAGE_TOPIC_ICONS = [
-    {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde 3000+ Baupläne', 'link' : reverse_lazy('search') }
+    {'text' : 'Mobilität', 'icon': 'fa-car', 'overlay': 'Mobilitätsthemen im Landkreis', 'link' : reverse_lazy('search/order=&tags=Mobilität') },
+    {'text' : 'Familienfreundlichkeit', 'icon': 'fa-heart', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Arbeitsmarkt', 'icon': 'fa-clock-o', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Bildung', 'icon': 'fa-graduation-cap', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Infrastruktur', 'icon': 'fa-train', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Kultur und Freizeit', 'icon': 'fa-coffee', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Umwelt', 'icon': 'fa-pagelines', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Benachteiligungen abbauen', 'icon': 'fa-ban', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Regionale Produkte', 'icon': 'fa-compass', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Tourismus', 'icon': 'fa-mao-o', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Gutes Miteinander', 'icon': 'fa-thumbs-o-up', 'overlay': '', 'link' : reverse_lazy('search') },
+    {'text' : 'Weitere Ideen', 'icon': 'fa-plus', 'overlay': '', 'link' : reverse_lazy('search') },
+
 ]
 
 
