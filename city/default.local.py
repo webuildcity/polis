@@ -70,6 +70,8 @@ ETHERPAD_SETTINGS = {
     'api_key' : 'key',
     'base-url' : 'http://localhost:9001/api'
 }
+PREFIX = 'polis-'
+
 
 #SOCIAL LOGIN KEYS AND SECRETS
 SOCIAL_AUTH_FACEBOOK_KEY=''
