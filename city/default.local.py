@@ -65,7 +65,6 @@ FEED_TITLE = "Polis - by www.We-Build.City (Veröffentlichungen)"
 FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Build.City"
 
 #Etherpad 
-
 ETHERPAD_ENABLED = True
 ETHERPAD_SETTINGS = {
     'api_key' : 'key',
