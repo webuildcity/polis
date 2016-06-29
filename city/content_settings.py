@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.core.urlresolvers import reverse_lazy
+from django.core.urlresolvers import reverse_lazy, reverse
 
 #GENERAL SETTINGS
 DETAILS_TABS = {
@@ -35,7 +35,7 @@ STARTPAGE_OVERVIEW_ICONS = [
 
 #BOTTOM BOXES ON STARTPAGE
 STARTPAGE_TOPIC_ICONS = [
-    {'text' : 'Mobilität', 'icon': 'fa-car', 'overlay': 'Mobilitätsthemen im Landkreis', 'link' : reverse_lazy('search/order=&tags=Mobilität') },
+    {'text' : 'Mobilität', 'icon': 'fa-car', 'overlay': 'Mobilitätsthemen im Landkreis', 'link' : reverse_lazy('search'), 'params' : 'tags=Mobilität' },
     {'text' : 'Familienfreundlichkeit', 'icon': 'fa-heart', 'overlay': '', 'link' : reverse_lazy('search') },
     {'text' : 'Arbeitsmarkt', 'icon': 'fa-clock-o', 'overlay': '', 'link' : reverse_lazy('search') },
     {'text' : 'Bildung', 'icon': 'fa-graduation-cap', 'overlay': '', 'link' : reverse_lazy('search') },

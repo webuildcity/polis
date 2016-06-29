@@ -68,7 +68,7 @@
         {% for box in botIcons %}
             <div class="col-sm-4 wbc-teaser-container">
                 <div class="wrapper">
-                    <a href={{box.link}}>
+                    <a href={{box.link}}{{box.params}}>
                         <div class="teaser">
                             <i class='fa {{box.icon}}'></i>
                             <p>{{box.text}}</p>
