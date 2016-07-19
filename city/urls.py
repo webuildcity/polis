@@ -10,7 +10,7 @@ from wbc.core.views import SearchView, StartView
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
 from wbc.blog.views import BlogView
-from wbc.accounts.views import WbcRegistrationView
+from wbc.accounts.views import WbcRegistrationView, RegisterMethodView
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -87,6 +87,7 @@ urlpatterns = patterns('',
         }, name='password_reset_complete'),
 
     # register account
+    url(r'^register_method/$',RegisterMethodView.as_view(), name="register_method"), 
     url(r'^benutzerkonto/registrieren/$', WbcRegistrationView.as_view(), name='registration_register'),
     url(r'^benutzerkonto/registrieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/registration_complete.html'), name='registration_complete'),
     url(r'^benutzerkonto/aktivieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/activation_complete.html'), name='registration_activation_complete'),
