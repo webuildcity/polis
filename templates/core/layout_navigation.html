@@ -35,13 +35,7 @@
         </li>
     </ul>
     {% else %}
-    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
-        ANMELDEN <span class="caret"></span>
-    </a>
-    <ul id="login-dropdown" class="dropdown-menu dropdown-menu-right login-dropdown">
-        <li>
-        {% include "core/login.html" %}
-        </li>
-    </ul>
+    <a class="login-button" data-toggle="modal" data-target="#modal" data-form="{% url 'register_method' %}" data-title="Anmelden" href="#">Anmelden</a>
+
     {% endif %}
 </li>
