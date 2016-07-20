@@ -122,7 +122,7 @@ urlpatterns = patterns('',
 
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
 
-    url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
+    url(r'^autocomplete/', 'wbc.core.views.autocomplete', name="autocomplete"),
     url(r'^suche/', SearchView.as_view(), name="search"),
     url(r'^karte/', 'wbc.core.views.map', name="map"),
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
