@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: city/settings.py:125
+msgid "German"
+msgstr ""
+
+#: city/settings.py:126
+msgid "English"
+msgstr ""
+
+#: city/settings.py:127
+msgid "JugendDemografieDialog"
+msgstr ""
+
+#: templates/core/city.html:13 templates/core/default.city.html:12
+msgid "H1: Welcome to our platform"
+msgstr ""
+
+#: templates/core/city.html:14 templates/core/default.city.html:13
+msgid "H3 Claim: Use our platform to make the best out of our platform!"
+msgstr ""
+
+#: templates/core/city.html:16
+msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
+msgstr ""
+
+#: templates/core/city.html:26 templates/core/default.city.html:27
+msgid "Nav-boxes headline: What can you do here?"
+msgstr ""
+
+#: templates/core/city.html:31 templates/core/default.city.html:31
+msgid "Nav-boxes paragraph: Hier kannst Du Dich über"
+msgstr ""
+
+#: templates/core/city.html:31 templates/core/default.city.html:31
+msgid "laufende Ideen, Projekte und Stadtplanungsverfahren"
+msgstr ""
+
+#: templates/core/city.html:31 templates/core/default.city.html:31
+msgid "informieren. Du kannst ein"
+msgstr ""
+
+#: templates/core/city.html:31
+msgid "Benutzerkonto registrieren"
+msgstr ""
+
+#: templates/core/city.html:31 templates/core/default.city.html:31
+msgid "kostenloses Benutzerkonto anlegen"
+msgstr ""
+
+#: templates/core/city.html:31 templates/core/default.city.html:31
+msgid "um über Änderungen auf dem Laufenden gehalten zu werden!"
+msgstr ""
+
+#: templates/core/default.city.html:15
+msgid "Search Box: Search for Ideas, Projects, everything what you want..."
+msgstr ""
+
+#: templates/core/default.city.html:41
+msgid "Suche nach Ideen &amp; Projekten"
+msgstr ""
