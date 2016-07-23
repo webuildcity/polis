@@ -1,18 +1,17 @@
   /* Fonts */
 
-@font-face {
-  font-family: 'Raleway', sans-serif;
+/* @font-face {
+  font-family: raleway;
   font-weight: 400;
-  src: url('https://fonts.googleapis.com/css?family=Raleway'); }
+  src: url('https://fonts.googleapis.com/css?family=Raleway'); } */
 
-@font-face {
+/* @font-face {
   font-family: opensans;
-  src: url('/static/font/OpenSans-Light.ttf'); }
+  src: url('/static/font/OpenSans-Light.ttf'); } */
 
 @font-face {
-  font-family: roboto;
-  src: url('/static/font/Roboto-Bold.ttf');
-  font-weight: bold; }
+  font-family: raleway;
+  src: url('/static/font/Raleway-Regular.ttf'); }
 
 @font-face {
   font-family: 'Material Icons';
@@ -20,12 +19,12 @@
   font-weight: 400;
   src: url('/static/font/MaterialIcons-Regular.woff2') format('woff2'); }  
 
-$font-nav: bold 1em roboto;
-$font-body-copy: 1em roboto;
-$font-h1: bold 1.9em roboto;
-$font-h2: 1.45em roboto;
-$font-h3: bold 1em/1.25em roboto;
-$font-h4: bold 0.875em/1.25em roboto;
+$font-nav: bold 1em raleway;
+$font-body-copy: 1em raleway;
+$font-h1: bold 1.9em raleway;
+$font-h2: 1.45em raleway;
+$font-h3: bold 1em/1.25em raleway;
+$font-h4: bold 0.875em/1.25em raleway;
 
 /* Palette */
 
@@ -42,19 +41,19 @@ $link-color-light: lighten($link-color, 30%);
 
 $headline-color: $primary-color;
 
-$highlight-color: #AC1010;
+$highlight-color: #f29855;
 $highlight-color-light: lighten($highlight-color, 20%);
 $highlight-color-dark: darken($highlight-color, 20%);
 
 $primary-text: #444;
 $secondary-text: #FFFFFF;
 
-$icon-color: #f6f6f6;
+$icon-color: #f29855;
 $icon-admin-edit-color: $primary-color;
 
-$background-color: #f4e5a4;
+$background-color: #3898c8;
 $background-color-header: $background-color;
-$background-color-startpage-content: $highlight-color;
+$background-color-startpage-content: $background-color;
 $background-color-comments: #f2f2f2;
 $background-color-timeline-content: #f2f2f2;
 $background-color-search-result: #f2f2f2;
