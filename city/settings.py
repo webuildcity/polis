@@ -122,8 +122,9 @@ from django.utils.translation import ugettext_lazy as _
 
 LANGUAGE_CODE = 'de'
 LANGUAGES = [
-    ('de', _('German')),
-    ('en', _('English')),
+    ('de',  _('German')),
+    ('en',  _('English')),
+    ('jdd', _('JugendDemografieDialog')),
 ]
 
 MEDIA_URL = '/media/'
