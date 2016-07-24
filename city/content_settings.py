@@ -54,4 +54,4 @@ STARTPAGE_TOPIC_ICONS = [
 #SEARCH
 DEFAULT_VIEW_MAP   = False     # karte oder listenansicht zuerst
 SHOW_ENTITY_FILTER = True   # kann man nach entities filtern
-
+SHOW_ADDITIONAL_FILTER = True    # switchtes additional filters on/off
