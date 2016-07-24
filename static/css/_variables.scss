@@ -28,18 +28,18 @@ $font-h4: bold 0.875em/1.25em raleway;
 
 /* Palette */
 
-$primary-color: #444;
+$primary-color: #f29855;  /* orange */
 $primary-color-dark: darken($primary-color, 20%);
 $primary-color-light: lighten($primary-color, 30%);
 
 
 /* Links */
-$link-color: #AC1010;
+$link-color: #23da5d;
 $link-color-dark: darken($link-color, 20%);
 $link-color-light: lighten($link-color, 30%);
 
 
-$headline-color: $primary-color;
+$headline-color: #f29855;
 
 $highlight-color: #f29855;
 $highlight-color-light: lighten($highlight-color, 20%);
@@ -63,7 +63,9 @@ $secondary-background-color: #f6f6f6;
 
 /* Images */
 
-$startpage-image: url(static('img/startpage.jpg'));
+/* $startpage-image: url(static('img/startpage.jpg')); */
+
+$startpage-image: none;
 
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
