@@ -114,8 +114,12 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# PROJECT PATH TO LOAD ALL LOCALE FOLDERS CORRECTLY
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+
 LOCALE_PATHS = (
     "locale",
+    os.path.join(PROJECT_PATH, '../locale'),
 )
 
 from django.utils.translation import ugettext_lazy as _
