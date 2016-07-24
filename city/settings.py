@@ -120,10 +120,11 @@ LOCALE_PATHS = (
 
 from django.utils.translation import ugettext_lazy as _
 
-LANGUAGE_CODE = 'de'
+LANGUAGE_CODE = 'jdd'
 LANGUAGES = [
     ('de',  _('German')),
     ('en',  _('English')),
+    ('pt',  _('Brazilian')),
     ('jdd', _('JugendDemografieDialog')),
 ]
 
