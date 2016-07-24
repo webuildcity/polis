@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-24 09:11+0200\n"
+"POT-Creation-Date: 2016-07-24 09:57+0200\n"
 "PO-Revision-Date: 2016-01-30 11:42+0100\n"
 "Last-Translator: Timo Lundelius <timo@lundelius.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,17 +37,19 @@ msgstr ""
 
 #: templates/core/city.html:13
 msgid "ORIGIN: Neue Ideen für den Landkreis Lichtenfels"
-msgstr ""
+msgstr "Neue Ideen für den Landkreis Lichtenfels"
 
 #: templates/core/city.html:14
 msgid ""
 "ORIGIN: Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels "
 "entwickelt"
-msgstr "jdd-sprache-aktiv-test"
+msgstr ""
+"Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels (jdd-aktiv)"
 
 #: templates/core/city.html:16
 msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
 msgstr ""
+"Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."
 
 #: templates/core/city.html:31 templates/core/default.city.html:31
 msgid "informieren. Du kannst ein"
