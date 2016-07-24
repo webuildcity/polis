@@ -3,7 +3,7 @@ from django.core.urlresolvers import reverse_lazy, reverse
 
 #GENERAL SETTINGS
 DETAILS_TABS = {
-    'info' : False,
+    'info' : True,
     '3d' : False,
     'images' : True,
     'events' : True,
