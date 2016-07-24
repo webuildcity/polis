@@ -55,3 +55,4 @@ STARTPAGE_TOPIC_ICONS = [
 DEFAULT_VIEW_MAP   = False     # karte oder listenansicht zuerst
 SHOW_ENTITY_FILTER = True   # kann man nach entities filtern
 SHOW_ADDITIONAL_FILTER = False    # switchtes additional filters on/off
+TERMINATED_PROJECTS = False

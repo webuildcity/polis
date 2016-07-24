@@ -13,7 +13,7 @@
         {% else %}
             <img class="user_img" src="{% static 'img/person_placeholder.png' %}" />
         {% endif %}  
-        </i>{{user.username}} <span class="caret"></span>
+        </i>{% if user.first_name %} {{user.first_name}} {% else %} {{user.username}}{% endif %} <span class="caret"></span>
     </a>
     <ul class="dropdown-menu dropdown-menu-right">
         <li>
