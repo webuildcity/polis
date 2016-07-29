@@ -156,7 +156,7 @@ COMPRESS_PRECOMPILERS = (
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
-TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
+TILES_URL = 'https://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
 
 TILES_OPT = {
     'attribution': 'Map data &copy; 2016 OpenStreetMap contributors',
