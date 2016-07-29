@@ -138,6 +138,8 @@ MEDIA_ROOT = os.path.join(SITE_ROOT,'media_root/')
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(SITE_ROOT,'static_root/')
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
+
 STATICFILES_DIRS = (
     os.path.join(SITE_ROOT,'static/'),
 )
