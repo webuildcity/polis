@@ -31,6 +31,7 @@ $font-h4: bold 0.875em/1.25em raleway;
 $primary-color: #f29855;  /* orange */
 $primary-color-dark: darken($primary-color, 20%);
 $primary-color-light: lighten($primary-color, 30%);
+$primary-color-slight-light: lighten($primary-color, 20%);
 
 
 /* Links */
@@ -53,6 +54,8 @@ $icon-color: #f29855;
 $icon-admin-edit-color: $primary-color;
 
 $background-color: #3898c8;
+$background-color-light: lighten($background-color, 20%);
+
 $background-color-header: #FFFFFF;
 $background-color-startpage-content: $background-color;
 $background-color-comments: #f2f2f2;
