@@ -23,14 +23,18 @@
 
 {% block nav-boxes %}
 <div class="bottom-block">
-    <h2 class="wbc-headline"> Was kannst Du hier tun?</h2>
+    <div class="wbc-headline">
+        <div class="container">
+            <h2>Was kannst Du hier tun?</h2>
+        </div>
+    </div>
     <div class="wbc-divider"></div>
     
     <div class="container">
 
-        <p>Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge </a> {% trans "informieren. Du kannst ein" %} <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %} Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Landkreis und Umgebung entwickelt! 
+        <p class="startpage-text">Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge </a> {% trans "informieren. Du kannst ein" %} <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %} Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Landkreis und Umgebung entwickelt! 
         
-        <div id="navigation-boxes" class="container">
+        <div id="navigation-boxes">
 
         {% for box in topIcons %}
             <div class="col-sm-12 wbc-teaser-container">
@@ -58,7 +62,11 @@
 {% block topic-boxes %}
 
 <div class="bottom-block">
-    <h2 class="wbc-headline"> Themen</h2>
+    <div class="wbc-headline">
+        <div class="container">
+            <h2>Themen</h2>
+        </div>
+    </div>
     <div class="wbc-divider"></div>
     <div class="container">
 
@@ -93,27 +101,25 @@
 {% block footer %}
 
 <div class="bottom-block">
-<div class="wbc-divider"></div>
-<div class="container">
-
-
-
-<div class="col-sm-4">
-    <h4>
-        <a href="/" target="_blank">Landkreis Lichtenfels</a>
-    </h4>
-</div>
+<div id="wbc-footer" class="container">
+    <div class="col-sm-4">
+        <h4>
+            <a href="/" target="_blank">Landkreis Lichtenfels</a>
+        </h4>
+    </div>
     
-<div class="col-sm-4">
-    <h4>
-        <a href="http://jugend-demografie-dialog.de/impressum/">Impressum &amp; Datenschutzerklärung</a>
-    </h4>
-</div>
+    <div class="col-sm-4">
+        <h4 class="text-center">
+            <a href="http://jugend-demografie-dialog.de/impressum/">Impressum &amp; Datenschutzerklärung</a>
+        </h4>
+    </div>
 
-<div class="col-sm-4">
-    <h4>
-        <a href="https://github.com/webuildcity" target="_blank">Offener Quellcode</a>
-    </h4>
+    <div class="col-sm-4">
+        <h4 class="pull-right">
+            <a href="https://github.com/webuildcity" target="_blank">Offener Quellcode</a>
+        </h4>
+    </div>
+</div>
 </div>
 
 {% endblock %} -->

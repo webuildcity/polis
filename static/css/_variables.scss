@@ -40,7 +40,7 @@ $link-color-dark: darken($link-color, 20%);
 $link-color-light: lighten($link-color, 30%);
 
 
-$headline-color: #f29855;
+$headline-color: #444;
 
 $highlight-color: #f29855;
 $highlight-color-light: lighten($highlight-color, 20%);
@@ -48,15 +48,21 @@ $highlight-color-lightest: lighten($highlight-color, 40%);
 $highlight-color-dark: darken($highlight-color, 20%);
 
 $primary-text: #444;
-$secondary-text: #FFFFFF;
+$secondary-text: #f2f2f2;
+$third-text: #ffffff;
 
 $icon-color: #f29855;
 $icon-admin-edit-color: $primary-color;
 
-$background-color: #3898c8;
+$background-color: #f6f6f6;
 $background-color-light: lighten($background-color, 20%);
 
-$background-color-header: #FFFFFF;
+
+$background-color-header: #3898c8;
+$background-color-header-dark: darken($background-color-header, 10%);
+$background-color-header-light: lighten($background-color-header, 30%);
+$background-color-header-lightest: lighten($background-color-header, 40%);
+
 $background-color-startpage-content: $background-color;
 $background-color-comments: #f2f2f2;
 $background-color-timeline-content: #f2f2f2;
@@ -67,9 +73,9 @@ $secondary-background-color: #f6f6f6;
 
 /* Images */
 
-/* $startpage-image: url(static('img/startpage.jpg')); */
+$startpage-image: url(static('img/startpage.jpg'));
 
-$startpage-image: none;
+// $startpage-image: none;
 
 $background-image: url(static('img/background.png'));
 $background-image-light: none;
