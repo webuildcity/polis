@@ -29,7 +29,7 @@ urlpatterns = patterns('',
     url(r'^liste/$', 'wbc.projects.views.projects', name='projects'),
 
     # projects
-    url(r'^projekte/$', RedirectView.as_view(url='/liste/', permanent=True)),
+    url(r'^projekte/$', RedirectView.as_view(url='/suche/', permanent=True)),
     url(r'^projekt/neu/$', ProjectCreate.as_view(), name='project_create'),
     url(r'^projekt/(?P<pk>[0-9]+)/$', 'wbc.projects.views.project', name='project'),
     url(r'^projekt/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.projects.views.projectslug', name='projectslug'),
