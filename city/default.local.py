@@ -71,7 +71,7 @@ FEED_DESCRIPTION = "Veröffentlichungen zu Bauvorhaben in Polis - by www.We-Buil
 ETHERPAD_ENABLED = True
 ETHERPAD_SETTINGS = {
     'api_key' : 'key',
-    'base-url' : 'http://localhost:9001/api'
+    'base-url' : 'http://localhost:9001/api/'
 }
 PREFIX = 'polis-'
 
