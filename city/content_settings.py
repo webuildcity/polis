@@ -6,7 +6,7 @@ DETAILS_TABS = {
     'info' : True,
     '3d' : False,
     'images' : True,
-    'events' : True,
+    'events' : False,
     'stakeholder' : True,
     'discussion' : True,
     'map' : False,
