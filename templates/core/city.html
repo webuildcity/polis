@@ -17,7 +17,12 @@
             </div>
         </div>
     </div>
+    {% if user.is_authenticated %}
     <button class="new-project-button wbc-alarm-button btn btn-default modal-button" data-form="{% url 'project_create' %}" data-title="{% trans 'Projekt hinzufügen' %}">{% trans 'Neues Project erstellen' %}</button>
+    {% else %}
+    <button class="new-project-button wbc-alarm-button btn btn-default login-button" data-toggle="modal" data-target="#login-modal" data-form="{% url 'register_method' %}" data-title="Anmelden">{% trans 'Neues Project erstellen' %}</button>
+
+    {% endif %}
 </div>
 {% endblock %}
 <!-- Have to be add: Link & Credit to author of the image: https://www.flickr.com/photos/lobostudio/5070193235 -->
