@@ -23,16 +23,15 @@ ORDER_BTNS = [
 
 #DOOOOOOOOOOOOOOO THIS
 GENERAL_CONTENT = {
-    'blog'    : True,
-    'lexikon' : True,
+    'blog'    : False,
+    'lexikon' : False,
     'account' : True,
 }
 
 #TOP BOXES ON STARTPAGE
 STARTPAGE_OVERVIEW_ICONS = [
-    {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde 3000+ Baupläne', 'link' : reverse_lazy('search') },
-    {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde 3000+ Baupläne', 'link' : reverse_lazy('search') },
-    {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde 3000+ Baupläne', 'link' : reverse_lazy('search') },
+    {'text' : 'Neue Ideen & Orte', 'icon': 'fa-lightbulb-o', 'overlay': 'Neue Orte aus den Workshops', 'link' : reverse_lazy('search') },
+    
 ]
 
 #BOTTOM BOXES ON STARTPAGE

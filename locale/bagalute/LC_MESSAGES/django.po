@@ -8,71 +8,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-23 14:38+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-08-25 14:17+0200\n"
+"PO-Revision-Date: 2016-08-25 14:14+0200\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.7.8\n"
 
-#: city/settings.py:125
+#: city/settings.py:129
 msgid "German"
 msgstr ""
 
-#: city/settings.py:126
+#: city/settings.py:130
 msgid "English"
 msgstr ""
 
-#: city/settings.py:127
+#: city/settings.py:131
 msgid "JugendDemografieDialog"
+msgstr ""
+
+#: city/settings.py:132
+msgid "Bagaluteorg"
 msgstr ""
 
 #: templates/core/city.html:13 templates/core/default.city.html:12
 msgid "H1: Welcome to our platform"
-msgstr ""
+msgstr "UND STÖRTEBEKER WIRD ENDLICH GLÜCKLICH"
 
 #: templates/core/city.html:14 templates/core/default.city.html:13
 msgid "H3 Claim: Use our platform to make the best out of our platform!"
-msgstr ""
+msgstr "LEBEN UND ARBEITEN AM WASSER"
 
 #: templates/core/city.html:16
 msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
-msgstr ""
+msgstr "Entdecke neue Ort am Wasser zum Leben und Arbeiten!"
 
 #: templates/core/city.html:26 templates/core/default.city.html:27
 msgid "Nav-boxes headline: What can you do here?"
-msgstr ""
+msgstr "Was gibt es hier?"
 
 #: templates/core/city.html:31 templates/core/default.city.html:31
 msgid "Nav-boxes paragraph: Hier kannst Du Dich über"
 msgstr ""
+"Leben und Arbeiten am Wasser – nicht nur Slogan von Immobilienspekulanten "
+"und Stadtmarketing, sondern potenziell für alle "
 
 #: templates/core/city.html:31 templates/core/default.city.html:31
 msgid "laufende Ideen, Projekte und Stadtplanungsverfahren"
-msgstr ""
+msgstr "Stadtbewohner*innen realisierbar? In Hamburgs Mitte "
 
 #: templates/core/city.html:31 templates/core/default.city.html:31
 msgid "informieren. Du kannst ein"
 msgstr ""
+"und Osten schlummern gigantische wassernahe Flächen ungenutzt einen "
+"Dornröschenschlaf."
 
 #: templates/core/city.html:31
 msgid "Benutzerkonto registrieren"
 msgstr ""
+"Claudius Schulze wird mit den Teilnehmenden auf einem Floß die Wasserseite "
+"Hamburgs in den Blick nehmen, ungenutzte Potenziale erkunden und urbane Räume"
 
 #: templates/core/city.html:31 templates/core/default.city.html:31
 msgid "kostenloses Benutzerkonto anlegen"
-msgstr ""
+msgstr " kartieren, die"
 
 #: templates/core/city.html:31 templates/core/default.city.html:31
 msgid "um über Änderungen auf dem Laufenden gehalten zu werden!"
 msgstr ""
+" für künstlerische und soziale Nutzung in Frage kommen – mach mit bei "
+"unserer Piraterie des öffentlichen Raumes!"
 
 #: templates/core/default.city.html:15
 msgid "Search Box: Search for Ideas, Projects, everything what you want..."
-msgstr ""
+msgstr "Suche nach Ideen, Flächen, unentdecktem Land"
 
 #: templates/core/default.city.html:41
 msgid "Suche nach Ideen &amp; Projekten"
-msgstr ""
+msgstr "Suche nach Ideen, Flächen, unentdecktem Land"

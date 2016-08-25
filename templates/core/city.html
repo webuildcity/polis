@@ -29,13 +29,12 @@
     <div class="container">
 
         <p>{% trans "Nav-boxes paragraph: Hier kannst Du Dich über" %} <a href="{% url 'search' %}">{% trans "laufende Ideen, Projekte und Stadtplanungsverfahren" %}</a> {% trans "informieren. Du kannst ein" %} <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %}
-        Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Stadtteil, in Hamburg und Umgebung entwickelt! 
-        Weitere Informationen zu Stadtentwicklung und Bürgerbeteiligung findest Du im <a href="{% url 'encyclopedia' %}">Lexikon</a> oder im <a href="{% url 'blog' %}">Blog</a>.</p> 
+        </p> 
 
         <div id="navigation-boxes" class="container">
 
         {% for box in topIcons %}
-            <div class="col-sm-4 wbc-teaser-container">
+            <div class="col-sm-12 wbc-teaser-container">
                 <div class="wrapper">
                     <a href={{box.link}}>
                         <div class="teaser">
@@ -59,32 +58,6 @@
 <!-- Block of Topic Boxes -->
 {% block topic-boxes %}
 
-<div class="bottom-block">
-    <h2 class="wbc-headline"> Themen</h2>
-    <div class="wbc-divider"></div>
-    <div class="container">
-
-  <!-- p>Themen, um die es hier geht: <a href="{% url 'search' %}">laufenden Ideen & L&ouml;sungsans&auml;tze</a> informieren, Dich beteiligen und immer auf dem neusten Stand bleiben!</p -->
-
-        <div id="navigation-boxes" class="container">
-        {% for box in botIcons %}
-            <div class="col-sm-4 wbc-teaser-container">
-                <div class="wrapper">
-                    <a href={{box.link}}>
-                        <div class="teaser">
-                            <i class='fa {{box.icon}}'></i>
-                            <p>{{box.text}}</p>
-                        </div>
-                        <div class="wbc-overlay">
-                            <h2>{{box.overlay}}</h2>
-                        </div>
-                    </a>
-                </div> 
-            </div> 
-        {% endfor %}
-        </div>
-    </div>
-</div>
 {% endblock %}
 
 
@@ -95,52 +68,19 @@
 
 <!-- block -->
 
-<div class="bottom-block">
-    <h2 class="wbc-headline">Was ist Wir-bauen-Hamburg?</h2>
-    <div class="wbc-divider"></div>
-    <div class="container">
-      <p>
-        Unsere Wir-Bauen-Hamburg Plattform macht Hamburgs Stadtplanung verständlicher, zugänglicher und fördert die Kommunikation zwischen Bürgern, der Stadt und allen Interessierten. Wir eröffnen einen neuen, frischen Blick auf die eigene Stadt, ihre Planung und Entwicklung. Außerdem zeigen wir Beteiligungsmöglichkeiten auf, um selbst die Zukunft Hamburg kreativ mitgestalten zu können!
-      </p>
-    </div>
-</div>
 
 <div class="bottom-block">
-    <h2 class="wbc-headline">Vision</h2>
+    <h2 class="wbc-headline">Wer macht das hier?</h2>
     <div class="wbc-divider"></div>
     <div class="container">
-      <p>
-        Wir wollen zukünftige Stadtplanung die offen, partizipativ und demokratiefördernd ist - im Einklang mit ihren Bürgern. Deshalb bieten wir den Bürgern und allen Interessierten die Möglichkeit, sich einfach und unterhaltsam über Bauvorhaben und andere Projekten, sowie Verwaltungsprozesse der Stadt zu informieren.
-      </p>
-    </div>
-</div>
-
-<div class="bottom-block">
-    <h2 class="wbc-headline">Wer organisiert das hier?</h2>
-    <div class="wbc-divider"></div>
-    <div class="container">
-         <div>
-            <p style="padding-bottom: 1em;">
-                Wir sind ein  jugenes Unternehmen aus Hamburg &amp; Berlin welches es sich zum Ziel gesetzt hat innovative Informations- und Kommunikationsplattformen zu entwickeln um Stadtplanung transparenter &amp; partizipativer zu machen. Unser Team besteht aus erfahrenen IT Experten, Open Data Enthusiasten, Politik-, Kommunikations- und Kulturwissenschaftlern... 
-            </p>
-         </div>
-         <div class="col-sm-4">
-            <img src="/static/img/wbc-timo-lundelius.jpg">
-            <h3>Timo Lundelius</h3>
-            <p style="padding-left: 0; padding-top: 1em;">Fon +4940 609430490<br><a href="mailto:timo.lundelius@we-build.city">timo.lundelius@we-build.city</a></p>
-        </div>
         <div class="col-sm-4">
-            <img src="/static/img/wbc-solveig-schroeder.jpg">
-            <h3>Solveig Schröder</h3>
-            <p style="padding-left: 0; padding-top: 1em;">Fon +4940 609430490<br><a href="mailto:solveig.schroeder@we-build.city">solveig.schroeder@we-build.city</a></p>
+            <img src="/static/img/Portrait-Claudius-1.png">
+            <h3>Claudius Schulze</h3>
         </div>
     </div>
 
     <div class="container">
-        <p> Wir - das Team von We-Build.City - verstehen uns als Brückenbauer zwischen Stadt,Verwaltung, Bürgern und Investoren. Gute und effektive Kommunikation ist in unseren Augen das A und O einer gelungenen Stadtentwicklung und die Grundlage von Demokratie. Mit diesem Leitbild vor Augen haben wir eine Informations- und Kommunikationsplattform für Stadtplanung entwickelt.<br>
-        Entstanden ist das Projekt 2012 im Rahmen ehrenamtlicher Arbeit in den Open Knowledge Labs von Codefor.de. Unter dem Namen buergerbautstadt.de wurde für die Stadt Berlin eine Plattform für Bebauungs- und Planfeststellungsverfahren von Magdalena Noffke, Jochen Klar und Weiteren gebaut.<br>
-        Die Weiterentwicklung und Ausgründung des Projektes fand im Oktober 2014 statt. Bei einem EU-Förderwettbewerb der Europäischen Kommnission landete die Projektidee von We-build.city auf Platz 5 von 183 eingereichten Bewerbungen. Diese finanzielle Ausstattung ermöglichte es uns, das Konzept und die Software zu einem marktreifen Produkt weiterzuentwickeln und zu professionalisieren.<br>
-        Die Ausgründung erlaubt es uns die Software als sogenannte Open Software as a Service Modell (OpenSaaS) anbieten und betreiben zu können. Die Anwendungsbereiche der Plattform sind so vielfältig, wie die Stadtentwicklung selbst. Haben wir Ihr Interesse als Stadtverwaltung, Bürgerinitiative, NGO oder Firma geweckt? Dann <a href="mailto:team@we-build.city">schreiben Sie uns</a> einfach. Wir sind gespannt auf die Herausforderung die Sie für uns haben!
+        Claudius Schulze ist Fotograf und Wissenschaftler. Sein Interesse gilt den menschlichen Fehlern und dem globalen Wandel des Anthropozän. Seine subtil angelegten fotografischen Arbeiten wurden bisher in zwei Büchern (Socotra 2012, State of Nature 2017) veröffentlicht, mehrfach ausgezeichnet und veröffentlicht (u.a. Geo, der Stern, Spiegel, The Independent). Schulze studierte erst Politik- und Islamwissenschaft an der Universität Hamburg und erhielt ein M.A.-Abschluss in „Conflict Analysis and Resolution“ von der Sabanci University Istanbul. Am LCC, University of the Arts London absolvierte er das M.A. Programm „Documentary Photography and Photojournalism“ mit Auszeichnung. Gegenwärtig ist er Lehrbeauftragter an der Leuphana Universität Lüneburg und arbeitet an einem PhD über Computerkreativität.
         </div>
     </div>
 </div>
@@ -157,62 +97,17 @@
 
 
 
-<div class="col-sm-4">
+<div class="col-sm-6">
     <h4>
-        <a href="http://we-build.city" target="_blank">We-Build.City Services UG</a>
+        <a href="http://claudiusschulze.com/" target="_blank">claudiusschulze.com</a>
     </h4>
 </div>
     
-<div class="col-sm-4">
+<div class="col-sm-6">
     <h4>
-        <a href="/impressum/">Impressum &amp; Datenschutzerklärung</a>
+        <a href="/impressum/">Impressum</a>
     </h4>
 </div>
 
-<div class="col-sm-4">
-    <h4>
-        <a href="https://github.com/webuildcity" target="_blank">Offener Quellcode</a>
-    </h4>
-</div>
 
 {% endblock %}
-
-
-
-
-<!-- Upcomming Events -->
-
-<!--         {% if upcoming %}
-        <div class="bottom-block">
-            <h2 class="wbc-headline">Aktuelle Veranstaltungen &amp; Projekte mit Bürgerbeteiligung</h2>
-            <div class="wbc-divider"></div>
-            <div class="upcoming container">
-                    {% for project in upcoming %}
-                    <a href="{{project.get_absolute_url}}">
-                        <div class="project-description col-md-4">
-                            {% if project.gallery %}
-                            <img class="description_img" src="{{project.gallery.photos.all.0.get_description_url}}" />
-                            {% else %}
-                            <img class="description_img" src="{% static 'img/person_placeholder.png' %}" />
-                            {% endif %}
-                            <div>
-                                <h3>{{project.name}} {% if project.identifier %} ({{project.identifier}}) {% endif %}</h3>
-                                {% if project.address_obj %}
-                                <p >{{project.address_obj.street}}  {{ project.address_obj.streetnumber }}</p>
-                                <p>{{project.get_teaser}}</p>
-                                {% endif %}
-                            </div>
-                            {% if project.get_next_date %}
-                            <div class="next-date">
-                                <p title="Nächste Veranstaltung"><i class="fa fa-calendar"> </i>
-                                {{project.get_next_date.title}}</p>
-                                <p  class="date text-muted">{{project.get_next_date.begin}}</p>
-                            </div>
-                            {% endif %}
-                        </div>
-                    </a>
-                    {% endfor %}
-            </div>
-        </div>
-        {% endif %}
--->
