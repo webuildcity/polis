@@ -129,6 +129,7 @@ LANGUAGES = [
     ('de',  _('German')),
     ('en',  _('English')),
     ('jdd', _('JugendDemografieDialog')),
+    ('bagalute', _('Bagaluteorg')),
 ]
 
 MEDIA_URL = '/media/'
