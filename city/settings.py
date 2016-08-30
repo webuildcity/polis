@@ -159,7 +159,9 @@ COMPRESS_PRECOMPILERS = (
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
-TILES_URL = 'https://{s}.tiles.we-build.city/lichtenfels/{z}/{x}/{y}.png'
+
+# TILES_URL = 'https://{s}.tiles.we-build.city/lichtenfels/{z}/{x}/{y}.png'
+TILES_URL = 'https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibHVuZGVsaXVzIiwiYSI6ImNpa29kc2RsZDAwYWN2c200OWc4ZmNuZWMifQ.EXdvNd6AcfSVZ0Yg07SOwA'
 
 TILES_OPT = {
     'attribution': 'Map data &copy; 2016 OpenStreetMap contributors',
