@@ -9,7 +9,7 @@ DETAILS_TABS = {
     'events' : False,
     'stakeholder' : True,
     'discussion' : True,
-    'map' : False,
+    'map' : True,
     'etherpad' : True,
 }
 
@@ -30,26 +30,15 @@ GENERAL_CONTENT = {
 
 #TOP BOXES ON STARTPAGE
 STARTPAGE_OVERVIEW_ICONS = [
-    {'text' : 'Suche nach Ideen & Projekten', 'icon': 'fa-map-o', 'overlay': 'Finde hier mehr als 70 Ideen & Projekte', 'link' : reverse_lazy('search') },
+    {'text' : 'Gesamtübersicht über alle Ideen & Projekte', 'icon': 'fa-bulp-o', 'overlay': 'Klicke hier für die Übersicht', 'link' : reverse_lazy('search') },
 ]
 
 #BOTTOM BOXES ON STARTPAGE
 STARTPAGE_TOPIC_ICONS = [
-    {'text' : 'Mobilität', 'icon': 'fa-car', 'overlay': 'Mobilitätsthemen im Landkreis', 'link' : reverse_lazy('search'), 'params' : 'tags=Mobilität' },
-    {'text' : 'Familienfreundlichkeit', 'icon': 'fa-heart', 'overlay': 'Alles zum Thema Familienfreundlichkeit', 'link' : reverse_lazy('search'), 'params' : 'tags=Familienfreundlichkeit'  },
-    {'text' : 'Arbeitsmarkt', 'icon': 'fa-clock-o', 'overlay': 'Ideen zum Arbeitsmarkt', 'link' : reverse_lazy('search'), 'params' : 'tags=Arbeitsmarkt'  },
-    {'text' : 'Bildung', 'icon': 'fa-graduation-cap', 'overlay': 'Bildungsideen', 'link' : reverse_lazy('search'), 'params' : 'tags=Bildung'  },
-    {'text' : 'Infrastruktur', 'icon': 'fa-train', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Infrastruktur'  },
-    {'text' : 'Kultur und Freizeit', 'icon': 'fa-coffee', 'overlay': 'Kulturprojekte und Ideen', 'link' : reverse_lazy('search'), 'params' : 'tags=Kultur'  },
-    {'text' : 'Umwelt', 'icon': 'fa-pagelines', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Umwelt'  },
-    {'text' : 'Benachteiligungen abbauen', 'icon': 'fa-ban', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Benachteiligungen'  },
-    {'text' : 'Regionale Produkte', 'icon': 'fa-compass', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Regionales'  },
-    {'text' : 'Tourismus', 'icon': 'fa-mao-o', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Tourismus'  },
-    {'text' : 'Gutes Miteinander', 'icon': 'fa-thumbs-o-up', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Miteinander'  },
-    {'text' : 'Weitere Ideen', 'icon': 'fa-plus', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Weiteres'  },
-
+    {'text' : 'Gruppe 1', 'icon': 'fa-users', 'overlay': 'Gruppe 1', 'link' : reverse_lazy('search'), 'params' : 'tags=Gruppe1' },
+    {'text' : 'Gruppe 2', 'icon': 'fa-users', 'overlay': 'Gruppe 2', 'link' : reverse_lazy('search'), 'params' : 'tags=Gruppe2' },
+    {'text' : 'Gruppe 3', 'icon': 'fa-users', 'overlay': 'Gruppe 3', 'link' : reverse_lazy('search'), 'params' : 'tags=Gruppe3' },
 ]
-
 
 #SEARCH
 DEFAULT_VIEW_MAP   = False     # karte oder listenansicht zuerst

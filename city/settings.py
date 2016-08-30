@@ -124,12 +124,13 @@ LOCALE_PATHS = (
 
 from django.utils.translation import ugettext_lazy as _
 
-LANGUAGE_CODE = 'jdd'
+LANGUAGE_CODE = 'amelinghausen'
 LANGUAGES = [
     ('de',  _('German')),
     ('en',  _('English')),
     ('pt',  _('Brazilian')),
     ('jdd', _('JugendDemografieDialog')),
+    ('amelinghausen', _('Amelinghausen')),
 ]
 
 MEDIA_URL = '/media/'
@@ -172,8 +173,8 @@ TILES_OPT = {
 }
 
 DEFAULT_VIEW = {
-    'lat': 50.1314338,
-    'lon': 10.9424489,
+    'lat': 53.0925144,
+    'lon': 10.2089544,
     'zoom': 11
 }
 

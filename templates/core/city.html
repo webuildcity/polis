@@ -38,7 +38,14 @@
     
     <div class="container">
 
-        <p class="startpage-text">Hier kannst Du Dich über <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge </a> {% trans "informieren. Du kannst ein" %} <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %} Natürlich kannst Du auch <a href="{% url 'search' %}">einfach nur stöbern</a>, was sich gerade in deinem Landkreis und Umgebung entwickelt! 
+        <p class="startpage-text">Hier kannst Du:
+
+        <br>
+        
+            <ul>
+                <li>Dich &uuml;ber <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge </a> informieren</li>
+                <li> ein <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %} </li>
+            </ul>
         
         <div id="navigation-boxes">
 
@@ -70,7 +77,7 @@
 <div class="bottom-block">
     <div class="wbc-headline">
         <div class="container">
-            <h2>Themen</h2>
+            <h2>Gruppen</h2>
         </div>
     </div>
     <div class="wbc-divider"></div>
@@ -110,7 +117,7 @@
     <div id="wbc-footer" class="container">
         <div class="col-sm-4">
             <h4>
-                <a href="/" target="_blank">Landkreis Lichtenfels</a>
+                <a href="/" target="_blank">Sandgemeinde Amelinghausen</a>
             </h4>
         </div>
         
