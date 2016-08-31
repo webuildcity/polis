@@ -44,7 +44,7 @@ msgid ""
 "ORIGIN: Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels "
 "entwickelt"
 msgstr ""
-"Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels (jdd-aktiv)"
+"Wie gehen wir mit dem demografischen Wandel um?"
 
 #: templates/core/city.html:16
 msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
