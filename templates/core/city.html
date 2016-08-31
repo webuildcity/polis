@@ -47,7 +47,25 @@
                 <li>Dich &uuml;ber <a href="{% url 'search' %}">laufende Ideen, Projekte und Lösungsvorschläge </a> informieren</li>
                 <li> ein <a class="modal-button" data-toggle="modal" data-target="#modal" data-form="/benutzerkonto/registrieren/" data-title="{% trans 'Benutzerkonto registrieren' %}" href="#">{% trans "kostenloses Benutzerkonto anlegen" %}</a> {% trans "um über Änderungen auf dem Laufenden gehalten zu werden!" %} </li>
             </ul>
-        
+
+        <div id="navigation-boxes">
+
+            <div class="col-sm-12 wbc-teaser-container">
+                <div class="wrapper">
+                    <a href="/suche/tags=Favoriten" >
+                        <div class="teaser">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <p>Klick hier für unsere Favoriten!</p>
+                        </div>
+                        <div class="wbc-overlay">
+                            <h2>Hier findest Du unsere besten Ideen!</h2>
+                        </div>
+                    </a>
+                </div> 
+            </div> 
+
+        </div>
+
         <div id="navigation-boxes">
 
         {% for box in topIcons %}
@@ -65,24 +83,6 @@
                 </div> 
             </div> 
         {% endfor %}
-
-        </div>
-
-        <div id="navigation-boxes">
-
-            <div class="col-sm-12 wbc-teaser-container">
-                <div class="wrapper">
-                    <a href="/suche/tags=Favoriten" >
-                        <div class="teaser">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <p>Klick hier für unsere Favoriten!</p>
-                        </div>
-                        <div class="wbc-overlay">
-                            <h2>Hier findest Du unsere besten Ideen!</h2>
-                        </div>
-                    </a>
-                </div> 
-            </div> 
 
         </div>
 

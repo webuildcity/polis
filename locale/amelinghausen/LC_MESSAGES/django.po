@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 14:07+0200\n"
+"POT-Creation-Date: 2016-08-31 11:11+0200\n"
 "PO-Revision-Date: 2016-01-30 11:42+0100\n"
 "Last-Translator: Timo Lundelius <timo@lundelius.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: templates/core/city.html:13
 msgid "ORIGIN: Neue Ideen für den Landkreis Lichtenfels"
-msgstr "Neue Ideen für die Sandgemeinde Amelinghausen"
+msgstr "Amelinghausen auf dem Weg zur kinderfreundlichen Kommune"
 
 #: templates/core/city.html:14
 msgid ""
@@ -62,21 +62,17 @@ msgstr ""
 msgid "Neues Project erstellen"
 msgstr ""
 
-#: templates/core/city.html:41 templates/core/default.city.html:31
-msgid "informieren. Du kannst ein"
-msgstr "informieren. Du kannst ein"
-
-#: templates/core/city.html:41
+#: templates/core/city.html:48
 #, fuzzy
 #| msgid "kostenloses Benutzerkonto anlegen"
 msgid "Benutzerkonto registrieren"
 msgstr "kostenloses Benutzerkonto anlegen"
 
-#: templates/core/city.html:41 templates/core/default.city.html:31
+#: templates/core/city.html:48 templates/core/default.city.html:31
 msgid "kostenloses Benutzerkonto anlegen"
 msgstr "kostenloses Benutzerkonto anlegen"
 
-#: templates/core/city.html:41 templates/core/default.city.html:31
+#: templates/core/city.html:48 templates/core/default.city.html:31
 msgid "um über Änderungen auf dem Laufenden gehalten zu werden!"
 msgstr "um über Änderungen auf dem Laufenden gehalten zu werden!"
 
@@ -103,6 +99,10 @@ msgstr "Hier kannst Du dich über"
 #: templates/core/default.city.html:31
 msgid "laufende Ideen, Projekte und Stadtplanungsverfahren"
 msgstr "laufende Ideen, Projekte und Stadtplanungsverfahren"
+
+#: templates/core/default.city.html:31
+msgid "informieren. Du kannst ein"
+msgstr "informieren. Du kannst ein"
 
 #: templates/core/default.city.html:41
 msgid "Suche nach Ideen &amp; Projekten"

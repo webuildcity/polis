@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 14:07+0200\n"
+"POT-Creation-Date: 2016-08-31 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,19 +59,15 @@ msgstr ""
 msgid "Neues Project erstellen"
 msgstr ""
 
-#: templates/core/city.html:41 templates/core/default.city.html:31
-msgid "informieren. Du kannst ein"
-msgstr ""
-
-#: templates/core/city.html:41
+#: templates/core/city.html:48
 msgid "Benutzerkonto registrieren"
 msgstr ""
 
-#: templates/core/city.html:41 templates/core/default.city.html:31
+#: templates/core/city.html:48 templates/core/default.city.html:31
 msgid "kostenloses Benutzerkonto anlegen"
 msgstr ""
 
-#: templates/core/city.html:41 templates/core/default.city.html:31
+#: templates/core/city.html:48 templates/core/default.city.html:31
 msgid "um über Änderungen auf dem Laufenden gehalten zu werden!"
 msgstr ""
 
@@ -97,6 +93,10 @@ msgstr ""
 
 #: templates/core/default.city.html:31
 msgid "laufende Ideen, Projekte und Stadtplanungsverfahren"
+msgstr ""
+
+#: templates/core/default.city.html:31
+msgid "informieren. Du kannst ein"
 msgstr ""
 
 #: templates/core/default.city.html:41
