@@ -30,7 +30,7 @@ GENERAL_CONTENT = {
 
 #TOP BOXES ON STARTPAGE
 STARTPAGE_OVERVIEW_ICONS = [
-    {'text' : 'Gesamtübersicht über alle Ideen & Projekte', 'icon': 'fa-bulp-o', 'overlay': 'Klicke hier für die Übersicht', 'link' : reverse_lazy('search') },
+    {'text' : 'Gesamtübersicht über alle Ideen & Projekte', 'icon': 'fa-lightbulb-o', 'overlay': 'Klicke hier für die Übersicht', 'link' : reverse_lazy('search') },
 ]
 
 #BOTTOM BOXES ON STARTPAGE
