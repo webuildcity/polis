@@ -7,7 +7,7 @@ DETAILS_TABS = {
     '3d' : False,
     'images' : True,
     'events' : False,
-    'stakeholder' : True,
+    'stakeholder' : False,
     'discussion' : True,
     'map' : True,
     'etherpad' : True,
