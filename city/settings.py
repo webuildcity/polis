@@ -59,6 +59,7 @@ INSTALLED_APPS = (
     'star_ratings',
     'etherpad_lite',
     'social.apps.django_app.default',
+    'django_social_share',
 )
 
 MIDDLEWARE_CLASSES = (

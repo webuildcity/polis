@@ -21,7 +21,7 @@ ORDER_BTNS = [
     # {'value' : '-ratings_count', 'text' : '# Bewertungen'},
 ]
 
-#DOOOOOOOOOOOOOOO THIS
+#SWITCH ON/OFF PARTS OF THE WBC APP
 GENERAL_CONTENT = {
     'blog'    : True,
     'lexikon' : True,
@@ -30,6 +30,7 @@ GENERAL_CONTENT = {
     'starrating': True,
     'featured' : True,
     'updownvote': True,
+    'social_media_share': True,
 }
 
 #TOP BOXES ON STARTPAGE
