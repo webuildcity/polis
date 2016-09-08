@@ -47,4 +47,6 @@ etherpad-lite==0.5
 #-e git+git://github.com/devjones/PyEtherpadLite.git#egg=PyEtherpadLite
 
 python-social-auth==0.2.19
+django-social-share==0.3.1
+
 

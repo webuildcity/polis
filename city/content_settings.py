@@ -21,11 +21,16 @@ ORDER_BTNS = [
     # {'value' : '-ratings_count', 'text' : '# Bewertungen'},
 ]
 
-#DOOOOOOOOOOOOOOO THIS
+#SWITCH ON/OFF PARTS OF THE WBC APP
 GENERAL_CONTENT = {
     'blog'    : False,
     'lexikon' : False,
     'account' : True,
+    'wbcrating': True,
+    'starrating': True,
+    'featured' : True,
+    'updownvote': True,
+    'social_media_share': True,
 }
 
 #TOP BOXES ON STARTPAGE
@@ -40,7 +45,6 @@ STARTPAGE_TOPIC_ICONS = [
     {'text' : 'Gruppe 3', 'icon': 'fa-users', 'overlay': 'Gruppe 3', 'link' : reverse_lazy('search'), 'params' : 'tags=Gruppe3' },
 ]
 
-#SEARCH
 DEFAULT_VIEW_MAP   = False     # karte oder listenansicht zuerst
 SHOW_ENTITY_FILTER = True   # kann man nach entities filtern
 SHOW_ADDITIONAL_FILTER = False    # switchtes additional filters on/off
