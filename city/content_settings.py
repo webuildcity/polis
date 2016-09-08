@@ -26,6 +26,10 @@ GENERAL_CONTENT = {
     'blog'    : True,
     'lexikon' : True,
     'account' : True,
+    'wbcrating': True,
+    'starrating': True,
+    'featured' : True,
+    'updownvote': True,
 }
 
 #TOP BOXES ON STARTPAGE
