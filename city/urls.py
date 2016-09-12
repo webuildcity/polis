@@ -10,7 +10,7 @@ from wbc.core.views import SearchView, StartView
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
 from wbc.blog.views import BlogView
-from wbc.accounts.views import WbcRegistrationView
+from wbc.accounts.views import WbcRegistrationView, RegisterMethodView
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -87,7 +87,8 @@ urlpatterns = patterns('',
         }, name='password_reset_complete'),
 
     # register account
-    url(r'^benutzerkonto/registrieren/$', RegistrationView.as_view(), name='registration_register'),
+    url(r'^register_method/$',RegisterMethodView.as_view(), name="register_method"), 
+    url(r'^benutzerkonto/registrieren/$', WbcRegistrationView.as_view(), name='registration_register'),
     url(r'^benutzerkonto/registrieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/registration_complete.html'), name='registration_complete'),
     url(r'^benutzerkonto/aktivieren/abgeschlossen/$', TemplateView.as_view(template_name='registration/activation_complete.html'), name='registration_activation_complete'),
     url(r'^benutzerkonto/aktivieren/(?P<activation_key>\w+)/$', ActivationView.as_view(), name='registration_activate'),
@@ -109,7 +110,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # user login
-    url(r'^login/', 'wbc.core.views.login_user', name='login'),
+    url(r'^login_wbc/', 'wbc.core.views.login_user', name='login'),
     url(r'^logout/', 'wbc.core.views.logout_user', name='logout'),
 
     # serve media files
@@ -121,7 +122,7 @@ urlpatterns = patterns('',
 
     # url(r'^autocomplete/', include('autocomplete_light.urls')),
 
-    url(r'^autocomplete/', 'wbc.core.views.autocomplete'),
+    url(r'^autocomplete/', 'wbc.core.views.autocomplete', name="autocomplete"),
     url(r'^suche/', SearchView.as_view(), name="search"),
     url(r'^karte/', 'wbc.core.views.map', name="map"),
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
@@ -140,4 +141,6 @@ urlpatterns = patterns('',
     #ratings
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 
+    #social auth
+    url('', include('social.apps.django_app.urls', namespace='social')),
 )

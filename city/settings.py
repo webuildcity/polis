@@ -56,8 +56,8 @@ INSTALLED_APPS = (
     'rosetta',
     'django_makemessages_xgettext',
     'star_ratings',
-    'etherpad_lite'
-    # 'etherpadlite'
+    'etherpad_lite',
+    'social.apps.django_app.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -75,7 +75,10 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend', # this is default
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.twitter.TwitterOAuth',
+    'wbc.core.backends.DualModelBackend', # this is default
+    # 'django.contrib.auth.backends.ModelBackend', # this is default
     'guardian.backends.ObjectPermissionBackend',
 )
 
@@ -93,6 +96,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'wbc.core.context_processors.settings',
                 'django.core.context_processors.i18n',
+                'social.apps.django_app.context_processors.backends',
+                # 'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -109,16 +114,21 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# PROJECT PATH TO LOAD ALL LOCALE FOLDERS CORRECTLY
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+
 LOCALE_PATHS = (
     "locale",
+    os.path.join(PROJECT_PATH, '../locale'),
 )
 
 from django.utils.translation import ugettext_lazy as _
 
 LANGUAGE_CODE = 'de'
 LANGUAGES = [
-    ('de', _('German')),
-    ('en', _('English')),
+    ('de',  _('German')),
+    ('en',  _('English')),
+    ('jdd', _('JugendDemografieDialog')),
 ]
 
 MEDIA_URL = '/media/'
@@ -126,6 +136,8 @@ MEDIA_ROOT = os.path.join(SITE_ROOT,'media_root/')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(SITE_ROOT,'static_root/')
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
 
 STATICFILES_DIRS = (
     os.path.join(SITE_ROOT,'static/'),
@@ -146,7 +158,7 @@ COMPRESS_PRECOMPILERS = (
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
-TILES_URL = 'http://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
+TILES_URL = 'https://{s}.tiles.we-build.city/hamburg/{z}/{x}/{y}.png'
 
 TILES_OPT = {
     'attribution': 'Map data &copy; 2016 OpenStreetMap contributors',
@@ -195,3 +207,54 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 #Translation Rosetta
 #ROSETTA_WSGI_AUTO_RELOAD
 #ROSETTA_UWSGI_AUTO_RELOAD
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id,name,email', 
+}
+
+SOCIAL_AUTH_PIPELINE = (
+    # Get the information we can about the user and return it in a simple
+    # format to create the user instance later. On some cases the details are
+    # already part of the auth response from the provider, but sometimes this
+    # could hit a provider API.
+    'social.pipeline.social_auth.social_details',
+
+    # Get the social uid from whichever service we're authing thru. The uid is
+    # the unique identifier of the given user in the provider.
+    'social.pipeline.social_auth.social_uid',
+
+    # Verifies that the current auth process is valid within the current
+    # project, this is where emails and domains whitelists are applied (if
+    # defined).
+    'social.pipeline.social_auth.auth_allowed',
+
+    # Checks if the current social-account is already associated in the site.
+    'social.pipeline.social_auth.social_user',
+
+    # Make up a username for this person, appends a random string at the end if
+    # there's any collision.
+    'social.pipeline.user.get_username',
+
+    # Send a validation email to the user to verify its email address.
+    # Disabled by default.
+    # 'social.pipeline.mail.mail_validation',
+
+    # Associates the current social details with another user account with
+    # a similar email address. Disabled by default.
+    # 'social.pipeline.social_auth.associate_by_email',
+
+    # Create a user account if we haven't found one yet.
+    'social.pipeline.user.create_user',
+
+    # Create the record that associated the social account with this user.
+    'social.pipeline.social_auth.associate_user',
+
+    # Populate the extra_data field in the social record with the values
+    # specified by settings (and the default ones like access_token, etc).
+    'social.pipeline.social_auth.load_extra_data',
+
+    # Update the user record with any changed info from the auth service.
+    'social.pipeline.user.user_details',
+    'city.pipeline.save_profile_picture',
+)
