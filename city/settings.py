@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'wbc.accounts',
     'wbc.encyclopedia',
     'wbc.images',
+    'wbc.rating',
     #'wbc.buildings'
     # 'rolodex',
     'sortedm2m',
@@ -58,6 +59,7 @@ INSTALLED_APPS = (
     'star_ratings',
     'etherpad_lite',
     'social.apps.django_app.default',
+    'django_social_share',
 )
 
 MIDDLEWARE_CLASSES = (
