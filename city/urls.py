@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 
 from registration.backends.default.views import RegistrationView, ActivationView
 
-from wbc.core.views import SearchView, StartView
+from wbc.core.views import SearchView, StartView, UploadProjectData
 from wbc.projects.views import ProjectCreate,ProjectUpdate,ProjectDelete
 from wbc.events.views import PublicationFeed, PublicationCreate, PublicationUpdate,PublicationDelete
 from wbc.blog.views import BlogView
@@ -143,4 +143,7 @@ urlpatterns = patterns('',
 
     #social auth
     url('', include('social.apps.django_app.urls', namespace='social')),
+
+    #upload project data
+    url(r'^jdd_upload/', UploadProjectData.as_view())
 )
