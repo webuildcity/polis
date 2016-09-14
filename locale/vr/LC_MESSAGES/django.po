@@ -45,19 +45,17 @@ msgstr ""
 
 #: templates/core/city.html:13
 msgid "ORIGIN: Neue Ideen für den Landkreis Lichtenfels"
-msgstr "Neue Ideen für den Landkreis Lichtenfels"
+msgstr "Neue Ideen für den Landkreis Vorpommern-Rügen"
 
 #: templates/core/city.html:14
 msgid ""
 "ORIGIN: Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels "
 "entwickelt"
-msgstr ""
-"Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels entwickelt"
+msgstr "Was wollen die Jugendlichen aus VR? Workshop für Ideen & Projekte"
 
 #: templates/core/city.html:16
 msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
-msgstr ""
-"Suche nach Ideen, Ansprechpartnern und Projekten in deinem Landkreis..."
+msgstr "Suche nach Ideen und Projekten in Vorpommern-Rügen"
 
 #: templates/core/city.html:21
 msgid "Projekt hinzufügen"
@@ -65,7 +63,7 @@ msgstr ""
 
 #: templates/core/city.html:21 templates/core/city.html.py:23
 msgid "Neues Project erstellen"
-msgstr ""
+msgstr "Neue Idee?"
 
 #: templates/core/city.html:48
 #, fuzzy
@@ -83,7 +81,7 @@ msgstr "um über Änderungen auf dem Laufenden gehalten zu werden!"
 
 #: templates/core/default.city.html:12
 msgid "H1: Welcome to our platform"
-msgstr "Willkommen bei Wir-Bauen-Hamburg!"
+msgstr "Neue Ideen für den Landkreis Lichtenfels2"
 
 #: templates/core/default.city.html:13
 msgid "H3 Claim: Use our platform to make the best out of our platform!"
