@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-31 11:41+0200\n"
+"POT-Creation-Date: 2016-09-14 12:42+0200\n"
 "PO-Revision-Date: 2016-01-30 11:42+0100\n"
 "Last-Translator: Timo Lundelius <timo@lundelius.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,24 +19,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.7.8\n"
 
-#: city/settings.py:129
+#: city/settings.py:131
 msgid "German"
 msgstr ""
 
-#: city/settings.py:130
+#: city/settings.py:132
 msgid "English"
 msgstr ""
 
-#: city/settings.py:131
+#: city/settings.py:133
 msgid "Brazilian"
 msgstr ""
 
-#: city/settings.py:132
+#: city/settings.py:134
 msgid "JugendDemografieDialog"
 msgstr ""
 
-#: city/settings.py:133
+#: city/settings.py:135
 msgid "Amelinghausen"
+msgstr ""
+
+#: city/settings.py:136
+msgid "bardowick"
 msgstr ""
 
 #: templates/core/city.html:13

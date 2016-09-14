@@ -45,18 +45,18 @@ msgstr ""
 
 #: templates/core/city.html:13
 msgid "ORIGIN: Neue Ideen für den Landkreis Lichtenfels"
-msgstr "Amelinghausen auf dem Weg zur kinderfreundlichen Kommune"
+msgstr "Bardowick auf dem Weg zur kinderfreundlichen Kommune"
 
 #: templates/core/city.html:14
 msgid ""
 "ORIGIN: Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels "
 "entwickelt"
 msgstr ""
-"Was wollen die Jugendlichen aus Amelinghausen? Workshop für Ideen & Projekte"
+"Was wollen die Jugendlichen aus Bardowick? Workshop für Ideen & Projekte"
 
 #: templates/core/city.html:16
 msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
-msgstr "Suche nach Ideen und Projekten in Amelinghausen"
+msgstr "Suche nach Ideen und Projekten in Bardowick"
 
 #: templates/core/city.html:21
 msgid "Projekt hinzufügen"
@@ -64,7 +64,7 @@ msgstr ""
 
 #: templates/core/city.html:21 templates/core/city.html.py:23
 msgid "Neues Project erstellen"
-msgstr ""
+msgstr "Neue Idee?"
 
 #: templates/core/city.html:48
 #, fuzzy
