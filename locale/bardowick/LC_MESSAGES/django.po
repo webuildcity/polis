@@ -45,14 +45,14 @@ msgstr ""
 
 #: templates/core/city.html:13
 msgid "ORIGIN: Neue Ideen für den Landkreis Lichtenfels"
-msgstr "Bardowick auf dem Weg zur kinderfreundlichen Kommune"
+msgstr "Jugendfreundliches Bardowick"
 
 #: templates/core/city.html:14
 msgid ""
 "ORIGIN: Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels "
 "entwickelt"
 msgstr ""
-"Was wollen die Jugendlichen aus Bardowick? Workshop für Ideen & Projekte"
+"Ideen und Vorschläge von Jugendlichen um die Samtgemeinde jugendfreundlicher zu gestalten"
 
 #: templates/core/city.html:16
 msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
@@ -94,7 +94,7 @@ msgstr "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
 
 #: templates/core/default.city.html:27
 msgid "Nav-boxes headline: What can you do here?"
-msgstr "Was kannst Du hier machen?"
+msgstr "Worum geht es hier?"
 
 #: templates/core/default.city.html:31
 msgid "Nav-boxes paragraph: Hier kannst Du Dich über"
