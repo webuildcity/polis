@@ -148,5 +148,5 @@ urlpatterns = patterns('',
     url('', include('social.apps.django_app.urls', namespace='social')),
 
     #upload project data
-    url(r'^jdd_upload/', UploadProjectData.as_view())
+    url(r'^jdd_upload/', UploadProjectData.as_view()),
 )
