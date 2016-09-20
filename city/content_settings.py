@@ -27,7 +27,7 @@ GENERAL_CONTENT = {
     'lexikon' : False,
     'account' : True,
     'wbcrating': True,
-    'starrating': True,
+    'starrating': False,
     'featured' : True,
     'updownvote': True,
     'social_media_share': True,
