@@ -49,8 +49,8 @@ STARTPAGE_TOPIC_ICONS = [
     {'text' : 'Zivilgesellschaft / Ehrenamt', 'icon': 'fa-university', 'overlay': 'Zivilgesellschaft / Ehrenamt', 'link' : reverse_lazy('search'), 'params' : 'tags=Zivilgesellschaft'  },
     {'text' : 'Wohnen', 'icon': 'fa-home', 'overlay': 'Wohnen', 'link' : reverse_lazy('search'), 'params' : 'tags=Wohnen'  },
     {'text' : 'Gesundheit', 'icon': 'fa-heartbeat', 'overlay': 'Gesundheit', 'link' : reverse_lazy('search'), 'params' : 'tags=Gesundheit'  },
-    {'text' : 'Zuwanderung (Migration)', 'icon': 'fa-truck', 'overlay': 'Zuwanderung (Migration)', 'link' : reverse_lazy('search'), 'params' : 'tags=Zuwanderung'  },
-    {'text' : 'Alter', 'icon': 'fa-wheelchair', 'overlay': 'Alter', 'link' : reverse_lazy('search'), 'params' : 'tags=Alter'  },
+    {'text' : 'Zuwanderung (Migration)', 'icon': 'fa-universal-access', 'overlay': 'Zuwanderung (Migration)', 'link' : reverse_lazy('search'), 'params' : 'tags=Zuwanderung'  },
+    {'text' : 'Alter', 'icon': 'fa-blind', 'overlay': 'Alter', 'link' : reverse_lazy('search'), 'params' : 'tags=Alter'  },
     {'text' : 'Demokratie & Partizipation', 'icon': 'fa-hand-paper-o', 'overlay': 'Demokratie & Partizipation', 'link' : reverse_lazy('search'), 'params' : 'tags=Demokratie'  },
     {'text' : 'Öffentliche Verwaltung', 'icon': 'fa-university', 'overlay': 'Öffentliche Verwaltung', 'link' : reverse_lazy('search'), 'params' : 'tags=Verwaltung'  },
 
