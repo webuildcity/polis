@@ -28,6 +28,7 @@ GENERAL_CONTENT = {
     'lexikon' : True,
     'account' : True,
     'wbcrating': True,
+    'number_votes': 3,
     'starrating': True,
     'featured' : True,
     'updownvote': True,
