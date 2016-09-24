@@ -19,6 +19,7 @@ ORDER_BTNS = [
     # {'value' : '-num_stakeholder', 'text' : '# Beteiligte'},
     {'value' : '-ratings_avg', 'text' : 'Bewertung'},
     # {'value' : '-ratings_count', 'text' : '# Bewertungen'},
+    {'value' : '-wbcrating', 'text' : 'Punkte'},
 ]
 
 #SWITCH ON/OFF PARTS OF THE WBC APP
@@ -27,6 +28,7 @@ GENERAL_CONTENT = {
     'lexikon' : False,
     'account' : True,
     'wbcrating': True,
+    'number_votes': 3,
     'starrating': True,
     'featured' : True,
     'updownvote': True,
