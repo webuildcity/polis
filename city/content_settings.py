@@ -18,6 +18,7 @@ ORDER_BTNS = [
     {'value' : '-created', 'text' : 'Datum'},
     # {'value' : '-num_stakeholder', 'text' : '# Beteiligte'},
     {'value' : '-ratings_avg', 'text' : 'Bewertung'},
+    {'value' : '-wbcrating', 'text' : 'Punkte'}
     # {'value' : '-ratings_count', 'text' : '# Bewertungen'},
     {'value' : '-wbcrating', 'text' : 'Punkte'},
 ]
@@ -29,7 +30,7 @@ GENERAL_CONTENT = {
     'account' : True,
     'wbcrating': True,
     'number_votes': 3,
-    'starrating': True,
+    'starrating': False,
     'featured' : True,
     'updownvote': True,
     'social_media_share': True,
@@ -42,12 +43,23 @@ STARTPAGE_OVERVIEW_ICONS = [
 
 #BOTTOM BOXES ON STARTPAGE
 STARTPAGE_TOPIC_ICONS = [
-    {'text' : 'Gruppe 1', 'icon': 'fa-users', 'overlay': 'Gruppe 1', 'link' : reverse_lazy('search'), 'params' : 'tags=Gruppe1' },
-    {'text' : 'Gruppe 2', 'icon': 'fa-users', 'overlay': 'Gruppe 2', 'link' : reverse_lazy('search'), 'params' : 'tags=Gruppe2' },
-    {'text' : 'Gruppe 3', 'icon': 'fa-users', 'overlay': 'Gruppe 3', 'link' : reverse_lazy('search'), 'params' : 'tags=Gruppe3' },
+    {'text' : 'Wirtschaft, Arbeits- und Ausbildungsplätze', 'icon': 'fa-line-chart', 'overlay': 'Wirtschaft, Arbeits- und Ausbildungsplätze', 'link' : reverse_lazy('search'), 'params' : 'tags=Wirtschaft'  },
+    {'text' : 'Mobilität', 'icon': 'fa-car', 'overlay': 'Mobilität', 'link' : reverse_lazy('search'), 'params' : 'tags=Mobilität' },
+    {'text' : 'Bildung', 'icon': 'fa-graduation-cap', 'overlay': 'Bildungsideen', 'link' : reverse_lazy('search'), 'params' : 'tags=Bildung'  },
+    {'text' : 'Familie', 'icon': 'fa-heart', 'overlay': 'Alles zum Thema Familie', 'link' : reverse_lazy('search'), 'params' : 'tags=Familie'  },
+    {'text' : 'Infrastruktur', 'icon': 'fa-train', 'overlay': '', 'link' : reverse_lazy('search'), 'params' : 'tags=Infrastruktur'  },
+    {'text' : 'Kultur und Freizeit', 'icon': 'fa-coffee', 'overlay': 'Kulturprojekte und Ideen', 'link' : reverse_lazy('search'), 'params' : 'tags=Kultur'  },
+    {'text' : 'Zivilgesellschaft / Ehrenamt', 'icon': 'fa-university', 'overlay': 'Zivilgesellschaft / Ehrenamt', 'link' : reverse_lazy('search'), 'params' : 'tags=Zivilgesellschaft'  },
+    {'text' : 'Wohnen', 'icon': 'fa-home', 'overlay': 'Wohnen', 'link' : reverse_lazy('search'), 'params' : 'tags=Wohnen'  },
+    {'text' : 'Gesundheit', 'icon': 'fa-heartbeat', 'overlay': 'Gesundheit', 'link' : reverse_lazy('search'), 'params' : 'tags=Gesundheit'  },
+    {'text' : 'Zuwanderung (Migration)', 'icon': 'fa-universal-access', 'overlay': 'Zuwanderung (Migration)', 'link' : reverse_lazy('search'), 'params' : 'tags=Zuwanderung'  },
+    {'text' : 'Alter', 'icon': 'fa-blind', 'overlay': 'Alter', 'link' : reverse_lazy('search'), 'params' : 'tags=Alter'  },
+    {'text' : 'Demokratie & Partizipation', 'icon': 'fa-hand-paper-o', 'overlay': 'Demokratie & Partizipation', 'link' : reverse_lazy('search'), 'params' : 'tags=Demokratie'  },
+    {'text' : 'Öffentliche Verwaltung', 'icon': 'fa-university', 'overlay': 'Öffentliche Verwaltung', 'link' : reverse_lazy('search'), 'params' : 'tags=Verwaltung'  },
+
 ]
 
-DEFAULT_VIEW_MAP   = False     # karte oder listenansicht zuerst
+DEFAULT_VIEW_MAP   = None     # karte oder listenansicht zuerst
 SHOW_ENTITY_FILTER = True   # kann man nach entities filtern
 SHOW_ADDITIONAL_FILTER = False    # switchtes additional filters on/off
 TERMINATED_PROJECTS = False
