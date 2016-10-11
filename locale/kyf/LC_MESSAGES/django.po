@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-14 16:37+0200\n"
+"PO-Revision-Date: 2016-01-30 11:42+0100\n"
+"Last-Translator: Timo Lundelius <timo@lundelius.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.7.8\n"
+
+#: city/settings.py:131
+msgid "German"
+msgstr ""
+
+#: city/settings.py:132
+msgid "English"
+msgstr ""
+
+#: city/settings.py:133
+msgid "Brazilian"
+msgstr ""
+
+#: city/settings.py:134
+msgid "JugendDemografieDialog"
+msgstr ""
+
+#: city/settings.py:135
+msgid "Amelinghausen"
+msgstr ""
+
+#: city/settings.py:136
+msgid "bardowick"
+msgstr ""
+
+#: templates/core/city.html:13
+msgid "ORIGIN: Neue Ideen für den Landkreis Lichtenfels"
+msgstr "Neue Ideen für den Kyffhäuser Kreis"
+
+#: templates/core/city.html:14
+msgid ""
+"ORIGIN: Die Ideen wurden von Jugendlichen aus dem Landkreis Lichtenfels "
+"entwickelt"
+msgstr "Die Ideen wurden von Jugendlichen aus dem Kyffhäuserkreis "
+"entwickelt"
+
+#: templates/core/city.html:16
+msgid "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
+msgstr "Suche nach Ideen und Projekten im Kyffhäuserkreis"
+
+#: templates/core/city.html:21
+msgid "Projekt hinzufügen"
+msgstr ""
+
+#: templates/core/city.html:21 templates/core/city.html.py:23
+msgid "Neues Project erstellen"
+msgstr "Neue Idee?"
+
+#: templates/core/city.html:48
+#, fuzzy
+#| msgid "kostenloses Benutzerkonto anlegen"
+msgid "Benutzerkonto registrieren"
+msgstr "kostenloses Benutzerkonto anlegen"
+
+#: templates/core/city.html:48 templates/core/default.city.html:31
+msgid "kostenloses Benutzerkonto anlegen"
+msgstr "kostenloses Benutzerkonto anlegen"
+
+#: templates/core/city.html:48 templates/core/default.city.html:31
+msgid "um über Änderungen auf dem Laufenden gehalten zu werden!"
+msgstr "um über Änderungen auf dem Laufenden gehalten zu werden!"
+
+#: templates/core/default.city.html:12
+msgid "H1: Welcome to our platform"
+msgstr "Neue Ideen für den Landkreis Lichtenfels2"
+
+#: templates/core/default.city.html:13
+msgid "H3 Claim: Use our platform to make the best out of our platform!"
+msgstr "Finde heraus was gerade Hamburg gebaut werden soll!"
+
+#: templates/core/default.city.html:15
+msgid "Search Box: Search for Ideas, Projects, everything what you want..."
+msgstr "Suche: Bauvorhaben, 3D Modelle, Bebauungspläne, etc."
+
+#: templates/core/default.city.html:27
+msgid "Nav-boxes headline: What can you do here?"
+msgstr "Was kannst Du hier machen?"
+
+#: templates/core/default.city.html:31
+msgid "Nav-boxes paragraph: Hier kannst Du Dich über"
+msgstr "Hier kannst Du dich über"
+
+#: templates/core/default.city.html:31
+msgid "laufende Ideen, Projekte und Stadtplanungsverfahren"
+msgstr "laufende Ideen, Projekte und Stadtplanungsverfahren"
+
+#: templates/core/default.city.html:31
+msgid "informieren. Du kannst ein"
+msgstr "informieren. Du kannst ein"
+
+#: templates/core/default.city.html:41
+msgid "Suche nach Ideen &amp; Projekten"
+msgstr "Suche nach Ideen &amp; Projekten"
+
+#~ msgid ""
+#~ "Suche Overlay Text kljlk jk jjk ksdkkkkkkkkkkk kd          kd kdddddddd "
+#~ "kd dkkkkkkkkkk dk kdddddddd dk"
+#~ msgstr "Finde 3000+ Baupläne"
+
+#~ msgid "Abonnierte Projekte"
+#~ msgstr "Abonnierte Projekte"
+
+#~ msgid "Suche Overlay Text"
+#~ msgstr "Abonniere Bauplanungen und folge der Entwicklung"
+
+#~ msgid "kostenlos registrieren"
+#~ msgstr "kostenlos registrieren"
