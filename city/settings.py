@@ -131,6 +131,7 @@ LANGUAGES = [
     ('de',  _('German')),
     ('en',  _('English')),
     ('jdd', _('JugendDemografieDialog')),
+    ('fritz',  _('FritzSchumacher')),
 ]
 
 MEDIA_URL = '/media/'
