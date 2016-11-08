@@ -126,7 +126,7 @@ LOCALE_PATHS = (
 
 from django.utils.translation import ugettext_lazy as _
 
-LANGUAGE_CODE = 'vr'
+LANGUAGE_CODE = 'kyf'
 LANGUAGES = [
     ('de',  _('German')),
     ('en',  _('English')),
@@ -135,6 +135,7 @@ LANGUAGES = [
     ('amelinghausen', _('Amelinghausen')),
     ('bardowick', _('bardowick')),
     ('vr', _('VorpommernRuegen')),
+    ('kyf', _('Kyffhaeuserkreis')),
 ]
 
 MEDIA_URL = '/media/'
