@@ -10,7 +10,7 @@ DETAILS_TABS = {
     'stakeholder' : True,
     'discussion' : True,
     'map' : True,
-    'etherpad' : True,
+    'etherpad' : False,
 }
 
 ORDER_BTNS = [
@@ -27,9 +27,9 @@ GENERAL_CONTENT = {
     'blog'    : False,
     'lexikon' : False,
     'account' : True,
-    'wbcrating': True,
+    'wbcrating': False,
     'number_votes': 3,
-    'starrating': False,
+    'starrating': True,
     'featured' : True,
     'updownvote': True,
     'social_media_share': True,
