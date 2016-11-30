@@ -15,7 +15,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 
-    url(r'^$', StartView.as_view(template_name="core/city.html"), name='start'),
+    url(r'^start/$', StartView.as_view(template_name="core/city.html"), name='start'),
 
     url(r'^blog/$', BlogView.as_view(), name='blog'),
     url(r'^blog/(?P<slug>[a-zA-Z0-9_.-]+)/$', 'wbc.blog.views.blogentry', name='blogentry'),
@@ -124,7 +124,7 @@ urlpatterns = patterns('',
 
     url(r'^autocomplete/', 'wbc.core.views.autocomplete', name="autocomplete"),
     url(r'^suche/', SearchView.as_view(), name="search"),
-    url(r'^karte/', 'wbc.core.views.map', name="map"),
+    # url(r'^karte/', 'wbc.core.views.map', name="map"),
     # url(r'^suche/', TemplateView.as_view(template_name="core/search.html"), name='search'),
 
     url(r'^impressum/', TemplateView.as_view(template_name='impressum.html'), name='imprint'),
@@ -146,4 +146,10 @@ urlpatterns = patterns('',
 
     #upload project data
     url(r'^jdd_upload/', UploadProjectData.as_view()),
+
+    #NEW FRONTEND
+    url(r'^$', 'wbc.core.views.index'),
+
+    url(r'^(?P<path>.*)/$', 'wbc.core.views.index')
+
 )
