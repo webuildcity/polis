@@ -1,5 +1,10 @@
 { 
-    "type" : "Story",
+    "type"          : "Story",
+    "name"          : "Der Hamburger Deckel",
+    "subtitle"      : "Hamburg auf dem Weg zurück zur grünen Großstadt",
+    "description"   : "In einem der größten Infrastrukturprojekte Deutschlands setzt Hamburg der A7 Autobahn drei grüne Deckel auf. Damit sollen die Belastungen für die AnwohnerInnen an der A7 zurückgehen und neuer lebenswerter Stadtraum auf und neben der A7 geschaffen werden.",
+    "image"         : "/assets/img/stories/deckel/deckel_start.png",
+    "explanation"   : "Eine interaktive Reise von Autos, Lärm und Abgrasen zur neuen \"grünen Lunge\" Hamburgs...",
     "anchors" : [ 
         {
             "type": "StoryAnchor",

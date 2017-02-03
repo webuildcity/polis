@@ -101,6 +101,7 @@ urlpatterns = patterns('',
     url(r'^project/', include('wbc.projects.urls')),
     url(r'^stakeholder/', include('wbc.stakeholder.urls')),
     url(r'^blog_api/', include('wbc.blog.urls')),
+    url(r'^story/', include('wbc.stories.urls')),
 
     # buildings
     # url(r'^buildings/(?P<pk>[0-9]+)/$', 'wbc.buildings.views.building', name='buildings'),
