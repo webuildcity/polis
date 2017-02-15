@@ -14,6 +14,8 @@ import requests
 from django.core.files import File
 from django.conf import settings
 
+from django.contrib.gis.geos import GEOSGeometry
+
 import wand
 from wand.image import Image
 
@@ -85,20 +87,20 @@ class ProjectFetcher():
                     for path in feature['geometry']['coordinates']:
                         for point in path:
                             # point[0],point[1] = point[1],point[0]
-                            latMin = min(latMin,point[0])
-                            latMax = max(latMax,point[0])
-                            lonMin = min(lonMin,point[1])
-                            lonMax = max(lonMax,point[1])
+                            latMin = min(latMin,point[1])
+                            latMax = max(latMax,point[1])
+                            lonMin = min(lonMin,point[0])
+                            lonMax = max(lonMax,point[0])
                     project_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
                 else:
                     for polygon in feature['geometry']['coordinates']:
                         for path in polygon:
                             for point in path:
                                 # point[0],point[1] = point[1],point[0]
-                                latMin = min(latMin,point[0])
-                                latMax = max(latMax,point[0])
-                                lonMin = min(lonMin,point[1])
-                                lonMax = max(lonMax,point[1])
+                                latMin = min(latMin,point[1])
+                                latMax = max(latMax,point[1])
+                                lonMin = min(lonMin,point[0])
+                                lonMax = max(lonMax,point[0])
                     project_values['polygon'] = json.dumps(feature['geometry']['coordinates'])
 
                 # get lat and lon
@@ -112,6 +114,9 @@ class ProjectFetcher():
             # update the place or create a new one
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
 
+            project.polygon_gis = GEOSGeometry(json.dumps(feature['geometry']))
+            project.point_gis = GEOSGeometry('POINT('+project_values['lon']+ ' '+project_values['lat'] + ')')
+            project.save()
             # add Tags
             project.tags.add('Bebauungsplan', 'Bebauungsplan im Verfahren', 'B-Plan')
 
@@ -259,21 +264,19 @@ class ProjectFestgestelltFetcher():
                 if feature['geometry']['type'] == 'Polygon':
                     for path in feature['geometry']['coordinates']:
                         for point in path:
-                            point[0],point[1] = point[1],point[0]
-                            latMin = min(latMin,point[0])
-                            latMax = max(latMax,point[0])
-                            lonMin = min(lonMin,point[1])
-                            lonMax = max(lonMax,point[1])
+                            latMin = min(latMin,point[1])
+                            latMax = max(latMax,point[1])
+                            lonMin = min(lonMin,point[0])
+                            lonMax = max(lonMax,point[0])
                     project_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
                 else:
                     for polygon in feature['geometry']['coordinates']:
                         for path in polygon:
                             for point in path:
-                                point[0],point[1] = point[1],point[0]
-                                latMin = min(latMin,point[0])
-                                latMax = max(latMax,point[0])
-                                lonMin = min(lonMin,point[1])
-                                lonMax = max(lonMax,point[1])
+                                latMin = min(latMin,point[1])
+                                latMax = max(latMax,point[1])
+                                lonMin = min(lonMin,point[0])
+                                lonMax = max(lonMax,point[0])
                     project_values['polygon'] = json.dumps(feature['geometry']['coordinates'])
 
                 # get lat and lon
@@ -297,6 +300,11 @@ class ProjectFestgestelltFetcher():
                 project_values['finished'] = datetime.strptime(date, '%d.%m.%Y');
             # update the place or create a new one
             project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
+
+            project.polygon_gis = GEOSGeometry(json.dumps(feature['geometry']))
+            project.point_gis = GEOSGeometry('POINT('+project_values['lon']+ ' '+project_values['lat'] + ')')
+            project.save()
+
 
             link = feature['properties'].get('hotlink', '')
             
@@ -452,21 +460,19 @@ class AusgleichsflaechenFetcher():
                 if feature['geometry']['type'] == 'Polygon':
                     for path in feature['geometry']['coordinates']:
                         for point in path:
-                            point[0],point[1] = point[1],point[0]
-                            latMin = min(latMin,point[0])
-                            latMax = max(latMax,point[0])
-                            lonMin = min(lonMin,point[1])
-                            lonMax = max(lonMax,point[1])
+                            latMin = min(latMin,point[1])
+                            latMax = max(latMax,point[1])
+                            lonMin = min(lonMin,point[0])
+                            lonMax = max(lonMax,point[0])
                     ausgleichsflaechen_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
                 else:
                     for polygon in feature['geometry']['coordinates']:
                         for path in polygon:
                             for point in path:
-                                point[0],point[1] = point[1],point[0]
-                                latMin = min(latMin,point[0])
-                                latMax = max(latMax,point[0])
-                                lonMin = min(lonMin,point[1])
-                                lonMax = max(lonMax,point[1])
+                                latMin = min(latMin,point[1])
+                                latMax = max(latMax,point[1])
+                                lonMin = min(lonMin,point[0])
+                                lonMax = max(lonMax,point[0])
                     ausgleichsflaechen_values['polygon'] = json.dumps(feature['geometry']['coordinates'])
 
                 # get lat and lon
@@ -491,6 +497,11 @@ class AusgleichsflaechenFetcher():
             ausgleichsflaechen_values['active'] = True
             # # update the place or create a new one
             buffer_area, created = BufferArea.objects.update_or_create(gml_id=ausgleichsflaechen_values['gml_id'], defaults=ausgleichsflaechen_values)
+            
+            buffer_area.polygon_gis = GEOSGeometry(json.dumps(feature['geometry']))
+            buffer_area.point_gis = GEOSGeometry('POINT('+project_values['lon']+ ' '+project_values['lat'] + ')')
+            buffer_area.save()
+
             # if created:
             #     importEvent = {
             #         'description': "Bauprojekt aus dem  Planportal importiert.",
@@ -565,8 +576,8 @@ class DenkmalFetcher():
             # "Gartendenkmal",
             # "Welterbe",
             # "geschuetztes_Gewaesser",
-            # "Baudenkmal",
-            "Ensemble",
+            "Baudenkmal",
+            # "Ensemble",
             # "geloeschtes_Denkmalobjekt",
             # "geloeschtes_Gartendenkmal",
             # "geschuetztes_Denkmalobjekt",
@@ -614,7 +625,7 @@ class DenkmalFetcher():
                 project_values['typename'] = 'Denkmal'
                 if 'BEZEICHNUNG' in feature['properties']:
                     if feature['properties']['BEZEICHNUNG']:
-                        project_values['name'] = feature['properties']['BEZEICHNUNG']
+                        project_values['name'] = feature['properties']['BEZEICHNUNG'][:128]
                 if 'WK_OBJEKT' in feature['properties']:
                     project_values['name'] = feature['properties']['WK_OBJEKT']
                 # if 'BAUTYP' in feature['properties']:
@@ -628,10 +639,11 @@ class DenkmalFetcher():
                     if feature['properties']['INFO']:
                         project_values['description'] = feature['properties']['INFO']
 
-                if ('FISID' in feature['properties']):
+                if 'FISID' in feature['properties']:
                     if feature['properties']['FISID']:
                         project_values['description_official'] = feature['properties']['FISID']
                         project_values['identifier'] = feature['properties']['FISID']
+
                 else:
                     if feature['properties']['GlobalID']:
                         project_values['description_official'] = feature['properties']['GlobalID']
@@ -701,15 +713,21 @@ class DenkmalFetcher():
                 project_values['active'] = True
                 # project_values['isFinished'] = False
                 # # update the place or create a new one
+
                 if 'identifier' in project_values:
                     project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
                 else:
-                   project, created = Project.objects.update_or_create(identifier=str(feature['properties']['OBJECTID'])+layer, defaults=project_values)
+                   project, created = Project.objects.update_or_create(identifier=str(feature['properties']['OBJECTID']), defaults=project_values)
  
+                if feature['geometry']['type'] != 'Point':
+                    project.polygon_gis = GEOSGeometry(json.dumps(feature['geometry']))
+                project.point_gis = GEOSGeometry('POINT('+project_values['lon']+ ' '+project_values['lat'] + ')')
+                project.save()
+
                 # # add Tags
                 if 'BAUTYP' in feature['properties']:
                     if feature['properties']['BAUTYP']:
-                        project.tags.add(feature['properties']['BAUTYP'])
+                        project.tags.add(feature['properties']['BAUTYP'][:100])
                 project.tags.add(layer)
 
                 # link = feature['properties'].get('hotlink_iv', '')
