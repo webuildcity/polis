@@ -14,6 +14,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'django.contrib.gis',
     'django.contrib.sites',
     'django_extensions',
     # other dependencies
@@ -61,6 +62,7 @@ INSTALLED_APPS = (
     'etherpad_lite',
     'social.apps.django_app.default',
     'django_social_share',
+    'django_filters'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -210,6 +212,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 #Translation Rosetta
 #ROSETTA_WSGI_AUTO_RELOAD
 #ROSETTA_UWSGI_AUTO_RELOAD
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
+    'page_size_query_param' : 'limit'
+}
+
 
 SOCIAL_AUTH_UUID_LENGTH = 2
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
