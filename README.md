@@ -22,6 +22,7 @@ More about the OpenSource project: [we-build.city][we-build-city] or the company
 4.4 Edit the `HAYSTACK_CONNECTIONS` block, edit the name of the index.
 
 7. Install the dependencies using pip `pip install -r /path/to/city/requirements.txt`. You might want to use a [virtualenv][virtualenv] for this.
+7b. Install GEO packages: https://docs.djangoproject.com/en/1.10/ref/contrib/gis/install/geolibs/
 8. Change to the home-directory of the city repository and execute `python manage.py migrate` to set up the database structure.
 
 9. Use `python manage.py load-fixtures` to load test data of the administrative information about our "polis test city" Hamburg into the database.
