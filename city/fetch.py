@@ -667,37 +667,37 @@ class DenkmalFetcher():
 
                 # switch lat and lon in (multi) polygon and get center
                 # try:
-                latMin,latMax,lonMin,lonMax = 90,-90,180,-180
-                if feature['geometry']['type'] == 'Polygon':
-                    for path in feature['geometry']['coordinates']:
-                        for point in path:
-                            # point[0],point[1] = point[1],point[0]
-                            latMin = min(latMin,point[1])
-                            latMax = max(latMax,point[1])
-                            lonMin = min(lonMin,point[0])
-                            lonMax = max(lonMax,point[0])
-                    project_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
-                if feature['geometry']['type'] == 'Point':
-                    point = feature['geometry']['coordinates']
-                    latMin = min(latMin,point[1])
-                    latMax = max(latMax,point[1])
-                    lonMin = min(lonMin,point[0])
-                    lonMax = max(lonMax,point[0])
-                    project_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
-                else:
-                    for polygon in feature['geometry']['coordinates']:
-                        for path in polygon:
-                            for point in path:
-                                # point[0],point[1] = point[1],point[0]
-                                latMin = min(latMin,point[1])
-                                latMax = max(latMax,point[1])
-                                lonMin = min(lonMin,point[0])
-                                lonMax = max(lonMax,point[0])
-                    project_values['polygon'] = json.dumps(feature['geometry']['coordinates'])
+                # latMin,latMax,lonMin,lonMax = 90,-90,180,-180
+                # if feature['geometry']['type'] == 'Polygon':
+                #     for path in feature['geometry']['coordinates']:
+                #         for point in path:
+                #             # point[0],point[1] = point[1],point[0]
+                #             latMin = min(latMin,point[1])
+                #             latMax = max(latMax,point[1])
+                #             lonMin = min(lonMin,point[0])
+                #             lonMax = max(lonMax,point[0])
+                #     project_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
+                # if feature['geometry']['type'] == 'Point':
+                #     point = feature['geometry']['coordinates']
+                #     latMin = min(latMin,point[1])
+                #     latMax = max(latMax,point[1])
+                #     lonMin = min(lonMin,point[0])
+                #     lonMax = max(lonMax,point[0])
+                #     project_values['polygon'] = json.dumps([feature['geometry']['coordinates']])
+                # else:
+                #     for polygon in feature['geometry']['coordinates']:
+                #         for path in polygon:
+                #             for point in path:
+                #                 # point[0],point[1] = point[1],point[0]
+                #                 latMin = min(latMin,point[1])
+                #                 latMax = max(latMax,point[1])
+                #                 lonMin = min(lonMin,point[0])
+                #                 lonMax = max(lonMax,point[0])
+                # project_values['polygon'] = json.dumps(feature['geometry']['coordinates'])
 
                 # get lat and lon
-                project_values['lat'] = str((latMax + latMin) * 0.5)
-                project_values['lon'] = str((lonMax + lonMin) * 0.5)
+                # project_values['lat'] = str((latMax + latMin) * 0.5)
+                # project_values['lon'] = str((lonMax + lonMin) * 0.5)
                 # except TypeError:
                 #     continue
                 if 'SHAPE_Length' in feature['properties']:
@@ -721,7 +721,8 @@ class DenkmalFetcher():
  
                 if feature['geometry']['type'] != 'Point':
                     project.polygon_gis = GEOSGeometry(json.dumps(feature['geometry']))
-                project.point_gis = GEOSGeometry('POINT('+project_values['lon']+ ' '+project_values['lat'] + ')')
+                if feature['geometry']['type'] == 'Point':
+                    project.point_gis = GEOSGeometry(json.dumps(feature['geometry']))
                 project.save()
 
                 # # add Tags
