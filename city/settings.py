@@ -63,7 +63,8 @@ INSTALLED_APPS = (
     'etherpad_lite',
     'social.apps.django_app.default',
     'django_social_share',
-    'django_filters'
+    'django_filters',
+    'corsheaders'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,6 +78,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 )
 
@@ -272,3 +274,11 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.user.user_details',
     'city.pipeline.save_profile_picture',
 )
+
+
+# CORS THINGS
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+
+CORS_ORIGIN_REGEX_WHITELIST = ('^(https?://)?(\w+\.)?we-build\.city$', )
