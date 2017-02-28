@@ -598,7 +598,7 @@ class DenkmalFetcher():
                 time_delta = 1000
 
             # download data if older than 10 minutes
-            if time_delta > 10:
+            if time_delta > 600:
                 try:
                     os.remove('/tmp/denkmal.json')
                 except OSError:
@@ -615,6 +615,9 @@ class DenkmalFetcher():
 
             geojson = json.load(open('/tmp/denkmal.json','r'))
             n = 0
+            projects = []
+
+            projectList = Project.objects.filter(typename="Denkmal").values_list('identifier', flat=True)
             for feature in geojson["features"]:
 
                 # prepare values dictionary
@@ -709,27 +712,47 @@ class DenkmalFetcher():
                 if 'BAUJAHR' in feature['properties']:
                     project_values['date_string'] = feature['properties']['BAUJAHR']
                 
+                if feature['geometry']['type'] != 'Point':
+                    project_values['polygon_gis'] = GEOSGeometry(json.dumps(feature['geometry']))
+                if feature['geometry']['type'] == 'Point':
+                    project_values['point_gis'] = GEOSGeometry(json.dumps(feature['geometry']))
 
                 project_values['active'] = True
+                project_values['created'] = datetime.now()
+                project_values['updated'] = datetime.now()
+                if "identifier" in project_values:
+                    if project_values["identifier"] not in projectList:
+                #         print pro.name
+                          pro = Project(**project_values)
+                          projects.append(pro)
+                #         # print project_values
+                #         Project.objects.create(**project_values)
+                elif str(feature['properties']['OBJECTID']) not in projectList:
+                      pro = Project(**project_values)
+                      projects.append(pro)
+                #     pro.identifier = str(feature['properties']['OBJECTID'])
+                #     print pro.name
+                #     Project.objects.create(**project_values)
+
+                    # pro.save()
+                # if 'identifier' in project_values:
+                #     project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
+                # else:
+                #    project, created = Project.objects.update_or_create(identifier=str(feature['properties']['OBJECTID']), defaults=project_values)
+ 
+
+            print len(projects)
+            Project.objects.bulk_create(projects)
                 # project_values['isFinished'] = False
                 # # update the place or create a new one
 
-                if 'identifier' in project_values:
-                    project, created = Project.objects.update_or_create(identifier=project_values['identifier'], defaults=project_values)
-                else:
-                   project, created = Project.objects.update_or_create(identifier=str(feature['properties']['OBJECTID']), defaults=project_values)
- 
-                if feature['geometry']['type'] != 'Point':
-                    project.polygon_gis = GEOSGeometry(json.dumps(feature['geometry']))
-                if feature['geometry']['type'] == 'Point':
-                    project.point_gis = GEOSGeometry(json.dumps(feature['geometry']))
-                project.save()
+                # project.save()
 
                 # # add Tags
-                if 'BAUTYP' in feature['properties']:
-                    if feature['properties']['BAUTYP']:
-                        project.tags.add(feature['properties']['BAUTYP'][:100])
-                project.tags.add(layer)
+                # if 'BAUTYP' in feature['properties']:
+                #     if feature['properties']['BAUTYP']:
+                #         project.tags.add(feature['properties']['BAUTYP'][:100])
+                # project.tags.add(layer)
 
                 # link = feature['properties'].get('hotlink_iv', '')
                 # if link:
@@ -776,40 +799,40 @@ class DenkmalFetcher():
                 #     except lxml.etree.XMLSyntaxError:
                 #         print 'XMLSyntaxError for: ', link
 
-                if created:
-                    importEvent = {
-                        'description': "Denkmal aus dem  Transparenzportal importiert.",
-                        'link': "http://geodienste.hamburg.de/",
-                        'begin': datetime.now()
-                    }
+                # if created:
+                #     importEvent = {
+                #         'description': "Denkmal aus dem  Transparenzportal importiert.",
+                #         'link': "http://geodienste.hamburg.de/",
+                #         'begin': datetime.now()
+                #     }
 
-                    # if link:
-                    #     project.link = link.strip()
-                    #     importEvent['link'] = link.strip()
+                #     # if link:
+                #     #     project.link = link.strip()
+                #     #     importEvent['link'] = link.strip()
 
-                    project.events.create(**importEvent)
+                #     project.events.create(**importEvent)
 
-                    n += 1
-                    # try:
-                    #     for quarter in quarters:
-                    #         q = Quarter.objects.get(name=quarter)
-                    #         project.entities.add(q)
-                    #         project.save()
-                    # except Quarter.DoesNotExist:
-                    #     print 'no quarter for', project_values['identifier']
+                #     n += 1
+                #     # try:
+                #     #     for quarter in quarters:
+                #     #         q = Quarter.objects.get(name=quarter)
+                #     #         project.entities.add(q)
+                #     #         project.save()
+                #     # except Quarter.DoesNotExist:
+                #     #     print 'no quarter for', project_values['identifier']
 
-                    # if project.address == '':
-                    #     # get address from open street map
-                    #     url = "http://nominatim.openstreetmap.org/reverse?format=json&lat=%s&lon=%s&zoom=18&addressdetails=1" % (project.lat, project.lon)
+                #     # if project.address == '':
+                #     #     # get address from open street map
+                #     #     url = "http://nominatim.openstreetmap.org/reverse?format=json&lat=%s&lon=%s&zoom=18&addressdetails=1" % (project.lat, project.lon)
 
-                    #     response = urllib2.urlopen(url).read()
-                    #     data = json.loads(response)
-                    #     if 'road' in data['address']:
-                    #         project.address = data['address']['road']
-                    #     else:
-                    #         project.address = ''
-                    #     time.sleep(1.2)
+                #     #     response = urllib2.urlopen(url).read()
+                #     #     data = json.loads(response)
+                #     #     if 'road' in data['address']:
+                #     #         project.address = data['address']['road']
+                #     #     else:
+                #     #         project.address = ''
+                #     #     time.sleep(1.2)
 
-                    print project
+                #     print project
 
-            print n,'projects created'
+            # print n,'projects created'
