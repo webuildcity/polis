@@ -80,6 +80,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -278,7 +279,7 @@ SOCIAL_AUTH_PIPELINE = (
 
 # CORS THINGS
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 CORS_ORIGIN_REGEX_WHITELIST = ('^(https?://)?(\w+\.)?we-build\.city$', )
